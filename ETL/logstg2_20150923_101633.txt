@@ -1,0 +1,111 @@
+2015/09/23 10:16:33 - staging2 - Starting entry [stg2_dimensoes]
+2015/09/23 10:16:33 - stg2_dimensoes - Starting entry [stg2_dimensoes_itens]
+2015/09/23 10:16:33 - stg2_dimensoes_itens - Starting entry [stg2_categorias]
+2015/09/23 10:16:33 - stg2_categorias - Loading transformation from XML file [file:///Users/ykmfb/Desktop/ETL/stg2_categorias.ktr]
+2015/09/23 10:16:33 - stg2_categorias - Expedindo in?cio para transforma??o [stg2_categorias]
+2015/09/23 10:16:33 - Table output.0 - Connected to database [staging] (commit=1000)
+2015/09/23 10:16:33 - leitura grupos.0 - Finished reading query, closing connection.
+2015/09/23 10:16:33 - leitura grupos.0 - Finished processing (I=369, O=0, R=0, W=369, U=0, E=0)
+2015/09/23 10:16:33 - Table output.0 - Finished processing (I=0, O=369, R=369, W=369, U=0, E=0)
+2015/09/23 10:16:33 - stg2_dimensoes_itens - Starting entry [stg2_dimensoes_itens_categorizar]
+2015/09/23 10:16:33 - stg2_dimensoes_itens_categorizar - Loading transformation from XML file [file:///Users/ykmfb/Desktop/ETL/stg2_dimensoes_itens_categorizar.ktr]
+2015/09/23 10:16:33 - stg2_dimensoes_itens_categorizar - Expedindo in?cio para transforma??o [stg2_dimensoes_itens_categorizar]
+2015/09/23 10:16:33 - carregamento stg2_d_itens.0 - Connected to database [staging] (commit=1000)
+2015/09/23 10:16:33 - leitura stg1_itens_categorizados.0 - Finished reading query, closing connection.
+2015/09/23 10:16:34 - leitura stg1_itens_categorizados.0 - Finished processing (I=15464, O=0, R=0, W=15464, U=0, E=0)
+2015/09/23 10:16:34 - correcao sem grupo.0 - Finished processing (I=0, O=0, R=15464, W=15464, U=0, E=0)
+2015/09/23 10:16:36 - convert SKU bigint.0 - Finished processing (I=0, O=0, R=15464, W=15464, U=0, E=0)
+2015/09/23 10:16:39 - carregamento stg2_d_itens.0 - Finished processing (I=0, O=15464, R=15464, W=15464, U=0, E=0)
+2015/09/23 10:16:39 - stg2_dimensoes_itens - Starting entry [Success]
+2015/09/23 10:16:39 - stg2_dimensoes_itens - Finished job entry [Success] (result=[true])
+2015/09/23 10:16:39 - stg2_dimensoes_itens - Finished job entry [stg2_dimensoes_itens_categorizar] (result=[true])
+2015/09/23 10:16:39 - stg2_dimensoes_itens - Finished job entry [stg2_categorias] (result=[true])
+2015/09/23 10:16:39 - stg2_dimensoes - Starting entry [Success]
+2015/09/23 10:16:39 - stg2_dimensoes - Finished job entry [Success] (result=[true])
+2015/09/23 10:16:39 - stg2_dimensoes - Finished job entry [stg2_dimensoes_itens] (result=[true])
+2015/09/23 10:16:39 - staging2 - Starting entry [stg2itens]
+2015/09/23 10:16:39 - stg2itens - Starting entry [stg2L1]
+2015/09/23 10:16:39 - stg2L1 - Loading transformation from XML file [/Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr]
+2015/09/23 10:16:39 - stg2itens - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2015/09/23 10:16:39 - stg2itens - Unexpected error during transformation metadata load
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - Unable to read file [file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr]
+2015/09/23 10:16:39 - stg2itens - Could not read from "file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr" because it is a not a file.
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.entries.trans.JobEntryTrans.getTransMeta(JobEntryTrans.java:1208)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:648)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.Job.execute(Job.java:716)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.Job.execute(Job.java:859)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.Job.execute(Job.java:598)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.entries.job.JobEntryJobRunner.run(JobEntryJobRunner.java:69)
+2015/09/23 10:16:39 - stg2itens - 	at java.lang.Thread.run(Thread.java:695)
+2015/09/23 10:16:39 - stg2itens - Caused by: org.pentaho.di.core.exception.KettleXMLException: 
+2015/09/23 10:16:39 - stg2itens - Unable to read file [file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr]
+2015/09/23 10:16:39 - stg2itens - Could not read from "file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr" because it is a not a file.
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:560)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:539)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.trans.TransMeta.<init>(TransMeta.java:2702)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.entries.trans.JobEntryTrans.getTransMeta(JobEntryTrans.java:1157)
+2015/09/23 10:16:39 - stg2itens - 	... 6 more
+2015/09/23 10:16:39 - stg2itens - Caused by: org.apache.commons.vfs.FileNotFoundException: Could not read from "file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr" because it is a not a file.
+2015/09/23 10:16:39 - stg2itens - 	at org.apache.commons.vfs.provider.AbstractFileObject.getInputStream(Unknown Source)
+2015/09/23 10:16:39 - stg2itens - 	at org.apache.commons.vfs.provider.DefaultFileContent.getInputStream(Unknown Source)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.core.vfs.KettleVFS.getInputStream(KettleVFS.java:247)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:558)
+2015/09/23 10:16:39 - stg2itens - 	... 9 more
+2015/09/23 10:16:39 - stg2itens - Caused by: java.io.FileNotFoundException: /Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr (No such file or directory)
+2015/09/23 10:16:39 - stg2itens - 	at java.io.FileInputStream.open(Native Method)
+2015/09/23 10:16:39 - stg2itens - 	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+2015/09/23 10:16:39 - stg2itens - 	at org.apache.commons.vfs.provider.local.LocalFile.doGetInputStream(Unknown Source)
+2015/09/23 10:16:39 - stg2itens - 	... 13 more
+2015/09/23 10:16:39 - stg2itens - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : An error occurred executing this job entry : 
+2015/09/23 10:16:39 - stg2itens - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2015/09/23 10:16:39 - stg2itens - Unexpected error occurred while launching entry [stg2L1.0]
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - Unexpected error during transformation metadata load
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - Unable to read file [file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr]
+2015/09/23 10:16:39 - stg2itens - Could not read from "file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr" because it is a not a file.
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.Job.execute(Job.java:862)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.Job.execute(Job.java:598)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.entries.job.JobEntryJobRunner.run(JobEntryJobRunner.java:69)
+2015/09/23 10:16:39 - stg2itens - 	at java.lang.Thread.run(Thread.java:695)
+2015/09/23 10:16:39 - stg2itens - Caused by: org.pentaho.di.core.exception.KettleException: 
+2015/09/23 10:16:39 - stg2itens - Unexpected error during transformation metadata load
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - Unable to read file [file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr]
+2015/09/23 10:16:39 - stg2itens - Could not read from "file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr" because it is a not a file.
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.entries.trans.JobEntryTrans.getTransMeta(JobEntryTrans.java:1208)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:648)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.Job.execute(Job.java:716)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.Job.execute(Job.java:859)
+2015/09/23 10:16:39 - stg2itens - 	... 3 more
+2015/09/23 10:16:39 - stg2itens - Caused by: org.pentaho.di.core.exception.KettleXMLException: 
+2015/09/23 10:16:39 - stg2itens - Unable to read file [file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr]
+2015/09/23 10:16:39 - stg2itens - Could not read from "file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr" because it is a not a file.
+2015/09/23 10:16:39 - stg2itens - 
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:560)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:539)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.trans.TransMeta.<init>(TransMeta.java:2702)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.job.entries.trans.JobEntryTrans.getTransMeta(JobEntryTrans.java:1157)
+2015/09/23 10:16:39 - stg2itens - 	... 6 more
+2015/09/23 10:16:39 - stg2itens - Caused by: org.apache.commons.vfs.FileNotFoundException: Could not read from "file:///Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr" because it is a not a file.
+2015/09/23 10:16:39 - stg2itens - 	at org.apache.commons.vfs.provider.AbstractFileObject.getInputStream(Unknown Source)
+2015/09/23 10:16:39 - stg2itens - 	at org.apache.commons.vfs.provider.DefaultFileContent.getInputStream(Unknown Source)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.core.vfs.KettleVFS.getInputStream(KettleVFS.java:247)
+2015/09/23 10:16:39 - stg2itens - 	at org.pentaho.di.core.xml.XMLHandler.loadXMLFile(XMLHandler.java:558)
+2015/09/23 10:16:39 - stg2itens - 	... 9 more
+2015/09/23 10:16:39 - stg2itens - Caused by: java.io.FileNotFoundException: /Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr (No such file or directory)
+2015/09/23 10:16:39 - stg2itens - 	at java.io.FileInputStream.open(Native Method)
+2015/09/23 10:16:39 - stg2itens - 	at java.io.FileInputStream.<init>(FileInputStream.java:120)
+2015/09/23 10:16:39 - stg2itens - 	at org.apache.commons.vfs.provider.local.LocalFile.doGetInputStream(Unknown Source)
+2015/09/23 10:16:39 - stg2itens - 	... 13 more
+2015/09/23 10:16:39 - staging2 - Finished job entry [stg2itens] (result=[false])
+2015/09/23 10:16:39 - staging2 - Finished job entry [stg2_dimensoes] (result=[false])

@@ -1,0 +1,51 @@
+#documento_carro 
+
+marca/modelo, ano_fabricao, ano_modelo, chassi ,combustivel, qtd_vias, Numero_do_licenciamento, Nome do proprietario ,cpf, placa, placa_anterior, especie, CAP_pot_cil, categoria, cor, ano_ipva, faixa_ipva, banco_financiamento, endereco_dono_veiculo, CEP_moradia, blindagem, kit gas
+
+##carteira de motorista
+
+Nome, identidade, orgao, estado, filiacao (mae e pai), Cat. Hab, No registro,validade
+data_1_habilitacao
+
+###########
+Linkedin
+Cep_trabalho (endereco do linkedin), escolaridade, tempo_trabalho, qtd_recomendacoes, qtd_projetos, qtd_certificados, qtd_cursos, qtd_competencias_recomendadas, max_competencias_recomendadas, tempo_formacao (graduacao), telefone, tempo_linkedin
+
+
+#### google places####
+Estabelecimentos mais proximos do novo cliente (+60 estabelecimentos)
+Facebook
+
+####facebook
+data_nascimento, sexo, Quantas cidades ele ja visitou?, Quais cidades?, distancia media percorrida entre as cidades, Nomes dos familiares, estado civil
+...
+
+###IBGE
+Informações subaglomerados (favelas) nivel nacional
+Informações setor censitario (CENSO 2010) 3200 variáveis
+...
+
+
+##twitter
+
+Armazenar informacoes de textos dos nosso clientes diariamente
+Armazenar informacoes locais de textos sobre assuntos referenciados a seguro veicular: #rouboefurto #assassinato #acidentesdetransito
+
+###variaveis a calcular
+
+distancia casa para ao trabalho!==A
+distancia percorrida em media por dia
+d=2*A+(0.10*A)
+
+fazer stringmatch dos nomes (das carteiras de motorista para o cadastro) com
+os nomes extraido da familia pelo facebook.
+
+ID= motoristas do contrato diferente da familia
+
+#####
+
+
+
+Ja possui um contrato anterior com outra seguradora? (pessoa)
+
+

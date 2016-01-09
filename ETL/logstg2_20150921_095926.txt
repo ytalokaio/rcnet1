@@ -1,0 +1,231 @@
+2015/09/21 09:59:26 - staging2 - Starting entry [stg2_dimensoes]
+2015/09/21 09:59:26 - stg2_dimensoes - Starting entry [stg2_dimensoes_itens]
+2015/09/21 09:59:26 - stg2_dimensoes_itens - Starting entry [stg2_categorias]
+2015/09/21 09:59:26 - stg2_categorias - Loading transformation from XML file [/Users/ykmfb/Desktop/ETL/Staging2/stg2_categorias.ktr]
+2015/09/21 09:59:26 - stg2_categorias - Expedindo in?cio para transforma??o [stg2_categorias]
+2015/09/21 09:59:26 - Table output.0 - Connected to database [staging] (commit=1000)
+2015/09/21 09:59:26 - leitura grupos.0 - Finished reading query, closing connection.
+2015/09/21 09:59:26 - leitura grupos.0 - Finished processing (I=369, O=0, R=0, W=369, U=0, E=0)
+2015/09/21 09:59:27 - Table output.0 - Finished processing (I=0, O=369, R=369, W=369, U=0, E=0)
+2015/09/21 09:59:27 - stg2_dimensoes_itens - Starting entry [stg2_dimensoes_itens_categorizar]
+2015/09/21 09:59:27 - stg2_dimensoes_itens_categorizar - Loading transformation from XML file [/Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2_dimensoes_itens_categorizar.ktr]
+2015/09/21 09:59:27 - stg2_dimensoes_itens_categorizar - Expedindo in?cio para transforma??o [stg2_dimensoes_itens_categorizar]
+2015/09/21 09:59:27 - carregamento stg2_d_itens.0 - Connected to database [staging] (commit=1000)
+2015/09/21 09:59:27 - leitura stg1_itens_categorizados.0 - Finished reading query, closing connection.
+2015/09/21 09:59:27 - leitura stg1_itens_categorizados.0 - Finished processing (I=15464, O=0, R=0, W=15464, U=0, E=0)
+2015/09/21 09:59:28 - correcao sem grupo.0 - Finished processing (I=0, O=0, R=15464, W=15464, U=0, E=0)
+2015/09/21 09:59:29 - convert SKU bigint.0 - Finished processing (I=0, O=0, R=15464, W=15464, U=0, E=0)
+2015/09/21 09:59:32 - carregamento stg2_d_itens.0 - Finished processing (I=0, O=15464, R=15464, W=15464, U=0, E=0)
+2015/09/21 09:59:32 - stg2_dimensoes_itens - Starting entry [Success]
+2015/09/21 09:59:32 - stg2_dimensoes_itens - Finished job entry [Success] (result=[true])
+2015/09/21 09:59:32 - stg2_dimensoes_itens - Finished job entry [stg2_dimensoes_itens_categorizar] (result=[true])
+2015/09/21 09:59:32 - stg2_dimensoes_itens - Finished job entry [stg2_categorias] (result=[true])
+2015/09/21 09:59:32 - stg2_dimensoes - Starting entry [Success]
+2015/09/21 09:59:32 - stg2_dimensoes - Finished job entry [Success] (result=[true])
+2015/09/21 09:59:32 - stg2_dimensoes - Finished job entry [stg2_dimensoes_itens] (result=[true])
+2015/09/21 09:59:32 - staging2 - Starting entry [stg2itens]
+2015/09/21 09:59:32 - stg2itens - Starting entry [stg2L1]
+2015/09/21 09:59:32 - stg2L1 - Loading transformation from XML file [/Users/ykmfb/Desktop/ETL/Staging2/stg2itens/stg2L1.ktr]
+2015/09/21 09:59:32 - stg2L1 - Expedindo in?cio para transforma??o [stg2L1]
+2015/09/21 09:59:32 - stg2_itens.0 - Connected to database [staging] (commit=1000)
+2015/09/21 09:59:32 - stg2_itens erro.0 - Connected to database [staging] (commit=1000)
+2015/09/21 09:59:32 - stg2_itens 2.0 - Connected to database [staging] (commit=1000)
+2015/09/21 09:59:32 - stg2_itens 3.0 - Connected to database [staging] (commit=1000)
+2015/09/21 09:59:32 - stg2_itens 2 2.0 - Connected to database [staging] (commit=1000)
+2015/09/21 09:59:35 - stg1itensL1.0 - linenr 50000
+2015/09/21 09:59:35 - Calculator.0 - Linenr 50000
+2015/09/21 09:59:35 - Switch / Case.0 - linenr 50000
+2015/09/21 09:59:35 - Add constants 3.0 - Linha Nr : 50000
+2015/09/21 09:59:35 - Sort rows.0 - Linenr 50000
+2015/09/21 09:59:36 - stg1itensL1.0 - linenr 100000
+2015/09/21 09:59:36 - Calculator.0 - Linenr 100000
+2015/09/21 09:59:36 - Switch / Case.0 - linenr 100000
+2015/09/21 09:59:36 - Add constants 3.0 - Linha Nr : 100000
+2015/09/21 09:59:36 - Sort rows.0 - Linenr 100000
+2015/09/21 09:59:37 - stg1itensL1.0 - linenr 150000
+2015/09/21 09:59:38 - Calculator.0 - Linenr 150000
+2015/09/21 09:59:38 - Switch / Case.0 - linenr 150000
+2015/09/21 09:59:38 - Add constants 3.0 - Linha Nr : 150000
+2015/09/21 09:59:38 - Sort rows.0 - Linenr 150000
+2015/09/21 09:59:39 - stg1itensL1.0 - linenr 200000
+2015/09/21 09:59:39 - Calculator.0 - Linenr 200000
+2015/09/21 09:59:39 - Switch / Case.0 - linenr 200000
+2015/09/21 09:59:39 - Add constants 3.0 - Linha Nr : 200000
+2015/09/21 09:59:39 - Sort rows.0 - Linenr 200000
+2015/09/21 09:59:40 - stg1itensL1.0 - linenr 250000
+2015/09/21 09:59:41 - Calculator.0 - Linenr 250000
+2015/09/21 09:59:41 - Switch / Case.0 - linenr 250000
+2015/09/21 09:59:41 - Add constants 3.0 - Linha Nr : 250000
+2015/09/21 09:59:41 - Sort rows.0 - Linenr 250000
+2015/09/21 09:59:42 - stg1itensL1.0 - linenr 300000
+2015/09/21 09:59:42 - Calculator.0 - Linenr 300000
+2015/09/21 09:59:42 - Switch / Case.0 - linenr 300000
+2015/09/21 09:59:42 - Add constants 3.0 - Linha Nr : 300000
+2015/09/21 09:59:42 - Sort rows.0 - Linenr 300000
+2015/09/21 09:59:43 - stg1itensL1.0 - linenr 350000
+2015/09/21 09:59:43 - Calculator.0 - Linenr 350000
+2015/09/21 09:59:44 - Switch / Case.0 - linenr 350000
+2015/09/21 09:59:44 - Add constants 3.0 - Linha Nr : 350000
+2015/09/21 09:59:44 - Sort rows.0 - Linenr 350000
+2015/09/21 09:59:45 - stg1itensL1.0 - linenr 400000
+2015/09/21 09:59:45 - Calculator.0 - Linenr 400000
+2015/09/21 09:59:45 - Switch / Case.0 - linenr 400000
+2015/09/21 09:59:45 - Add constants 3.0 - Linha Nr : 400000
+2015/09/21 09:59:45 - Sort rows.0 - Linenr 400000
+2015/09/21 09:59:46 - stg1itensL1.0 - linenr 450000
+2015/09/21 09:59:46 - Calculator.0 - Linenr 450000
+2015/09/21 09:59:46 - Switch / Case.0 - linenr 450000
+2015/09/21 09:59:46 - Add constants 3.0 - Linha Nr : 450000
+2015/09/21 09:59:46 - Sort rows.0 - Linenr 450000
+2015/09/21 09:59:47 - stg1itensL1.0 - linenr 500000
+2015/09/21 09:59:48 - Calculator.0 - Linenr 500000
+2015/09/21 09:59:48 - Switch / Case.0 - linenr 500000
+2015/09/21 09:59:48 - Add constants 3.0 - Linha Nr : 500000
+2015/09/21 09:59:48 - Sort rows.0 - Linenr 500000
+2015/09/21 09:59:49 - stg1itensL1.0 - linenr 550000
+2015/09/21 09:59:49 - Calculator.0 - Linenr 550000
+2015/09/21 09:59:49 - Switch / Case.0 - linenr 550000
+2015/09/21 09:59:49 - Add constants 3.0 - Linha Nr : 550000
+2015/09/21 09:59:49 - Sort rows.0 - Linenr 550000
+2015/09/21 09:59:50 - stg1itensL1.0 - linenr 600000
+2015/09/21 09:59:50 - Calculator.0 - Linenr 600000
+2015/09/21 09:59:50 - Switch / Case.0 - linenr 600000
+2015/09/21 09:59:50 - Add constants 3.0 - Linha Nr : 600000
+2015/09/21 09:59:50 - Sort rows.0 - Linenr 600000
+2015/09/21 09:59:51 - stg1itensL1.0 - linenr 650000
+2015/09/21 09:59:51 - Calculator.0 - Linenr 650000
+2015/09/21 09:59:51 - Switch / Case.0 - linenr 650000
+2015/09/21 09:59:52 - Add constants 3.0 - Linha Nr : 650000
+2015/09/21 09:59:52 - Sort rows.0 - Linenr 650000
+2015/09/21 09:59:52 - stg1itensL1.0 - linenr 700000
+2015/09/21 09:59:53 - Calculator.0 - Linenr 700000
+2015/09/21 09:59:53 - Switch / Case.0 - linenr 700000
+2015/09/21 09:59:53 - Add constants 3.0 - Linha Nr : 700000
+2015/09/21 09:59:53 - Sort rows.0 - Linenr 700000
+2015/09/21 09:59:54 - stg1itensL1.0 - linenr 750000
+2015/09/21 09:59:54 - Calculator.0 - Linenr 750000
+2015/09/21 09:59:54 - Switch / Case.0 - linenr 750000
+2015/09/21 09:59:54 - Add constants 3.0 - Linha Nr : 750000
+2015/09/21 09:59:55 - Sort rows.0 - Linenr 750000
+2015/09/21 09:59:55 - stg1itensL1.0 - linenr 800000
+2015/09/21 09:59:56 - Calculator.0 - Linenr 800000
+2015/09/21 09:59:56 - Switch / Case.0 - linenr 800000
+2015/09/21 09:59:56 - Add constants 3.0 - Linha Nr : 800000
+2015/09/21 09:59:56 - Sort rows.0 - Linenr 800000
+2015/09/21 09:59:57 - stg1itensL1.0 - linenr 850000
+2015/09/21 09:59:57 - Calculator.0 - Linenr 850000
+2015/09/21 09:59:57 - Switch / Case.0 - linenr 850000
+2015/09/21 09:59:57 - Add constants 3.0 - Linha Nr : 850000
+2015/09/21 09:59:57 - Sort rows.0 - Linenr 850000
+2015/09/21 09:59:58 - stg1itensL1.0 - linenr 900000
+2015/09/21 09:59:58 - Calculator.0 - Linenr 900000
+2015/09/21 09:59:58 - Switch / Case.0 - linenr 900000
+2015/09/21 09:59:59 - Add constants 3.0 - Linha Nr : 900000
+2015/09/21 09:59:59 - Sort rows.0 - Linenr 900000
+2015/09/21 09:59:59 - stg1itensL1.0 - linenr 950000
+2015/09/21 10:00:00 - Calculator.0 - Linenr 950000
+2015/09/21 10:00:00 - Switch / Case.0 - linenr 950000
+2015/09/21 10:00:00 - Add constants 3.0 - Linha Nr : 950000
+2015/09/21 10:00:00 - Sort rows.0 - Linenr 950000
+2015/09/21 10:00:01 - stg1itensL1.0 - linenr 1000000
+2015/09/21 10:00:01 - Calculator.0 - Linenr 1000000
+2015/09/21 10:00:01 - Switch / Case.0 - linenr 1000000
+2015/09/21 10:00:01 - Add constants 3.0 - Linha Nr : 1000000
+2015/09/21 10:00:01 - Sort rows.0 - Linenr 1000000
+2015/09/21 10:00:02 - stg1itensL1.0 - linenr 1050000
+2015/09/21 10:00:02 - Calculator.0 - Linenr 1050000
+2015/09/21 10:00:02 - Switch / Case.0 - linenr 1050000
+2015/09/21 10:00:03 - Add constants 3.0 - Linha Nr : 1050000
+2015/09/21 10:00:03 - Sort rows.0 - Linenr 1050000
+2015/09/21 10:00:04 - stg1itensL1.0 - linenr 1100000
+2015/09/21 10:00:04 - Calculator.0 - Linenr 1100000
+2015/09/21 10:00:04 - Switch / Case.0 - linenr 1100000
+2015/09/21 10:00:04 - Add constants 3.0 - Linha Nr : 1100000
+2015/09/21 10:00:04 - Sort rows.0 - Linenr 1100000
+2015/09/21 10:00:05 - stg1itensL1.0 - linenr 1150000
+2015/09/21 10:00:05 - Calculator.0 - Linenr 1150000
+2015/09/21 10:00:05 - Switch / Case.0 - linenr 1150000
+2015/09/21 10:00:06 - Add constants 3.0 - Linha Nr : 1150000
+2015/09/21 10:00:06 - Sort rows.0 - Linenr 1150000
+2015/09/21 10:00:07 - stg1itensL1.0 - linenr 1200000
+2015/09/21 10:00:07 - stg1itensL1.0 - linenr 1200000
+2015/09/21 10:00:07 - stg1itensL1.0 - Finished reading query, closing connection.
+2015/09/21 10:00:07 - stg1itensL1.0 - Finished processing (I=1200000, O=0, R=0, W=1200000, U=0, E=0)
+2015/09/21 10:00:07 - Calculator.0 - Linenr 1200000
+2015/09/21 10:00:07 - Calculator.0 - Finished processing (I=0, O=0, R=1200000, W=1200000, U=0, E=0)
+2015/09/21 10:00:07 - Switch / Case.0 - linenr 1200000
+2015/09/21 10:00:07 - Switch / Case.0 - Finished processing (I=0, O=0, R=1200000, W=1200000, U=0, E=0)
+2015/09/21 10:00:07 - Add constants 3.0 - Finished processing (I=0, O=0, R=1190507, W=1190507, U=0, E=0)
+2015/09/21 10:00:07 - Add constants 2.0 - Finished processing (I=0, O=0, R=9493, W=9493, U=0, E=0)
+2015/09/21 10:00:07 - Sort rows.0 - Opening 239 tmp-files...
+2015/09/21 10:00:07 - Sort rows 2.0 - Opening 2 tmp-files...
+2015/09/21 10:00:07 - Sort rows 2.0 - Finished processing (I=0, O=0, R=9493, W=9493, U=0, E=0)
+2015/09/21 10:00:08 - Group by 2.0 - Finished processing (I=0, O=0, R=9493, W=6715, U=0, E=0)
+2015/09/21 10:00:10 - stg2_itens 2.0 - Finished processing (I=0, O=6715, R=6715, W=6715, U=0, E=0)
+2015/09/21 10:00:11 - stg2_itens 2 2.0 - Finished processing (I=0, O=6715, R=6715, W=6715, U=0, E=0)
+2015/09/21 10:00:18 - Group by.0 - Linenr 50000
+2015/09/21 10:00:26 - stg2_itens.0 - linenr 50000
+2015/09/21 10:00:27 - stg2_itens 3.0 - linenr 50000
+2015/09/21 10:00:30 - Group by.0 - Linenr 100000
+2015/09/21 10:00:41 - Group by.0 - Linenr 150000
+2015/09/21 10:00:42 - stg2_itens.0 - linenr 100000
+2015/09/21 10:00:43 - stg2_itens 3.0 - linenr 100000
+2015/09/21 10:00:53 - Group by.0 - Linenr 200000
+2015/09/21 10:00:59 - stg2_itens.0 - linenr 150000
+2015/09/21 10:00:59 - stg2_itens 3.0 - linenr 150000
+2015/09/21 10:01:05 - Group by.0 - Linenr 250000
+2015/09/21 10:01:15 - stg2_itens.0 - linenr 200000
+2015/09/21 10:01:16 - stg2_itens 3.0 - linenr 200000
+2015/09/21 10:01:16 - Group by.0 - Linenr 300000
+2015/09/21 10:01:27 - Group by.0 - Linenr 350000
+2015/09/21 10:01:31 - stg2_itens.0 - linenr 250000
+2015/09/21 10:01:32 - stg2_itens 3.0 - linenr 250000
+2015/09/21 10:01:38 - Group by.0 - Linenr 400000
+2015/09/21 10:01:48 - stg2_itens.0 - linenr 300000
+2015/09/21 10:01:49 - stg2_itens 3.0 - linenr 300000
+2015/09/21 10:01:51 - Group by.0 - Linenr 450000
+2015/09/21 10:02:02 - Group by.0 - Linenr 500000
+2015/09/21 10:02:04 - stg2_itens.0 - linenr 350000
+2015/09/21 10:02:05 - stg2_itens 3.0 - linenr 350000
+2015/09/21 10:02:13 - Group by.0 - Linenr 550000
+2015/09/21 10:02:21 - stg2_itens.0 - linenr 400000
+2015/09/21 10:02:21 - stg2_itens 3.0 - linenr 400000
+2015/09/21 10:02:25 - Group by.0 - Linenr 600000
+2015/09/21 10:02:36 - Group by.0 - Linenr 650000
+2015/09/21 10:02:37 - stg2_itens.0 - linenr 450000
+2015/09/21 10:02:37 - stg2_itens 3.0 - linenr 450000
+2015/09/21 10:02:47 - Group by.0 - Linenr 700000
+2015/09/21 10:02:53 - stg2_itens.0 - linenr 500000
+2015/09/21 10:02:54 - stg2_itens 3.0 - linenr 500000
+2015/09/21 10:02:59 - Group by.0 - Linenr 750000
+2015/09/21 10:03:09 - stg2_itens.0 - linenr 550000
+2015/09/21 10:03:10 - stg2_itens 3.0 - linenr 550000
+2015/09/21 10:03:10 - Group by.0 - Linenr 800000
+2015/09/21 10:03:21 - Group by.0 - Linenr 850000
+2015/09/21 10:03:25 - stg2_itens.0 - linenr 600000
+2015/09/21 10:03:26 - stg2_itens 3.0 - linenr 600000
+2015/09/21 10:03:32 - Group by.0 - Linenr 900000
+2015/09/21 10:03:41 - stg2_itens.0 - linenr 650000
+2015/09/21 10:03:42 - stg2_itens 3.0 - linenr 650000
+2015/09/21 10:03:44 - Group by.0 - Linenr 950000
+2015/09/21 10:03:55 - Group by.0 - Linenr 1000000
+2015/09/21 10:03:58 - stg2_itens.0 - linenr 700000
+2015/09/21 10:03:58 - stg2_itens 3.0 - linenr 700000
+2015/09/21 10:04:07 - Group by.0 - Linenr 1050000
+2015/09/21 10:04:14 - stg2_itens.0 - linenr 750000
+2015/09/21 10:04:14 - stg2_itens 3.0 - linenr 750000
+2015/09/21 10:04:19 - Group by.0 - Linenr 1100000
+2015/09/21 10:04:30 - stg2_itens.0 - linenr 800000
+2015/09/21 10:04:31 - stg2_itens 3.0 - linenr 800000
+2015/09/21 10:04:31 - Group by.0 - Linenr 1150000
+2015/09/21 10:04:38 - Sort rows.0 - Finished processing (I=0, O=0, R=1190507, W=1190507, U=0, E=0)
+2015/09/21 10:04:41 - Group by.0 - Finished processing (I=0, O=0, R=1190507, W=842847, U=0, E=0)
+2015/09/21 10:04:44 - stg2_itens.0 - Finished processing (I=0, O=842847, R=842847, W=842847, U=0, E=0)
+2015/09/21 10:04:44 - stg2_itens 3.0 - Finished processing (I=0, O=842847, R=842847, W=842847, U=0, E=0)
+2015/09/21 10:04:44 - stg2itens - Starting entry [Success]
+2015/09/21 10:04:44 - stg2itens - Finished job entry [Success] (result=[true])
+2015/09/21 10:04:44 - stg2itens - Finished job entry [stg2L1] (result=[true])
+2015/09/21 10:04:44 - staging2 - Starting entry [Success]
+2015/09/21 10:04:44 - staging2 - Finished job entry [Success] (result=[true])
+2015/09/21 10:04:44 - staging2 - Finished job entry [stg2itens] (result=[true])
+2015/09/21 10:04:44 - staging2 - Finished job entry [stg2_dimensoes] (result=[true])

@@ -1,0 +1,28 @@
+2015/10/08 16:11:14 - staging2 - Starting entry [stg2_dimensoes]
+2015/10/08 16:11:14 - stg2_dimensoes - Starting entry [stg2_dimensoes_itens]
+2015/10/08 16:11:14 - stg2_dimensoes_itens - Starting entry [stg2_categorias]
+2015/10/08 16:11:14 - stg2_categorias - Loading transformation from XML file [file:///Users/ykmfb/Dropbox/ETL/stg2_categorias.ktr]
+2015/10/08 16:11:14 - stg2_categorias - Expedindo in?cio para transforma??o [stg2_categorias]
+2015/10/08 16:11:14 - Table output.0 - Connected to database [staging] (commit=1000)
+2015/10/08 16:11:14 - leitura grupos.0 - Finished reading query, closing connection.
+2015/10/08 16:11:14 - leitura grupos.0 - Finished processing (I=55, O=0, R=0, W=55, U=0, E=0)
+2015/10/08 16:11:14 - Table output.0 - Finished processing (I=0, O=55, R=55, W=55, U=0, E=0)
+2015/10/08 16:11:14 - stg2_dimensoes_itens - Starting entry [stg2_dimensoes_itens_categorizar]
+2015/10/08 16:11:14 - stg2_dimensoes_itens_categorizar - Loading transformation from XML file [file:///Users/ykmfb/Dropbox/ETL/stg2_dimensoes_itens_categorizar.ktr]
+2015/10/08 16:11:15 - stg2_dimensoes_itens_categorizar - Expedindo in?cio para transforma??o [stg2_dimensoes_itens_categorizar]
+2015/10/08 16:11:15 - carregamento stg2_d_itens.0 - Connected to database [staging] (commit=1000)
+2015/10/08 16:11:15 - leitura stg1_itens_categorizados.0 - Finished reading query, closing connection.
+2015/10/08 16:11:15 - leitura stg1_itens_categorizados.0 - Finished processing (I=10000, O=0, R=0, W=10000, U=0, E=0)
+2015/10/08 16:11:16 - correcao sem grupo.0 - Finished processing (I=0, O=0, R=10000, W=10000, U=0, E=0)
+2015/10/08 16:11:19 - convert SKU bigint.0 - Finished processing (I=0, O=0, R=10000, W=10000, U=0, E=0)
+2015/10/08 16:11:48 - carregamento stg2_d_itens.0 - Finished processing (I=0, O=10000, R=10000, W=10000, U=0, E=0)
+2015/10/08 16:11:48 - stg2_dimensoes_itens - Starting entry [Success]
+2015/10/08 16:11:48 - stg2_dimensoes_itens - Finished job entry [Success] (result=[true])
+2015/10/08 16:11:48 - stg2_dimensoes_itens - Finished job entry [stg2_dimensoes_itens_categorizar] (result=[true])
+2015/10/08 16:11:48 - stg2_dimensoes_itens - Finished job entry [stg2_categorias] (result=[true])
+2015/10/08 16:11:48 - stg2_dimensoes - Starting entry [Success]
+2015/10/08 16:11:48 - stg2_dimensoes - Finished job entry [Success] (result=[true])
+2015/10/08 16:11:48 - stg2_dimensoes - Finished job entry [stg2_dimensoes_itens] (result=[true])
+2015/10/08 16:11:48 - stg2_dimensoes - Starting entry [stg2_dimensoes_transacoes]
+2015/10/08 16:11:48 - stg2_dimensoes_transacoes - Loading transformation from XML file [file:///Users/ykmfb/Dropbox/ETL/stg2_dimensoes_transacoes2.ktr]
+2015/10/08 16:11:48 - stg2_dimensoes_transacoes2 - Expedindo in?cio para transforma??o [stg2_dimensoes_transacoes2]

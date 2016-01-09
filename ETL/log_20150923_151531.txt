@@ -1,0 +1,52 @@
+2015/09/23 15:15:31 - staging2 - Starting entry [stg2_dimensoes]
+2015/09/23 15:15:31 - stg2_dimensoes - Starting entry [stg2_dimensoes_itens]
+2015/09/23 15:15:31 - stg2_dimensoes_itens - Starting entry [stg2_categorias]
+2015/09/23 15:15:31 - stg2_categorias - Loading transformation from XML file [file:///C:/Users/ytalo/Dropbox/Nova pasta/Dropbox/ETL/stg2_categorias.ktr]
+2015/09/23 15:15:31 - stg2_categorias - Expedindo in?cio para transforma??o [stg2_categorias]
+2015/09/23 15:15:31 - Table output.0 - Connected to database [staging] (commit=1000)
+2015/09/23 15:15:31 - leitura grupos.0 - Finished reading query, closing connection.
+2015/09/23 15:15:31 - leitura grupos.0 - Finished processing (I=369, O=0, R=0, W=369, U=0, E=0)
+2015/09/23 15:15:31 - Table output.0 - Finished processing (I=0, O=369, R=369, W=369, U=0, E=0)
+2015/09/23 15:15:31 - stg2_dimensoes_itens - Starting entry [stg2_dimensoes_itens_categorizar]
+2015/09/23 15:15:31 - stg2_dimensoes_itens_categorizar - Loading transformation from XML file [file:///C:/Users/ytalo/Dropbox/Nova pasta/Dropbox/ETL/stg2_dimensoes_itens_categorizar.ktr]
+2015/09/23 15:15:31 - stg2_dimensoes_itens_categorizar - Expedindo in?cio para transforma??o [stg2_dimensoes_itens_categorizar]
+2015/09/23 15:15:31 - carregamento stg2_d_itens.0 - Connected to database [staging] (commit=1000)
+2015/09/23 15:15:32 - leitura stg1_itens_categorizados.0 - Finished reading query, closing connection.
+2015/09/23 15:15:32 - leitura stg1_itens_categorizados.0 - Finished processing (I=15480, O=0, R=0, W=15480, U=0, E=0)
+2015/09/23 15:15:32 - correcao sem grupo.0 - Finished processing (I=0, O=0, R=15480, W=15480, U=0, E=0)
+2015/09/23 15:15:33 - convert SKU bigint.0 - Finished processing (I=0, O=0, R=15480, W=15480, U=0, E=0)
+2015/09/23 15:15:34 - carregamento stg2_d_itens.0 - Finished processing (I=0, O=15480, R=15480, W=15480, U=0, E=0)
+2015/09/23 15:15:34 - stg2_dimensoes_itens - Starting entry [Success]
+2015/09/23 15:15:34 - stg2_dimensoes_itens - Finished job entry [Success] (result=[true])
+2015/09/23 15:15:34 - stg2_dimensoes_itens - Finished job entry [stg2_dimensoes_itens_categorizar] (result=[true])
+2015/09/23 15:15:34 - stg2_dimensoes_itens - Finished job entry [stg2_categorias] (result=[true])
+2015/09/23 15:15:34 - stg2_dimensoes - Starting entry [Success]
+2015/09/23 15:15:34 - stg2_dimensoes - Finished job entry [Success] (result=[true])
+2015/09/23 15:15:34 - stg2_dimensoes - Finished job entry [stg2_dimensoes_itens] (result=[true])
+2015/09/23 15:15:34 - staging2 - Starting entry [stg2itens]
+2015/09/23 15:15:34 - stg2itens - Starting entry [stg2L1]
+2015/09/23 15:15:34 - stg2L1 - Loading transformation from XML file [file:///C:/Users/ytalo/Dropbox/Nova pasta/Dropbox/ETL/stg2L1.ktr]
+2015/09/23 15:15:34 - stg2L1 - Expedindo in?cio para transforma??o [stg2L1]
+2015/09/23 15:15:35 - Text file output.0 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : Couldn't open file /Users/ykmfb/Desktop/ETL/file
+2015/09/23 15:15:35 - Text file output.0 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2015/09/23 15:15:35 - Text file output.0 - Error opening new file : org.apache.commons.vfs.FileSystemException: Could not create folder "file:///C:/Users/ykmfb".
+2015/09/23 15:15:35 - Text file output.0 - 
+2015/09/23 15:15:35 - Text file output.0 - 	at org.pentaho.di.trans.steps.textfileoutput.TextFileOutput.openNewFile(TextFileOutput.java:654)
+2015/09/23 15:15:35 - Text file output.0 - 	at org.pentaho.di.trans.steps.textfileoutput.TextFileOutput.init(TextFileOutput.java:753)
+2015/09/23 15:15:35 - Text file output.0 - 	at org.pentaho.di.trans.step.StepInitThread.run(StepInitThread.java:69)
+2015/09/23 15:15:35 - Text file output.0 - 	at java.lang.Thread.run(Unknown Source)
+2015/09/23 15:15:35 - stg2_itens.0 - Connected to database [staging] (commit=1000)
+2015/09/23 15:15:35 - stg2_itens 2 2.0 - Connected to database [staging] (commit=1000)
+2015/09/23 15:15:35 - stg2_itens erro.0 - Connected to database [staging] (commit=1000)
+2015/09/23 15:15:35 - stg2_itens 2.0 - Connected to database [staging] (commit=1000)
+2015/09/23 15:15:35 - stg2_itens 3.0 - Connected to database [staging] (commit=1000)
+2015/09/23 15:15:35 - stg1itensL1.0 - Finished reading query, closing connection.
+2015/09/23 15:15:35 - stg2L1 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : Erros detectados!
+2015/09/23 15:15:35 - Text file output.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=1)
+2015/09/23 15:15:35 - stg2L1 - Transforma??o detectada 
+2015/09/23 15:15:35 - stg2L1 - Transforma??o est? matando os outros steps!
+2015/09/23 15:15:36 - stg1itensL1.0 - Finished processing (I=2, O=0, R=0, W=0, U=0, E=0)
+2015/09/23 15:15:36 - stg2L1 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : Erros detectados!
+2015/09/23 15:15:36 - stg2itens - Finished job entry [stg2L1] (result=[false])
+2015/09/23 15:15:36 - staging2 - Finished job entry [stg2itens] (result=[false])
+2015/09/23 15:15:36 - staging2 - Finished job entry [stg2_dimensoes] (result=[false])

@@ -1,0 +1,2 @@
+id_loja;CCF;COO;SKU;data_final;qtd_final;valor_unit_final;valor_total_final
+1;42482;48042;159;2011/06/03 16:40:51.000;335;1135,6;1135,6

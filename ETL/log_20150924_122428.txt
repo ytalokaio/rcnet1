@@ -1,0 +1,1947 @@
+2015/09/24 12:24:28 - staging2 - Starting entry [stg2_dimensoes]
+2015/09/24 12:24:28 - stg2_dimensoes - Starting entry [stg2_dimensoes_itens]
+2015/09/24 12:24:28 - stg2_dimensoes_itens - Starting entry [stg2_categorias]
+2015/09/24 12:24:28 - stg2_categorias - Loading transformation from XML file [file:///Users/ykmfb/Dropbox/ETL/stg2_categorias.ktr]
+2015/09/24 12:24:28 - stg2_categorias - Expedindo in?cio para transforma??o [stg2_categorias]
+2015/09/24 12:24:28 - Table output.0 - Connected to database [staging] (commit=1000)
+2015/09/24 12:24:28 - leitura grupos.0 - Finished reading query, closing connection.
+2015/09/24 12:24:28 - leitura grupos.0 - Finished processing (I=369, O=0, R=0, W=369, U=0, E=0)
+2015/09/24 12:24:29 - Table output.0 - Finished processing (I=0, O=369, R=369, W=369, U=0, E=0)
+2015/09/24 12:24:29 - stg2_dimensoes_itens - Starting entry [stg2_dimensoes_itens_categorizar]
+2015/09/24 12:24:29 - stg2_dimensoes_itens_categorizar - Loading transformation from XML file [file:///Users/ykmfb/Dropbox/ETL/stg2_dimensoes_itens_categorizar.ktr]
+2015/09/24 12:24:29 - stg2_dimensoes_itens_categorizar - Expedindo in?cio para transforma??o [stg2_dimensoes_itens_categorizar]
+2015/09/24 12:24:29 - carregamento stg2_d_itens.0 - Connected to database [staging] (commit=1000)
+2015/09/24 12:24:29 - leitura stg1_itens_categorizados.0 - Finished reading query, closing connection.
+2015/09/24 12:24:29 - leitura stg1_itens_categorizados.0 - Finished processing (I=15464, O=0, R=0, W=15464, U=0, E=0)
+2015/09/24 12:24:29 - correcao sem grupo.0 - Finished processing (I=0, O=0, R=15464, W=15464, U=0, E=0)
+2015/09/24 12:24:31 - convert SKU bigint.0 - Finished processing (I=0, O=0, R=15464, W=15464, U=0, E=0)
+2015/09/24 12:24:33 - carregamento stg2_d_itens.0 - Finished processing (I=0, O=15464, R=15464, W=15464, U=0, E=0)
+2015/09/24 12:24:33 - stg2_dimensoes_itens - Starting entry [Success]
+2015/09/24 12:24:33 - stg2_dimensoes_itens - Finished job entry [Success] (result=[true])
+2015/09/24 12:24:33 - stg2_dimensoes_itens - Finished job entry [stg2_dimensoes_itens_categorizar] (result=[true])
+2015/09/24 12:24:33 - stg2_dimensoes_itens - Finished job entry [stg2_categorias] (result=[true])
+2015/09/24 12:24:33 - stg2_dimensoes - Starting entry [Success]
+2015/09/24 12:24:33 - stg2_dimensoes - Finished job entry [Success] (result=[true])
+2015/09/24 12:24:33 - stg2_dimensoes - Finished job entry [stg2_dimensoes_itens] (result=[true])
+2015/09/24 12:24:33 - staging2 - Starting entry [stg2itens]
+2015/09/24 12:24:33 - stg2itens - Starting entry [stg2L1]
+2015/09/24 12:24:33 - stg2L1 - Loading transformation from XML file [file:///Users/ykmfb/Dropbox/ETL/stg2L1.ktr]
+2015/09/24 12:24:34 - stg2L1 - Expedindo in?cio para transforma??o [stg2L1]
+2015/09/24 12:24:34 - stg2_itens.0 - Connected to database [staging] (commit=1000)
+2015/09/24 12:24:34 - stg2_itens erro.0 - Connected to database [staging] (commit=1000)
+2015/09/24 12:24:34 - stg2_itens 2.0 - Connected to database [staging] (commit=1000)
+2015/09/24 12:24:34 - stg2_itens 3.0 - Connected to database [staging] (commit=1000)
+2015/09/24 12:24:34 - stg2_itens 2 2.0 - Connected to database [staging] (commit=1000)
+2015/09/24 12:24:36 - stg1itensL1.0 - linenr 50000
+2015/09/24 12:24:36 - Calculator.0 - Linenr 50000
+2015/09/24 12:24:36 - Switch / Case.0 - linenr 50000
+2015/09/24 12:24:36 - Add constants 3.0 - Linha Nr : 50000
+2015/09/24 12:24:36 - Sort rows.0 - Linenr 50000
+2015/09/24 12:24:38 - stg1itensL1.0 - linenr 100000
+2015/09/24 12:24:38 - Calculator.0 - Linenr 100000
+2015/09/24 12:24:38 - Switch / Case.0 - linenr 100000
+2015/09/24 12:24:38 - Add constants 3.0 - Linha Nr : 100000
+2015/09/24 12:24:38 - Sort rows.0 - Linenr 100000
+2015/09/24 12:24:39 - stg1itensL1.0 - linenr 150000
+2015/09/24 12:24:39 - Calculator.0 - Linenr 150000
+2015/09/24 12:24:39 - Switch / Case.0 - linenr 150000
+2015/09/24 12:24:39 - Add constants 3.0 - Linha Nr : 150000
+2015/09/24 12:24:39 - Sort rows.0 - Linenr 150000
+2015/09/24 12:24:40 - stg1itensL1.0 - linenr 200000
+2015/09/24 12:24:41 - Calculator.0 - Linenr 200000
+2015/09/24 12:24:41 - Switch / Case.0 - linenr 200000
+2015/09/24 12:24:41 - Add constants 3.0 - Linha Nr : 200000
+2015/09/24 12:24:41 - Sort rows.0 - Linenr 200000
+2015/09/24 12:24:42 - stg1itensL1.0 - linenr 250000
+2015/09/24 12:24:42 - Calculator.0 - Linenr 250000
+2015/09/24 12:24:42 - Switch / Case.0 - linenr 250000
+2015/09/24 12:24:42 - Add constants 3.0 - Linha Nr : 250000
+2015/09/24 12:24:42 - Sort rows.0 - Linenr 250000
+2015/09/24 12:24:43 - stg1itensL1.0 - linenr 300000
+2015/09/24 12:24:43 - Calculator.0 - Linenr 300000
+2015/09/24 12:24:43 - Switch / Case.0 - linenr 300000
+2015/09/24 12:24:44 - Add constants 3.0 - Linha Nr : 300000
+2015/09/24 12:24:44 - Sort rows.0 - Linenr 300000
+2015/09/24 12:24:44 - stg1itensL1.0 - linenr 350000
+2015/09/24 12:24:45 - Calculator.0 - Linenr 350000
+2015/09/24 12:24:45 - Switch / Case.0 - linenr 350000
+2015/09/24 12:24:45 - Add constants 3.0 - Linha Nr : 350000
+2015/09/24 12:24:45 - Sort rows.0 - Linenr 350000
+2015/09/24 12:24:46 - stg1itensL1.0 - linenr 400000
+2015/09/24 12:24:47 - Calculator.0 - Linenr 400000
+2015/09/24 12:24:47 - Switch / Case.0 - linenr 400000
+2015/09/24 12:24:47 - Add constants 3.0 - Linha Nr : 400000
+2015/09/24 12:24:47 - Sort rows.0 - Linenr 400000
+2015/09/24 12:24:48 - stg1itensL1.0 - linenr 450000
+2015/09/24 12:24:48 - Calculator.0 - Linenr 450000
+2015/09/24 12:24:48 - Switch / Case.0 - linenr 450000
+2015/09/24 12:24:48 - Add constants 3.0 - Linha Nr : 450000
+2015/09/24 12:24:48 - Sort rows.0 - Linenr 450000
+2015/09/24 12:24:49 - stg1itensL1.0 - linenr 500000
+2015/09/24 12:24:49 - Calculator.0 - Linenr 500000
+2015/09/24 12:24:49 - Switch / Case.0 - linenr 500000
+2015/09/24 12:24:49 - Add constants 3.0 - Linha Nr : 500000
+2015/09/24 12:24:49 - Sort rows.0 - Linenr 500000
+2015/09/24 12:24:50 - stg1itensL1.0 - linenr 550000
+2015/09/24 12:24:50 - Calculator.0 - Linenr 550000
+2015/09/24 12:24:50 - Switch / Case.0 - linenr 550000
+2015/09/24 12:24:50 - Add constants 3.0 - Linha Nr : 550000
+2015/09/24 12:24:51 - Sort rows.0 - Linenr 550000
+2015/09/24 12:24:51 - stg1itensL1.0 - linenr 600000
+2015/09/24 12:24:52 - Calculator.0 - Linenr 600000
+2015/09/24 12:24:52 - Switch / Case.0 - linenr 600000
+2015/09/24 12:24:52 - Add constants 3.0 - Linha Nr : 600000
+2015/09/24 12:24:52 - Sort rows.0 - Linenr 600000
+2015/09/24 12:24:53 - stg1itensL1.0 - linenr 650000
+2015/09/24 12:24:53 - Calculator.0 - Linenr 650000
+2015/09/24 12:24:53 - Switch / Case.0 - linenr 650000
+2015/09/24 12:24:53 - Add constants 3.0 - Linha Nr : 650000
+2015/09/24 12:24:53 - Sort rows.0 - Linenr 650000
+2015/09/24 12:24:54 - stg1itensL1.0 - linenr 700000
+2015/09/24 12:24:54 - Calculator.0 - Linenr 700000
+2015/09/24 12:24:54 - Switch / Case.0 - linenr 700000
+2015/09/24 12:24:54 - Add constants 3.0 - Linha Nr : 700000
+2015/09/24 12:24:54 - Sort rows.0 - Linenr 700000
+2015/09/24 12:24:55 - stg1itensL1.0 - linenr 750000
+2015/09/24 12:24:55 - Calculator.0 - Linenr 750000
+2015/09/24 12:24:55 - Switch / Case.0 - linenr 750000
+2015/09/24 12:24:56 - Add constants 3.0 - Linha Nr : 750000
+2015/09/24 12:24:56 - Sort rows.0 - Linenr 750000
+2015/09/24 12:24:56 - stg1itensL1.0 - linenr 800000
+2015/09/24 12:24:57 - Calculator.0 - Linenr 800000
+2015/09/24 12:24:57 - Switch / Case.0 - linenr 800000
+2015/09/24 12:24:57 - Add constants 3.0 - Linha Nr : 800000
+2015/09/24 12:24:57 - Sort rows.0 - Linenr 800000
+2015/09/24 12:24:58 - stg1itensL1.0 - linenr 850000
+2015/09/24 12:24:58 - Calculator.0 - Linenr 850000
+2015/09/24 12:24:58 - Switch / Case.0 - linenr 850000
+2015/09/24 12:24:58 - Add constants 3.0 - Linha Nr : 850000
+2015/09/24 12:24:58 - Sort rows.0 - Linenr 850000
+2015/09/24 12:24:59 - stg1itensL1.0 - linenr 900000
+2015/09/24 12:24:59 - Calculator.0 - Linenr 900000
+2015/09/24 12:24:59 - Switch / Case.0 - linenr 900000
+2015/09/24 12:25:00 - Add constants 3.0 - Linha Nr : 900000
+2015/09/24 12:25:00 - Sort rows.0 - Linenr 900000
+2015/09/24 12:25:00 - stg1itensL1.0 - linenr 950000
+2015/09/24 12:25:01 - Calculator.0 - Linenr 950000
+2015/09/24 12:25:01 - Switch / Case.0 - linenr 950000
+2015/09/24 12:25:01 - Add constants 3.0 - Linha Nr : 950000
+2015/09/24 12:25:01 - Sort rows.0 - Linenr 950000
+2015/09/24 12:25:02 - stg1itensL1.0 - linenr 1000000
+2015/09/24 12:25:02 - Calculator.0 - Linenr 1000000
+2015/09/24 12:25:02 - Switch / Case.0 - linenr 1000000
+2015/09/24 12:25:02 - Add constants 3.0 - Linha Nr : 1000000
+2015/09/24 12:25:02 - Sort rows.0 - Linenr 1000000
+2015/09/24 12:25:03 - stg1itensL1.0 - linenr 1050000
+2015/09/24 12:25:03 - Calculator.0 - Linenr 1050000
+2015/09/24 12:25:03 - Switch / Case.0 - linenr 1050000
+2015/09/24 12:25:04 - Add constants 3.0 - Linha Nr : 1050000
+2015/09/24 12:25:04 - Sort rows.0 - Linenr 1050000
+2015/09/24 12:25:04 - stg1itensL1.0 - linenr 1100000
+2015/09/24 12:25:05 - Calculator.0 - Linenr 1100000
+2015/09/24 12:25:05 - Switch / Case.0 - linenr 1100000
+2015/09/24 12:25:05 - Add constants 3.0 - Linha Nr : 1100000
+2015/09/24 12:25:05 - Sort rows.0 - Linenr 1100000
+2015/09/24 12:25:06 - stg1itensL1.0 - linenr 1150000
+2015/09/24 12:25:06 - Calculator.0 - Linenr 1150000
+2015/09/24 12:25:06 - Switch / Case.0 - linenr 1150000
+2015/09/24 12:25:06 - Add constants 3.0 - Linha Nr : 1150000
+2015/09/24 12:25:06 - Sort rows.0 - Linenr 1150000
+2015/09/24 12:25:07 - stg1itensL1.0 - linenr 1200000
+2015/09/24 12:25:07 - Calculator.0 - Linenr 1200000
+2015/09/24 12:25:07 - Switch / Case.0 - linenr 1200000
+2015/09/24 12:25:07 - Add constants 3.0 - Linha Nr : 1200000
+2015/09/24 12:25:08 - Sort rows.0 - Linenr 1200000
+2015/09/24 12:25:08 - stg1itensL1.0 - linenr 1250000
+2015/09/24 12:25:08 - Calculator.0 - Linenr 1250000
+2015/09/24 12:25:08 - Switch / Case.0 - linenr 1250000
+2015/09/24 12:25:09 - Add constants 3.0 - Linha Nr : 1250000
+2015/09/24 12:25:09 - Sort rows.0 - Linenr 1250000
+2015/09/24 12:25:09 - stg1itensL1.0 - linenr 1300000
+2015/09/24 12:25:10 - Calculator.0 - Linenr 1300000
+2015/09/24 12:25:10 - Switch / Case.0 - linenr 1300000
+2015/09/24 12:25:10 - Add constants 3.0 - Linha Nr : 1300000
+2015/09/24 12:25:10 - Sort rows.0 - Linenr 1300000
+2015/09/24 12:25:11 - stg1itensL1.0 - linenr 1350000
+2015/09/24 12:25:11 - Calculator.0 - Linenr 1350000
+2015/09/24 12:25:11 - Switch / Case.0 - linenr 1350000
+2015/09/24 12:25:11 - Add constants 3.0 - Linha Nr : 1350000
+2015/09/24 12:25:11 - Sort rows.0 - Linenr 1350000
+2015/09/24 12:25:12 - stg1itensL1.0 - linenr 1400000
+2015/09/24 12:25:12 - Calculator.0 - Linenr 1400000
+2015/09/24 12:25:12 - Switch / Case.0 - linenr 1400000
+2015/09/24 12:25:13 - Add constants 3.0 - Linha Nr : 1400000
+2015/09/24 12:25:13 - Sort rows.0 - Linenr 1400000
+2015/09/24 12:25:13 - stg1itensL1.0 - linenr 1450000
+2015/09/24 12:25:14 - Calculator.0 - Linenr 1450000
+2015/09/24 12:25:14 - Switch / Case.0 - linenr 1450000
+2015/09/24 12:25:14 - Add constants 3.0 - Linha Nr : 1450000
+2015/09/24 12:25:14 - Sort rows.0 - Linenr 1450000
+2015/09/24 12:25:15 - stg1itensL1.0 - linenr 1500000
+2015/09/24 12:25:15 - Calculator.0 - Linenr 1500000
+2015/09/24 12:25:15 - Switch / Case.0 - linenr 1500000
+2015/09/24 12:25:15 - Add constants 3.0 - Linha Nr : 1500000
+2015/09/24 12:25:15 - Sort rows.0 - Linenr 1500000
+2015/09/24 12:25:16 - stg1itensL1.0 - linenr 1550000
+2015/09/24 12:25:16 - Calculator.0 - Linenr 1550000
+2015/09/24 12:25:16 - Switch / Case.0 - linenr 1550000
+2015/09/24 12:25:17 - Add constants 3.0 - Linha Nr : 1550000
+2015/09/24 12:25:17 - Sort rows.0 - Linenr 1550000
+2015/09/24 12:25:17 - stg1itensL1.0 - linenr 1600000
+2015/09/24 12:25:18 - Calculator.0 - Linenr 1600000
+2015/09/24 12:25:18 - Switch / Case.0 - linenr 1600000
+2015/09/24 12:25:18 - Add constants 3.0 - Linha Nr : 1600000
+2015/09/24 12:25:18 - Sort rows.0 - Linenr 1600000
+2015/09/24 12:25:19 - stg1itensL1.0 - linenr 1650000
+2015/09/24 12:25:19 - Calculator.0 - Linenr 1650000
+2015/09/24 12:25:19 - Switch / Case.0 - linenr 1650000
+2015/09/24 12:25:19 - Add constants 3.0 - Linha Nr : 1650000
+2015/09/24 12:25:19 - Sort rows.0 - Linenr 1650000
+2015/09/24 12:25:20 - stg1itensL1.0 - linenr 1700000
+2015/09/24 12:25:20 - Calculator.0 - Linenr 1700000
+2015/09/24 12:25:20 - Switch / Case.0 - linenr 1700000
+2015/09/24 12:25:20 - Add constants 3.0 - Linha Nr : 1700000
+2015/09/24 12:25:20 - Sort rows.0 - Linenr 1700000
+2015/09/24 12:25:21 - stg1itensL1.0 - linenr 1750000
+2015/09/24 12:25:21 - Calculator.0 - Linenr 1750000
+2015/09/24 12:25:21 - Switch / Case.0 - linenr 1750000
+2015/09/24 12:25:22 - Add constants 3.0 - Linha Nr : 1750000
+2015/09/24 12:25:22 - Sort rows.0 - Linenr 1750000
+2015/09/24 12:25:22 - stg1itensL1.0 - linenr 1800000
+2015/09/24 12:25:23 - Calculator.0 - Linenr 1800000
+2015/09/24 12:25:23 - Switch / Case.0 - linenr 1800000
+2015/09/24 12:25:23 - Add constants 3.0 - Linha Nr : 1800000
+2015/09/24 12:25:23 - Sort rows.0 - Linenr 1800000
+2015/09/24 12:25:24 - stg1itensL1.0 - linenr 1850000
+2015/09/24 12:25:24 - Calculator.0 - Linenr 1850000
+2015/09/24 12:25:24 - Switch / Case.0 - linenr 1850000
+2015/09/24 12:25:24 - Add constants 3.0 - Linha Nr : 1850000
+2015/09/24 12:25:24 - Sort rows.0 - Linenr 1850000
+2015/09/24 12:25:25 - stg1itensL1.0 - linenr 1900000
+2015/09/24 12:25:25 - Calculator.0 - Linenr 1900000
+2015/09/24 12:25:25 - Switch / Case.0 - linenr 1900000
+2015/09/24 12:25:26 - Add constants 3.0 - Linha Nr : 1900000
+2015/09/24 12:25:26 - Sort rows.0 - Linenr 1900000
+2015/09/24 12:25:26 - stg1itensL1.0 - linenr 1950000
+2015/09/24 12:25:27 - Calculator.0 - Linenr 1950000
+2015/09/24 12:25:27 - Switch / Case.0 - linenr 1950000
+2015/09/24 12:25:27 - Add constants 3.0 - Linha Nr : 1950000
+2015/09/24 12:25:27 - Sort rows.0 - Linenr 1950000
+2015/09/24 12:25:28 - stg1itensL1.0 - linenr 2000000
+2015/09/24 12:25:28 - Calculator.0 - Linenr 2000000
+2015/09/24 12:25:28 - Switch / Case.0 - linenr 2000000
+2015/09/24 12:25:28 - Add constants 3.0 - Linha Nr : 2000000
+2015/09/24 12:25:28 - Sort rows.0 - Linenr 2000000
+2015/09/24 12:25:29 - stg1itensL1.0 - linenr 2050000
+2015/09/24 12:25:29 - Calculator.0 - Linenr 2050000
+2015/09/24 12:25:29 - Switch / Case.0 - linenr 2050000
+2015/09/24 12:25:30 - Add constants 3.0 - Linha Nr : 2050000
+2015/09/24 12:25:30 - Sort rows.0 - Linenr 2050000
+2015/09/24 12:25:30 - stg1itensL1.0 - linenr 2100000
+2015/09/24 12:25:31 - Calculator.0 - Linenr 2100000
+2015/09/24 12:25:31 - Switch / Case.0 - linenr 2100000
+2015/09/24 12:25:31 - Add constants 3.0 - Linha Nr : 2100000
+2015/09/24 12:25:31 - Sort rows.0 - Linenr 2100000
+2015/09/24 12:25:32 - stg1itensL1.0 - linenr 2150000
+2015/09/24 12:25:32 - Calculator.0 - Linenr 2150000
+2015/09/24 12:25:32 - Switch / Case.0 - linenr 2150000
+2015/09/24 12:25:32 - Add constants 3.0 - Linha Nr : 2150000
+2015/09/24 12:25:32 - Sort rows.0 - Linenr 2150000
+2015/09/24 12:25:33 - stg1itensL1.0 - linenr 2200000
+2015/09/24 12:25:33 - Calculator.0 - Linenr 2200000
+2015/09/24 12:25:33 - Switch / Case.0 - linenr 2200000
+2015/09/24 12:25:34 - Add constants 3.0 - Linha Nr : 2200000
+2015/09/24 12:25:34 - Sort rows.0 - Linenr 2200000
+2015/09/24 12:25:34 - stg1itensL1.0 - linenr 2250000
+2015/09/24 12:25:35 - Calculator.0 - Linenr 2250000
+2015/09/24 12:25:35 - Switch / Case.0 - linenr 2250000
+2015/09/24 12:25:35 - Add constants 3.0 - Linha Nr : 2250000
+2015/09/24 12:25:35 - Sort rows.0 - Linenr 2250000
+2015/09/24 12:25:36 - stg1itensL1.0 - linenr 2300000
+2015/09/24 12:25:36 - Calculator.0 - Linenr 2300000
+2015/09/24 12:25:36 - Switch / Case.0 - linenr 2300000
+2015/09/24 12:25:36 - Add constants 3.0 - Linha Nr : 2300000
+2015/09/24 12:25:36 - Sort rows.0 - Linenr 2300000
+2015/09/24 12:25:37 - stg1itensL1.0 - linenr 2350000
+2015/09/24 12:25:37 - Calculator.0 - Linenr 2350000
+2015/09/24 12:25:37 - Switch / Case.0 - linenr 2350000
+2015/09/24 12:25:38 - Add constants 3.0 - Linha Nr : 2350000
+2015/09/24 12:25:38 - Sort rows.0 - Linenr 2350000
+2015/09/24 12:25:38 - stg1itensL1.0 - linenr 2400000
+2015/09/24 12:25:38 - Calculator.0 - Linenr 2400000
+2015/09/24 12:25:38 - Switch / Case.0 - linenr 2400000
+2015/09/24 12:25:39 - Add constants 3.0 - Linha Nr : 2400000
+2015/09/24 12:25:39 - Sort rows.0 - Linenr 2400000
+2015/09/24 12:25:40 - stg1itensL1.0 - linenr 2450000
+2015/09/24 12:25:40 - Calculator.0 - Linenr 2450000
+2015/09/24 12:25:40 - Switch / Case.0 - linenr 2450000
+2015/09/24 12:25:40 - Add constants 3.0 - Linha Nr : 2450000
+2015/09/24 12:25:40 - Sort rows.0 - Linenr 2450000
+2015/09/24 12:25:41 - stg1itensL1.0 - linenr 2500000
+2015/09/24 12:25:41 - Calculator.0 - Linenr 2500000
+2015/09/24 12:25:41 - Switch / Case.0 - linenr 2500000
+2015/09/24 12:25:42 - Add constants 3.0 - Linha Nr : 2500000
+2015/09/24 12:25:42 - Sort rows.0 - Linenr 2500000
+2015/09/24 12:25:42 - stg1itensL1.0 - linenr 2550000
+2015/09/24 12:25:42 - Calculator.0 - Linenr 2550000
+2015/09/24 12:25:42 - Switch / Case.0 - linenr 2550000
+2015/09/24 12:25:43 - Add constants 3.0 - Linha Nr : 2550000
+2015/09/24 12:25:43 - Sort rows.0 - Linenr 2550000
+2015/09/24 12:25:43 - stg1itensL1.0 - linenr 2600000
+2015/09/24 12:25:44 - Calculator.0 - Linenr 2600000
+2015/09/24 12:25:44 - Switch / Case.0 - linenr 2600000
+2015/09/24 12:25:44 - Add constants 3.0 - Linha Nr : 2600000
+2015/09/24 12:25:44 - Sort rows.0 - Linenr 2600000
+2015/09/24 12:25:45 - stg1itensL1.0 - linenr 2650000
+2015/09/24 12:25:45 - Calculator.0 - Linenr 2650000
+2015/09/24 12:25:45 - Switch / Case.0 - linenr 2650000
+2015/09/24 12:25:46 - Add constants 3.0 - Linha Nr : 2650000
+2015/09/24 12:25:46 - Sort rows.0 - Linenr 2650000
+2015/09/24 12:25:46 - stg1itensL1.0 - linenr 2700000
+2015/09/24 12:25:46 - Calculator.0 - Linenr 2700000
+2015/09/24 12:25:46 - Switch / Case.0 - linenr 2700000
+2015/09/24 12:25:47 - Add constants 3.0 - Linha Nr : 2700000
+2015/09/24 12:25:47 - Sort rows.0 - Linenr 2700000
+2015/09/24 12:25:47 - stg1itensL1.0 - linenr 2750000
+2015/09/24 12:25:48 - Calculator.0 - Linenr 2750000
+2015/09/24 12:25:48 - Switch / Case.0 - linenr 2750000
+2015/09/24 12:25:48 - Add constants 3.0 - Linha Nr : 2750000
+2015/09/24 12:25:48 - Sort rows.0 - Linenr 2750000
+2015/09/24 12:25:49 - stg1itensL1.0 - linenr 2800000
+2015/09/24 12:25:49 - Calculator.0 - Linenr 2800000
+2015/09/24 12:25:49 - Switch / Case.0 - linenr 2800000
+2015/09/24 12:25:49 - Add constants 3.0 - Linha Nr : 2800000
+2015/09/24 12:25:49 - Sort rows.0 - Linenr 2800000
+2015/09/24 12:25:50 - stg1itensL1.0 - linenr 2850000
+2015/09/24 12:25:50 - Calculator.0 - Linenr 2850000
+2015/09/24 12:25:50 - Switch / Case.0 - linenr 2850000
+2015/09/24 12:25:51 - Add constants 3.0 - Linha Nr : 2850000
+2015/09/24 12:25:51 - Sort rows.0 - Linenr 2850000
+2015/09/24 12:25:51 - stg1itensL1.0 - linenr 2900000
+2015/09/24 12:25:51 - Calculator.0 - Linenr 2900000
+2015/09/24 12:25:51 - Switch / Case.0 - linenr 2900000
+2015/09/24 12:25:52 - Add constants 3.0 - Linha Nr : 2900000
+2015/09/24 12:25:52 - Sort rows.0 - Linenr 2900000
+2015/09/24 12:25:53 - stg1itensL1.0 - linenr 2950000
+2015/09/24 12:25:53 - Calculator.0 - Linenr 2950000
+2015/09/24 12:25:53 - Switch / Case.0 - linenr 2950000
+2015/09/24 12:25:53 - Add constants 3.0 - Linha Nr : 2950000
+2015/09/24 12:25:54 - Sort rows.0 - Linenr 2950000
+2015/09/24 12:25:54 - stg1itensL1.0 - linenr 3000000
+2015/09/24 12:25:54 - Calculator.0 - Linenr 3000000
+2015/09/24 12:25:54 - Switch / Case.0 - linenr 3000000
+2015/09/24 12:25:55 - Add constants 3.0 - Linha Nr : 3000000
+2015/09/24 12:25:55 - Sort rows.0 - Linenr 3000000
+2015/09/24 12:25:55 - stg1itensL1.0 - linenr 3050000
+2015/09/24 12:25:56 - Calculator.0 - Linenr 3050000
+2015/09/24 12:25:56 - Switch / Case.0 - linenr 3050000
+2015/09/24 12:25:56 - Add constants 3.0 - Linha Nr : 3050000
+2015/09/24 12:25:56 - Sort rows.0 - Linenr 3050000
+2015/09/24 12:25:57 - stg1itensL1.0 - linenr 3100000
+2015/09/24 12:25:57 - Calculator.0 - Linenr 3100000
+2015/09/24 12:25:57 - Switch / Case.0 - linenr 3100000
+2015/09/24 12:25:57 - Add constants 3.0 - Linha Nr : 3100000
+2015/09/24 12:25:57 - Sort rows.0 - Linenr 3100000
+2015/09/24 12:25:58 - stg1itensL1.0 - linenr 3150000
+2015/09/24 12:25:58 - Calculator.0 - Linenr 3150000
+2015/09/24 12:25:58 - Switch / Case.0 - linenr 3150000
+2015/09/24 12:25:59 - Add constants 3.0 - Linha Nr : 3150000
+2015/09/24 12:25:59 - Sort rows.0 - Linenr 3150000
+2015/09/24 12:25:59 - stg1itensL1.0 - linenr 3200000
+2015/09/24 12:25:59 - Calculator.0 - Linenr 3200000
+2015/09/24 12:25:59 - Switch / Case.0 - linenr 3200000
+2015/09/24 12:26:00 - Add constants 3.0 - Linha Nr : 3200000
+2015/09/24 12:26:00 - Sort rows.0 - Linenr 3200000
+2015/09/24 12:26:00 - stg1itensL1.0 - linenr 3250000
+2015/09/24 12:26:01 - Calculator.0 - Linenr 3250000
+2015/09/24 12:26:01 - Switch / Case.0 - linenr 3250000
+2015/09/24 12:26:01 - Add constants 3.0 - Linha Nr : 3250000
+2015/09/24 12:26:01 - Sort rows.0 - Linenr 3250000
+2015/09/24 12:26:02 - stg1itensL1.0 - linenr 3300000
+2015/09/24 12:26:02 - Calculator.0 - Linenr 3300000
+2015/09/24 12:26:02 - Switch / Case.0 - linenr 3300000
+2015/09/24 12:26:03 - Add constants 3.0 - Linha Nr : 3300000
+2015/09/24 12:26:03 - Sort rows.0 - Linenr 3300000
+2015/09/24 12:26:03 - stg1itensL1.0 - linenr 3350000
+2015/09/24 12:26:03 - Calculator.0 - Linenr 3350000
+2015/09/24 12:26:03 - Switch / Case.0 - linenr 3350000
+2015/09/24 12:26:04 - Add constants 3.0 - Linha Nr : 3350000
+2015/09/24 12:26:04 - Sort rows.0 - Linenr 3350000
+2015/09/24 12:26:04 - stg1itensL1.0 - linenr 3400000
+2015/09/24 12:26:05 - Calculator.0 - Linenr 3400000
+2015/09/24 12:26:05 - Switch / Case.0 - linenr 3400000
+2015/09/24 12:26:05 - Add constants 3.0 - Linha Nr : 3400000
+2015/09/24 12:26:05 - Sort rows.0 - Linenr 3400000
+2015/09/24 12:26:06 - stg1itensL1.0 - linenr 3450000
+2015/09/24 12:26:06 - Calculator.0 - Linenr 3450000
+2015/09/24 12:26:06 - Switch / Case.0 - linenr 3450000
+2015/09/24 12:26:07 - Add constants 3.0 - Linha Nr : 3450000
+2015/09/24 12:26:07 - Sort rows.0 - Linenr 3450000
+2015/09/24 12:26:07 - stg1itensL1.0 - linenr 3500000
+2015/09/24 12:26:07 - Calculator.0 - Linenr 3500000
+2015/09/24 12:26:07 - Switch / Case.0 - linenr 3500000
+2015/09/24 12:26:08 - Add constants 3.0 - Linha Nr : 3500000
+2015/09/24 12:26:08 - Sort rows.0 - Linenr 3500000
+2015/09/24 12:26:08 - stg1itensL1.0 - linenr 3550000
+2015/09/24 12:26:09 - Calculator.0 - Linenr 3550000
+2015/09/24 12:26:09 - Switch / Case.0 - linenr 3550000
+2015/09/24 12:26:09 - Add constants 3.0 - Linha Nr : 3550000
+2015/09/24 12:26:09 - Sort rows.0 - Linenr 3550000
+2015/09/24 12:26:10 - stg1itensL1.0 - linenr 3600000
+2015/09/24 12:26:10 - Calculator.0 - Linenr 3600000
+2015/09/24 12:26:10 - Switch / Case.0 - linenr 3600000
+2015/09/24 12:26:11 - Add constants 3.0 - Linha Nr : 3600000
+2015/09/24 12:26:11 - Sort rows.0 - Linenr 3600000
+2015/09/24 12:26:11 - stg1itensL1.0 - linenr 3650000
+2015/09/24 12:26:11 - Calculator.0 - Linenr 3650000
+2015/09/24 12:26:11 - Switch / Case.0 - linenr 3650000
+2015/09/24 12:26:12 - Add constants 3.0 - Linha Nr : 3650000
+2015/09/24 12:26:12 - Sort rows.0 - Linenr 3650000
+2015/09/24 12:26:12 - stg1itensL1.0 - linenr 3700000
+2015/09/24 12:26:13 - Calculator.0 - Linenr 3700000
+2015/09/24 12:26:13 - Switch / Case.0 - linenr 3700000
+2015/09/24 12:26:13 - Add constants 3.0 - Linha Nr : 3700000
+2015/09/24 12:26:14 - Sort rows.0 - Linenr 3700000
+2015/09/24 12:26:14 - stg1itensL1.0 - linenr 3750000
+2015/09/24 12:26:14 - Calculator.0 - Linenr 3750000
+2015/09/24 12:26:14 - Switch / Case.0 - linenr 3750000
+2015/09/24 12:26:15 - Add constants 3.0 - Linha Nr : 3750000
+2015/09/24 12:26:15 - Sort rows.0 - Linenr 3750000
+2015/09/24 12:26:15 - stg1itensL1.0 - linenr 3800000
+2015/09/24 12:26:15 - Calculator.0 - Linenr 3800000
+2015/09/24 12:26:15 - Switch / Case.0 - linenr 3800000
+2015/09/24 12:26:16 - Add constants 3.0 - Linha Nr : 3800000
+2015/09/24 12:26:16 - Sort rows.0 - Linenr 3800000
+2015/09/24 12:26:16 - stg1itensL1.0 - linenr 3850000
+2015/09/24 12:26:17 - Calculator.0 - Linenr 3850000
+2015/09/24 12:26:17 - Switch / Case.0 - linenr 3850000
+2015/09/24 12:26:17 - Add constants 3.0 - Linha Nr : 3850000
+2015/09/24 12:26:18 - Sort rows.0 - Linenr 3850000
+2015/09/24 12:26:18 - stg1itensL1.0 - linenr 3900000
+2015/09/24 12:26:18 - Calculator.0 - Linenr 3900000
+2015/09/24 12:26:18 - Switch / Case.0 - linenr 3900000
+2015/09/24 12:26:19 - Add constants 3.0 - Linha Nr : 3900000
+2015/09/24 12:26:19 - Sort rows.0 - Linenr 3900000
+2015/09/24 12:26:19 - stg1itensL1.0 - linenr 3950000
+2015/09/24 12:26:19 - Calculator.0 - Linenr 3950000
+2015/09/24 12:26:19 - Switch / Case.0 - linenr 3950000
+2015/09/24 12:26:20 - Add constants 3.0 - Linha Nr : 3950000
+2015/09/24 12:26:20 - Sort rows.0 - Linenr 3950000
+2015/09/24 12:26:20 - stg1itensL1.0 - linenr 4000000
+2015/09/24 12:26:21 - Calculator.0 - Linenr 4000000
+2015/09/24 12:26:21 - Switch / Case.0 - linenr 4000000
+2015/09/24 12:26:22 - Add constants 3.0 - Linha Nr : 4000000
+2015/09/24 12:26:22 - Sort rows.0 - Linenr 4000000
+2015/09/24 12:26:22 - stg1itensL1.0 - linenr 4050000
+2015/09/24 12:26:22 - Calculator.0 - Linenr 4050000
+2015/09/24 12:26:22 - Switch / Case.0 - linenr 4050000
+2015/09/24 12:26:23 - Add constants 3.0 - Linha Nr : 4050000
+2015/09/24 12:26:23 - Sort rows.0 - Linenr 4050000
+2015/09/24 12:26:23 - stg1itensL1.0 - linenr 4100000
+2015/09/24 12:26:23 - Calculator.0 - Linenr 4100000
+2015/09/24 12:26:23 - Switch / Case.0 - linenr 4100000
+2015/09/24 12:26:24 - Add constants 3.0 - Linha Nr : 4100000
+2015/09/24 12:26:24 - Sort rows.0 - Linenr 4100000
+2015/09/24 12:26:24 - stg1itensL1.0 - linenr 4150000
+2015/09/24 12:26:25 - Calculator.0 - Linenr 4150000
+2015/09/24 12:26:25 - Switch / Case.0 - linenr 4150000
+2015/09/24 12:26:25 - Add constants 3.0 - Linha Nr : 4150000
+2015/09/24 12:26:25 - Sort rows.0 - Linenr 4150000
+2015/09/24 12:26:26 - stg1itensL1.0 - linenr 4200000
+2015/09/24 12:26:26 - Calculator.0 - Linenr 4200000
+2015/09/24 12:26:26 - Switch / Case.0 - linenr 4200000
+2015/09/24 12:26:27 - Add constants 3.0 - Linha Nr : 4200000
+2015/09/24 12:26:27 - Sort rows.0 - Linenr 4200000
+2015/09/24 12:26:27 - stg1itensL1.0 - linenr 4250000
+2015/09/24 12:26:27 - Calculator.0 - Linenr 4250000
+2015/09/24 12:26:27 - Switch / Case.0 - linenr 4250000
+2015/09/24 12:26:28 - Add constants 3.0 - Linha Nr : 4250000
+2015/09/24 12:26:28 - Sort rows.0 - Linenr 4250000
+2015/09/24 12:26:28 - stg1itensL1.0 - linenr 4300000
+2015/09/24 12:26:29 - Calculator.0 - Linenr 4300000
+2015/09/24 12:26:29 - Switch / Case.0 - linenr 4300000
+2015/09/24 12:26:29 - Add constants 3.0 - Linha Nr : 4300000
+2015/09/24 12:26:29 - Sort rows.0 - Linenr 4300000
+2015/09/24 12:26:30 - stg1itensL1.0 - linenr 4350000
+2015/09/24 12:26:30 - Calculator.0 - Linenr 4350000
+2015/09/24 12:26:30 - Switch / Case.0 - linenr 4350000
+2015/09/24 12:26:31 - Add constants 3.0 - Linha Nr : 4350000
+2015/09/24 12:26:31 - Sort rows.0 - Linenr 4350000
+2015/09/24 12:26:31 - stg1itensL1.0 - linenr 4400000
+2015/09/24 12:26:31 - Calculator.0 - Linenr 4400000
+2015/09/24 12:26:31 - Switch / Case.0 - linenr 4400000
+2015/09/24 12:26:32 - Add constants 3.0 - Linha Nr : 4400000
+2015/09/24 12:26:32 - Sort rows.0 - Linenr 4400000
+2015/09/24 12:26:32 - stg1itensL1.0 - linenr 4450000
+2015/09/24 12:26:32 - Calculator.0 - Linenr 4450000
+2015/09/24 12:26:32 - Switch / Case.0 - linenr 4450000
+2015/09/24 12:26:33 - Add constants 3.0 - Linha Nr : 4450000
+2015/09/24 12:26:33 - Sort rows.0 - Linenr 4450000
+2015/09/24 12:26:33 - stg1itensL1.0 - linenr 4500000
+2015/09/24 12:26:34 - Calculator.0 - Linenr 4500000
+2015/09/24 12:26:34 - Switch / Case.0 - linenr 4500000
+2015/09/24 12:26:35 - Add constants 3.0 - Linha Nr : 4500000
+2015/09/24 12:26:35 - Sort rows.0 - Linenr 4500000
+2015/09/24 12:26:35 - stg1itensL1.0 - linenr 4550000
+2015/09/24 12:26:35 - Calculator.0 - Linenr 4550000
+2015/09/24 12:26:35 - Switch / Case.0 - linenr 4550000
+2015/09/24 12:26:36 - Add constants 3.0 - Linha Nr : 4550000
+2015/09/24 12:26:36 - Sort rows.0 - Linenr 4550000
+2015/09/24 12:26:36 - stg1itensL1.0 - linenr 4600000
+2015/09/24 12:26:36 - Calculator.0 - Linenr 4600000
+2015/09/24 12:26:36 - Switch / Case.0 - linenr 4600000
+2015/09/24 12:26:37 - Add constants 3.0 - Linha Nr : 4600000
+2015/09/24 12:26:37 - Sort rows.0 - Linenr 4600000
+2015/09/24 12:26:37 - stg1itensL1.0 - linenr 4650000
+2015/09/24 12:26:38 - Calculator.0 - Linenr 4650000
+2015/09/24 12:26:38 - Switch / Case.0 - linenr 4650000
+2015/09/24 12:26:38 - Add constants 3.0 - Linha Nr : 4650000
+2015/09/24 12:26:38 - Sort rows.0 - Linenr 4650000
+2015/09/24 12:26:39 - stg1itensL1.0 - linenr 4700000
+2015/09/24 12:26:39 - Calculator.0 - Linenr 4700000
+2015/09/24 12:26:39 - Switch / Case.0 - linenr 4700000
+2015/09/24 12:26:40 - Add constants 3.0 - Linha Nr : 4700000
+2015/09/24 12:26:40 - Sort rows.0 - Linenr 4700000
+2015/09/24 12:26:40 - stg1itensL1.0 - linenr 4750000
+2015/09/24 12:26:40 - Calculator.0 - Linenr 4750000
+2015/09/24 12:26:40 - Switch / Case.0 - linenr 4750000
+2015/09/24 12:26:41 - Add constants 3.0 - Linha Nr : 4750000
+2015/09/24 12:26:41 - Sort rows.0 - Linenr 4750000
+2015/09/24 12:26:41 - stg1itensL1.0 - linenr 4800000
+2015/09/24 12:26:41 - Calculator.0 - Linenr 4800000
+2015/09/24 12:26:41 - Switch / Case.0 - linenr 4800000
+2015/09/24 12:26:42 - Add constants 3.0 - Linha Nr : 4800000
+2015/09/24 12:26:42 - Sort rows.0 - Linenr 4800000
+2015/09/24 12:26:42 - stg1itensL1.0 - linenr 4850000
+2015/09/24 12:26:43 - Calculator.0 - Linenr 4850000
+2015/09/24 12:26:43 - Switch / Case.0 - linenr 4850000
+2015/09/24 12:26:43 - Add constants 3.0 - Linha Nr : 4850000
+2015/09/24 12:26:43 - Sort rows.0 - Linenr 4850000
+2015/09/24 12:26:44 - stg1itensL1.0 - linenr 4900000
+2015/09/24 12:26:44 - Calculator.0 - Linenr 4900000
+2015/09/24 12:26:44 - Switch / Case.0 - linenr 4900000
+2015/09/24 12:26:45 - Add constants 3.0 - Linha Nr : 4900000
+2015/09/24 12:26:45 - Sort rows.0 - Linenr 4900000
+2015/09/24 12:26:45 - stg1itensL1.0 - linenr 4950000
+2015/09/24 12:26:45 - Calculator.0 - Linenr 4950000
+2015/09/24 12:26:45 - Switch / Case.0 - linenr 4950000
+2015/09/24 12:26:46 - Add constants 3.0 - Linha Nr : 4950000
+2015/09/24 12:26:46 - Sort rows.0 - Linenr 4950000
+2015/09/24 12:26:46 - stg1itensL1.0 - linenr 5000000
+2015/09/24 12:26:46 - Calculator.0 - Linenr 5000000
+2015/09/24 12:26:46 - Switch / Case.0 - linenr 5000000
+2015/09/24 12:26:47 - Add constants 3.0 - Linha Nr : 5000000
+2015/09/24 12:26:48 - Sort rows.0 - Linenr 5000000
+2015/09/24 12:26:48 - stg1itensL1.0 - linenr 5050000
+2015/09/24 12:26:48 - Calculator.0 - Linenr 5050000
+2015/09/24 12:26:48 - Switch / Case.0 - linenr 5050000
+2015/09/24 12:26:49 - Add constants 3.0 - Linha Nr : 5050000
+2015/09/24 12:26:49 - Sort rows.0 - Linenr 5050000
+2015/09/24 12:26:49 - stg1itensL1.0 - linenr 5100000
+2015/09/24 12:26:49 - Calculator.0 - Linenr 5100000
+2015/09/24 12:26:49 - Switch / Case.0 - linenr 5100000
+2015/09/24 12:26:50 - Add constants 3.0 - Linha Nr : 5100000
+2015/09/24 12:26:50 - stg1itensL1.0 - linenr 5150000
+2015/09/24 12:26:50 - Sort rows.0 - Linenr 5100000
+2015/09/24 12:26:51 - Calculator.0 - Linenr 5150000
+2015/09/24 12:26:51 - Switch / Case.0 - linenr 5150000
+2015/09/24 12:26:52 - Add constants 3.0 - Linha Nr : 5150000
+2015/09/24 12:26:52 - Sort rows.0 - Linenr 5150000
+2015/09/24 12:26:52 - stg1itensL1.0 - linenr 5200000
+2015/09/24 12:26:52 - Calculator.0 - Linenr 5200000
+2015/09/24 12:26:52 - Switch / Case.0 - linenr 5200000
+2015/09/24 12:26:53 - Add constants 3.0 - Linha Nr : 5200000
+2015/09/24 12:26:53 - Sort rows.0 - Linenr 5200000
+2015/09/24 12:26:53 - stg1itensL1.0 - linenr 5250000
+2015/09/24 12:26:53 - Calculator.0 - Linenr 5250000
+2015/09/24 12:26:53 - Switch / Case.0 - linenr 5250000
+2015/09/24 12:26:54 - Add constants 3.0 - Linha Nr : 5250000
+2015/09/24 12:26:54 - Sort rows.0 - Linenr 5250000
+2015/09/24 12:26:54 - stg1itensL1.0 - linenr 5300000
+2015/09/24 12:26:54 - Calculator.0 - Linenr 5300000
+2015/09/24 12:26:54 - Switch / Case.0 - linenr 5300000
+2015/09/24 12:26:55 - Add constants 3.0 - Linha Nr : 5300000
+2015/09/24 12:26:55 - stg1itensL1.0 - linenr 5350000
+2015/09/24 12:26:55 - Sort rows.0 - Linenr 5300000
+2015/09/24 12:26:56 - Calculator.0 - Linenr 5350000
+2015/09/24 12:26:56 - Switch / Case.0 - linenr 5350000
+2015/09/24 12:26:57 - Add constants 3.0 - Linha Nr : 5350000
+2015/09/24 12:26:57 - stg1itensL1.0 - linenr 5400000
+2015/09/24 12:26:57 - Sort rows.0 - Linenr 5350000
+2015/09/24 12:26:57 - Calculator.0 - Linenr 5400000
+2015/09/24 12:26:57 - Switch / Case.0 - linenr 5400000
+2015/09/24 12:26:58 - Add constants 3.0 - Linha Nr : 5400000
+2015/09/24 12:26:58 - stg1itensL1.0 - linenr 5450000
+2015/09/24 12:26:58 - Sort rows.0 - Linenr 5400000
+2015/09/24 12:26:58 - Calculator.0 - Linenr 5450000
+2015/09/24 12:26:58 - Switch / Case.0 - linenr 5450000
+2015/09/24 12:26:59 - Add constants 3.0 - Linha Nr : 5450000
+2015/09/24 12:26:59 - stg1itensL1.0 - linenr 5500000
+2015/09/24 12:26:59 - Sort rows.0 - Linenr 5450000
+2015/09/24 12:27:00 - Calculator.0 - Linenr 5500000
+2015/09/24 12:27:00 - Switch / Case.0 - linenr 5500000
+2015/09/24 12:27:01 - stg1itensL1.0 - linenr 5550000
+2015/09/24 12:27:01 - Add constants 3.0 - Linha Nr : 5500000
+2015/09/24 12:27:01 - Sort rows.0 - Linenr 5500000
+2015/09/24 12:27:01 - Calculator.0 - Linenr 5550000
+2015/09/24 12:27:01 - Switch / Case.0 - linenr 5550000
+2015/09/24 12:27:02 - stg1itensL1.0 - linenr 5600000
+2015/09/24 12:27:02 - Add constants 3.0 - Linha Nr : 5550000
+2015/09/24 12:27:02 - Sort rows.0 - Linenr 5550000
+2015/09/24 12:27:02 - Calculator.0 - Linenr 5600000
+2015/09/24 12:27:02 - Switch / Case.0 - linenr 5600000
+2015/09/24 12:27:03 - stg1itensL1.0 - linenr 5650000
+2015/09/24 12:27:03 - Add constants 3.0 - Linha Nr : 5600000
+2015/09/24 12:27:03 - Sort rows.0 - Linenr 5600000
+2015/09/24 12:27:04 - Calculator.0 - Linenr 5650000
+2015/09/24 12:27:04 - Switch / Case.0 - linenr 5650000
+2015/09/24 12:27:05 - stg1itensL1.0 - linenr 5700000
+2015/09/24 12:27:05 - Add constants 3.0 - Linha Nr : 5650000
+2015/09/24 12:27:05 - Sort rows.0 - Linenr 5650000
+2015/09/24 12:27:05 - Calculator.0 - Linenr 5700000
+2015/09/24 12:27:05 - Switch / Case.0 - linenr 5700000
+2015/09/24 12:27:06 - stg1itensL1.0 - linenr 5750000
+2015/09/24 12:27:06 - Add constants 3.0 - Linha Nr : 5700000
+2015/09/24 12:27:06 - Sort rows.0 - Linenr 5700000
+2015/09/24 12:27:06 - Calculator.0 - Linenr 5750000
+2015/09/24 12:27:06 - Switch / Case.0 - linenr 5750000
+2015/09/24 12:27:07 - stg1itensL1.0 - linenr 5800000
+2015/09/24 12:27:07 - Add constants 3.0 - Linha Nr : 5750000
+2015/09/24 12:27:07 - Sort rows.0 - Linenr 5750000
+2015/09/24 12:27:07 - Calculator.0 - Linenr 5800000
+2015/09/24 12:27:07 - Switch / Case.0 - linenr 5800000
+2015/09/24 12:27:08 - stg1itensL1.0 - linenr 5850000
+2015/09/24 12:27:08 - Add constants 3.0 - Linha Nr : 5800000
+2015/09/24 12:27:09 - Sort rows.0 - Linenr 5800000
+2015/09/24 12:27:09 - Calculator.0 - Linenr 5850000
+2015/09/24 12:27:09 - Switch / Case.0 - linenr 5850000
+2015/09/24 12:27:10 - stg1itensL1.0 - linenr 5900000
+2015/09/24 12:27:10 - Add constants 3.0 - Linha Nr : 5850000
+2015/09/24 12:27:10 - Sort rows.0 - Linenr 5850000
+2015/09/24 12:27:10 - Calculator.0 - Linenr 5900000
+2015/09/24 12:27:10 - Switch / Case.0 - linenr 5900000
+2015/09/24 12:27:11 - stg1itensL1.0 - linenr 5950000
+2015/09/24 12:27:11 - Add constants 3.0 - Linha Nr : 5900000
+2015/09/24 12:27:11 - Sort rows.0 - Linenr 5900000
+2015/09/24 12:27:11 - Calculator.0 - Linenr 5950000
+2015/09/24 12:27:11 - Switch / Case.0 - linenr 5950000
+2015/09/24 12:27:12 - stg1itensL1.0 - linenr 6000000
+2015/09/24 12:27:12 - Add constants 3.0 - Linha Nr : 5950000
+2015/09/24 12:27:12 - Sort rows.0 - Linenr 5950000
+2015/09/24 12:27:12 - Calculator.0 - Linenr 6000000
+2015/09/24 12:27:12 - Switch / Case.0 - linenr 6000000
+2015/09/24 12:27:14 - stg1itensL1.0 - linenr 6050000
+2015/09/24 12:27:14 - Add constants 3.0 - Linha Nr : 6000000
+2015/09/24 12:27:14 - Sort rows.0 - Linenr 6000000
+2015/09/24 12:27:14 - Calculator.0 - Linenr 6050000
+2015/09/24 12:27:14 - Switch / Case.0 - linenr 6050000
+2015/09/24 12:27:15 - stg1itensL1.0 - linenr 6100000
+2015/09/24 12:27:15 - Add constants 3.0 - Linha Nr : 6050000
+2015/09/24 12:27:15 - Sort rows.0 - Linenr 6050000
+2015/09/24 12:27:15 - Calculator.0 - Linenr 6100000
+2015/09/24 12:27:15 - Switch / Case.0 - linenr 6100000
+2015/09/24 12:27:16 - stg1itensL1.0 - linenr 6150000
+2015/09/24 12:27:16 - Add constants 3.0 - Linha Nr : 6100000
+2015/09/24 12:27:16 - Sort rows.0 - Linenr 6100000
+2015/09/24 12:27:16 - Calculator.0 - Linenr 6150000
+2015/09/24 12:27:16 - Switch / Case.0 - linenr 6150000
+2015/09/24 12:27:17 - stg1itensL1.0 - linenr 6200000
+2015/09/24 12:27:18 - Add constants 3.0 - Linha Nr : 6150000
+2015/09/24 12:27:18 - Sort rows.0 - Linenr 6150000
+2015/09/24 12:27:18 - Calculator.0 - Linenr 6200000
+2015/09/24 12:27:18 - Switch / Case.0 - linenr 6200000
+2015/09/24 12:27:19 - stg1itensL1.0 - linenr 6250000
+2015/09/24 12:27:19 - Add constants 3.0 - Linha Nr : 6200000
+2015/09/24 12:27:19 - Sort rows.0 - Linenr 6200000
+2015/09/24 12:27:19 - Calculator.0 - Linenr 6250000
+2015/09/24 12:27:19 - Switch / Case.0 - linenr 6250000
+2015/09/24 12:27:20 - stg1itensL1.0 - linenr 6300000
+2015/09/24 12:27:20 - Add constants 3.0 - Linha Nr : 6250000
+2015/09/24 12:27:20 - Sort rows.0 - Linenr 6250000
+2015/09/24 12:27:20 - Calculator.0 - Linenr 6300000
+2015/09/24 12:27:20 - Switch / Case.0 - linenr 6300000
+2015/09/24 12:27:21 - stg1itensL1.0 - linenr 6350000
+2015/09/24 12:27:21 - Add constants 3.0 - Linha Nr : 6300000
+2015/09/24 12:27:21 - Sort rows.0 - Linenr 6300000
+2015/09/24 12:27:21 - Calculator.0 - Linenr 6350000
+2015/09/24 12:27:21 - Switch / Case.0 - linenr 6350000
+2015/09/24 12:27:22 - stg1itensL1.0 - linenr 6400000
+2015/09/24 12:27:23 - Add constants 3.0 - Linha Nr : 6350000
+2015/09/24 12:27:23 - Sort rows.0 - Linenr 6350000
+2015/09/24 12:27:23 - Calculator.0 - Linenr 6400000
+2015/09/24 12:27:23 - Switch / Case.0 - linenr 6400000
+2015/09/24 12:27:24 - stg1itensL1.0 - linenr 6450000
+2015/09/24 12:27:24 - Add constants 3.0 - Linha Nr : 6400000
+2015/09/24 12:27:24 - Calculator.0 - Linenr 6450000
+2015/09/24 12:27:24 - Sort rows.0 - Linenr 6400000
+2015/09/24 12:27:24 - Switch / Case.0 - linenr 6450000
+2015/09/24 12:27:25 - stg1itensL1.0 - linenr 6500000
+2015/09/24 12:27:25 - Add constants 3.0 - Linha Nr : 6450000
+2015/09/24 12:27:25 - Calculator.0 - Linenr 6500000
+2015/09/24 12:27:25 - Switch / Case.0 - linenr 6500000
+2015/09/24 12:27:25 - Sort rows.0 - Linenr 6450000
+2015/09/24 12:27:26 - stg1itensL1.0 - linenr 6550000
+2015/09/24 12:27:26 - Add constants 3.0 - Linha Nr : 6500000
+2015/09/24 12:27:26 - Calculator.0 - Linenr 6550000
+2015/09/24 12:27:26 - Switch / Case.0 - linenr 6550000
+2015/09/24 12:27:27 - Sort rows.0 - Linenr 6500000
+2015/09/24 12:27:27 - Add constants 2.0 - Linha Nr : 50000
+2015/09/24 12:27:27 - Sort rows 2.0 - Linenr 50000
+2015/09/24 12:27:27 - stg1itensL1.0 - linenr 6600000
+2015/09/24 12:27:28 - Calculator.0 - Linenr 6600000
+2015/09/24 12:27:28 - Switch / Case.0 - linenr 6600000
+2015/09/24 12:27:28 - Add constants 3.0 - Linha Nr : 6550000
+2015/09/24 12:27:28 - Sort rows.0 - Linenr 6550000
+2015/09/24 12:27:29 - stg1itensL1.0 - linenr 6650000
+2015/09/24 12:27:29 - Calculator.0 - Linenr 6650000
+2015/09/24 12:27:29 - Switch / Case.0 - linenr 6650000
+2015/09/24 12:27:29 - Add constants 3.0 - Linha Nr : 6600000
+2015/09/24 12:27:29 - Sort rows.0 - Linenr 6600000
+2015/09/24 12:27:30 - stg1itensL1.0 - linenr 6700000
+2015/09/24 12:27:30 - Calculator.0 - Linenr 6700000
+2015/09/24 12:27:30 - Switch / Case.0 - linenr 6700000
+2015/09/24 12:27:30 - Add constants 3.0 - Linha Nr : 6650000
+2015/09/24 12:27:31 - Sort rows.0 - Linenr 6650000
+2015/09/24 12:27:31 - stg1itensL1.0 - linenr 6750000
+2015/09/24 12:27:32 - Calculator.0 - Linenr 6750000
+2015/09/24 12:27:32 - Switch / Case.0 - linenr 6750000
+2015/09/24 12:27:32 - Add constants 3.0 - Linha Nr : 6700000
+2015/09/24 12:27:32 - Sort rows.0 - Linenr 6700000
+2015/09/24 12:27:33 - stg1itensL1.0 - linenr 6800000
+2015/09/24 12:27:33 - Calculator.0 - Linenr 6800000
+2015/09/24 12:27:33 - Switch / Case.0 - linenr 6800000
+2015/09/24 12:27:33 - Add constants 3.0 - Linha Nr : 6750000
+2015/09/24 12:27:33 - Sort rows.0 - Linenr 6750000
+2015/09/24 12:27:34 - stg1itensL1.0 - linenr 6850000
+2015/09/24 12:27:34 - Calculator.0 - Linenr 6850000
+2015/09/24 12:27:34 - Switch / Case.0 - linenr 6850000
+2015/09/24 12:27:34 - Add constants 3.0 - Linha Nr : 6800000
+2015/09/24 12:27:34 - Sort rows.0 - Linenr 6800000
+2015/09/24 12:27:35 - stg1itensL1.0 - linenr 6900000
+2015/09/24 12:27:35 - Calculator.0 - Linenr 6900000
+2015/09/24 12:27:35 - Switch / Case.0 - linenr 6900000
+2015/09/24 12:27:35 - Add constants 3.0 - Linha Nr : 6850000
+2015/09/24 12:27:35 - Sort rows.0 - Linenr 6850000
+2015/09/24 12:27:36 - stg1itensL1.0 - linenr 6950000
+2015/09/24 12:27:37 - Calculator.0 - Linenr 6950000
+2015/09/24 12:27:37 - Switch / Case.0 - linenr 6950000
+2015/09/24 12:27:37 - Add constants 3.0 - Linha Nr : 6900000
+2015/09/24 12:27:37 - Sort rows.0 - Linenr 6900000
+2015/09/24 12:27:38 - stg1itensL1.0 - linenr 7000000
+2015/09/24 12:27:38 - Calculator.0 - Linenr 7000000
+2015/09/24 12:27:38 - Switch / Case.0 - linenr 7000000
+2015/09/24 12:27:38 - Add constants 3.0 - Linha Nr : 6950000
+2015/09/24 12:27:38 - Sort rows.0 - Linenr 6950000
+2015/09/24 12:27:39 - stg1itensL1.0 - linenr 7050000
+2015/09/24 12:27:39 - Calculator.0 - Linenr 7050000
+2015/09/24 12:27:39 - Switch / Case.0 - linenr 7050000
+2015/09/24 12:27:39 - Add constants 3.0 - Linha Nr : 7000000
+2015/09/24 12:27:39 - Sort rows.0 - Linenr 7000000
+2015/09/24 12:27:40 - stg1itensL1.0 - linenr 7100000
+2015/09/24 12:27:40 - Calculator.0 - Linenr 7100000
+2015/09/24 12:27:40 - Switch / Case.0 - linenr 7100000
+2015/09/24 12:27:40 - Add constants 3.0 - Linha Nr : 7050000
+2015/09/24 12:27:41 - Sort rows.0 - Linenr 7050000
+2015/09/24 12:27:41 - stg1itensL1.0 - linenr 7150000
+2015/09/24 12:27:42 - Calculator.0 - Linenr 7150000
+2015/09/24 12:27:42 - Switch / Case.0 - linenr 7150000
+2015/09/24 12:27:42 - Add constants 3.0 - Linha Nr : 7100000
+2015/09/24 12:27:42 - Sort rows.0 - Linenr 7100000
+2015/09/24 12:27:43 - stg1itensL1.0 - linenr 7200000
+2015/09/24 12:27:43 - Calculator.0 - Linenr 7200000
+2015/09/24 12:27:43 - Switch / Case.0 - linenr 7200000
+2015/09/24 12:27:43 - Add constants 3.0 - Linha Nr : 7150000
+2015/09/24 12:27:43 - Sort rows.0 - Linenr 7150000
+2015/09/24 12:27:44 - stg1itensL1.0 - linenr 7250000
+2015/09/24 12:27:44 - Calculator.0 - Linenr 7250000
+2015/09/24 12:27:44 - Switch / Case.0 - linenr 7250000
+2015/09/24 12:27:44 - Add constants 3.0 - Linha Nr : 7200000
+2015/09/24 12:27:45 - Sort rows.0 - Linenr 7200000
+2015/09/24 12:27:45 - stg1itensL1.0 - linenr 7300000
+2015/09/24 12:27:46 - Calculator.0 - Linenr 7300000
+2015/09/24 12:27:46 - Switch / Case.0 - linenr 7300000
+2015/09/24 12:27:46 - Add constants 3.0 - Linha Nr : 7250000
+2015/09/24 12:27:46 - Sort rows.0 - Linenr 7250000
+2015/09/24 12:27:47 - stg1itensL1.0 - linenr 7350000
+2015/09/24 12:27:47 - Calculator.0 - Linenr 7350000
+2015/09/24 12:27:47 - Switch / Case.0 - linenr 7350000
+2015/09/24 12:27:47 - Add constants 3.0 - Linha Nr : 7300000
+2015/09/24 12:27:47 - Sort rows.0 - Linenr 7300000
+2015/09/24 12:27:48 - stg1itensL1.0 - linenr 7400000
+2015/09/24 12:27:48 - Calculator.0 - Linenr 7400000
+2015/09/24 12:27:48 - Switch / Case.0 - linenr 7400000
+2015/09/24 12:27:48 - Add constants 3.0 - Linha Nr : 7350000
+2015/09/24 12:27:48 - Sort rows.0 - Linenr 7350000
+2015/09/24 12:27:49 - stg1itensL1.0 - linenr 7450000
+2015/09/24 12:27:49 - Calculator.0 - Linenr 7450000
+2015/09/24 12:27:49 - Switch / Case.0 - linenr 7450000
+2015/09/24 12:27:50 - Add constants 3.0 - Linha Nr : 7400000
+2015/09/24 12:27:50 - Sort rows.0 - Linenr 7400000
+2015/09/24 12:27:50 - stg1itensL1.0 - linenr 7500000
+2015/09/24 12:27:51 - Calculator.0 - Linenr 7500000
+2015/09/24 12:27:51 - Switch / Case.0 - linenr 7500000
+2015/09/24 12:27:51 - Add constants 3.0 - Linha Nr : 7450000
+2015/09/24 12:27:51 - Sort rows.0 - Linenr 7450000
+2015/09/24 12:27:52 - stg1itensL1.0 - linenr 7550000
+2015/09/24 12:27:52 - Calculator.0 - Linenr 7550000
+2015/09/24 12:27:52 - Switch / Case.0 - linenr 7550000
+2015/09/24 12:27:52 - Add constants 3.0 - Linha Nr : 7500000
+2015/09/24 12:27:52 - Sort rows.0 - Linenr 7500000
+2015/09/24 12:27:53 - stg1itensL1.0 - linenr 7600000
+2015/09/24 12:27:53 - Calculator.0 - Linenr 7600000
+2015/09/24 12:27:53 - Switch / Case.0 - linenr 7600000
+2015/09/24 12:27:54 - Add constants 3.0 - Linha Nr : 7550000
+2015/09/24 12:27:54 - Sort rows.0 - Linenr 7550000
+2015/09/24 12:27:54 - stg1itensL1.0 - linenr 7650000
+2015/09/24 12:27:55 - Calculator.0 - Linenr 7650000
+2015/09/24 12:27:55 - Switch / Case.0 - linenr 7650000
+2015/09/24 12:27:55 - Add constants 3.0 - Linha Nr : 7600000
+2015/09/24 12:27:55 - Sort rows.0 - Linenr 7600000
+2015/09/24 12:27:56 - stg1itensL1.0 - linenr 7700000
+2015/09/24 12:27:56 - Calculator.0 - Linenr 7700000
+2015/09/24 12:27:56 - Switch / Case.0 - linenr 7700000
+2015/09/24 12:27:57 - Add constants 3.0 - Linha Nr : 7650000
+2015/09/24 12:27:57 - Sort rows.0 - Linenr 7650000
+2015/09/24 12:27:57 - stg1itensL1.0 - linenr 7750000
+2015/09/24 12:27:57 - Calculator.0 - Linenr 7750000
+2015/09/24 12:27:58 - Switch / Case.0 - linenr 7750000
+2015/09/24 12:27:58 - Add constants 3.0 - Linha Nr : 7700000
+2015/09/24 12:27:58 - Sort rows.0 - Linenr 7700000
+2015/09/24 12:27:58 - stg1itensL1.0 - linenr 7800000
+2015/09/24 12:27:59 - Calculator.0 - Linenr 7800000
+2015/09/24 12:27:59 - Switch / Case.0 - linenr 7800000
+2015/09/24 12:27:59 - Add constants 3.0 - Linha Nr : 7750000
+2015/09/24 12:27:59 - Sort rows.0 - Linenr 7750000
+2015/09/24 12:28:00 - stg1itensL1.0 - linenr 7850000
+2015/09/24 12:28:00 - Calculator.0 - Linenr 7850000
+2015/09/24 12:28:00 - Switch / Case.0 - linenr 7850000
+2015/09/24 12:28:00 - Add constants 3.0 - Linha Nr : 7800000
+2015/09/24 12:28:00 - Sort rows.0 - Linenr 7800000
+2015/09/24 12:28:01 - stg1itensL1.0 - linenr 7900000
+2015/09/24 12:28:01 - Calculator.0 - Linenr 7900000
+2015/09/24 12:28:01 - Switch / Case.0 - linenr 7900000
+2015/09/24 12:28:02 - Add constants 3.0 - Linha Nr : 7850000
+2015/09/24 12:28:02 - Sort rows.0 - Linenr 7850000
+2015/09/24 12:28:02 - stg1itensL1.0 - linenr 7950000
+2015/09/24 12:28:03 - Calculator.0 - Linenr 7950000
+2015/09/24 12:28:03 - Switch / Case.0 - linenr 7950000
+2015/09/24 12:28:03 - Add constants 3.0 - Linha Nr : 7900000
+2015/09/24 12:28:03 - Sort rows.0 - Linenr 7900000
+2015/09/24 12:28:03 - stg1itensL1.0 - linenr 8000000
+2015/09/24 12:28:04 - Calculator.0 - Linenr 8000000
+2015/09/24 12:28:04 - Switch / Case.0 - linenr 8000000
+2015/09/24 12:28:04 - Add constants 3.0 - Linha Nr : 7950000
+2015/09/24 12:28:04 - Sort rows.0 - Linenr 7950000
+2015/09/24 12:28:05 - stg1itensL1.0 - linenr 8050000
+2015/09/24 12:28:05 - Calculator.0 - Linenr 8050000
+2015/09/24 12:28:05 - Switch / Case.0 - linenr 8050000
+2015/09/24 12:28:05 - Add constants 3.0 - Linha Nr : 8000000
+2015/09/24 12:28:05 - Sort rows.0 - Linenr 8000000
+2015/09/24 12:28:06 - stg1itensL1.0 - linenr 8100000
+2015/09/24 12:28:06 - Calculator.0 - Linenr 8100000
+2015/09/24 12:28:06 - Switch / Case.0 - linenr 8100000
+2015/09/24 12:28:07 - Add constants 3.0 - Linha Nr : 8050000
+2015/09/24 12:28:07 - Sort rows.0 - Linenr 8050000
+2015/09/24 12:28:07 - stg1itensL1.0 - linenr 8150000
+2015/09/24 12:28:08 - Calculator.0 - Linenr 8150000
+2015/09/24 12:28:08 - Switch / Case.0 - linenr 8150000
+2015/09/24 12:28:08 - Add constants 3.0 - Linha Nr : 8100000
+2015/09/24 12:28:08 - Sort rows.0 - Linenr 8100000
+2015/09/24 12:28:09 - stg1itensL1.0 - linenr 8200000
+2015/09/24 12:28:09 - Calculator.0 - Linenr 8200000
+2015/09/24 12:28:09 - Switch / Case.0 - linenr 8200000
+2015/09/24 12:28:09 - Add constants 3.0 - Linha Nr : 8150000
+2015/09/24 12:28:09 - Sort rows.0 - Linenr 8150000
+2015/09/24 12:28:10 - stg1itensL1.0 - linenr 8250000
+2015/09/24 12:28:10 - Calculator.0 - Linenr 8250000
+2015/09/24 12:28:10 - Switch / Case.0 - linenr 8250000
+2015/09/24 12:28:11 - Add constants 3.0 - Linha Nr : 8200000
+2015/09/24 12:28:11 - Sort rows.0 - Linenr 8200000
+2015/09/24 12:28:11 - stg1itensL1.0 - linenr 8300000
+2015/09/24 12:28:12 - Calculator.0 - Linenr 8300000
+2015/09/24 12:28:12 - Switch / Case.0 - linenr 8300000
+2015/09/24 12:28:12 - Add constants 3.0 - Linha Nr : 8250000
+2015/09/24 12:28:12 - Sort rows.0 - Linenr 8250000
+2015/09/24 12:28:13 - stg1itensL1.0 - linenr 8350000
+2015/09/24 12:28:13 - Calculator.0 - Linenr 8350000
+2015/09/24 12:28:13 - Switch / Case.0 - linenr 8350000
+2015/09/24 12:28:13 - Add constants 3.0 - Linha Nr : 8300000
+2015/09/24 12:28:13 - Sort rows.0 - Linenr 8300000
+2015/09/24 12:28:14 - stg1itensL1.0 - linenr 8400000
+2015/09/24 12:28:14 - Calculator.0 - Linenr 8400000
+2015/09/24 12:28:14 - Switch / Case.0 - linenr 8400000
+2015/09/24 12:28:15 - Add constants 3.0 - Linha Nr : 8350000
+2015/09/24 12:28:15 - Sort rows.0 - Linenr 8350000
+2015/09/24 12:28:15 - stg1itensL1.0 - linenr 8450000
+2015/09/24 12:28:16 - Calculator.0 - Linenr 8450000
+2015/09/24 12:28:16 - Switch / Case.0 - linenr 8450000
+2015/09/24 12:28:16 - Add constants 3.0 - Linha Nr : 8400000
+2015/09/24 12:28:16 - Sort rows.0 - Linenr 8400000
+2015/09/24 12:28:17 - stg1itensL1.0 - linenr 8500000
+2015/09/24 12:28:17 - Calculator.0 - Linenr 8500000
+2015/09/24 12:28:17 - Switch / Case.0 - linenr 8500000
+2015/09/24 12:28:17 - Add constants 3.0 - Linha Nr : 8450000
+2015/09/24 12:28:17 - Sort rows.0 - Linenr 8450000
+2015/09/24 12:28:18 - stg1itensL1.0 - linenr 8550000
+2015/09/24 12:28:18 - Calculator.0 - Linenr 8550000
+2015/09/24 12:28:18 - Switch / Case.0 - linenr 8550000
+2015/09/24 12:28:18 - Add constants 3.0 - Linha Nr : 8500000
+2015/09/24 12:28:18 - Sort rows.0 - Linenr 8500000
+2015/09/24 12:28:19 - stg1itensL1.0 - linenr 8600000
+2015/09/24 12:28:19 - Calculator.0 - Linenr 8600000
+2015/09/24 12:28:19 - Switch / Case.0 - linenr 8600000
+2015/09/24 12:28:20 - Add constants 3.0 - Linha Nr : 8550000
+2015/09/24 12:28:20 - Sort rows.0 - Linenr 8550000
+2015/09/24 12:28:20 - stg1itensL1.0 - linenr 8650000
+2015/09/24 12:28:21 - Calculator.0 - Linenr 8650000
+2015/09/24 12:28:21 - Switch / Case.0 - linenr 8650000
+2015/09/24 12:28:21 - Add constants 3.0 - Linha Nr : 8600000
+2015/09/24 12:28:21 - Sort rows.0 - Linenr 8600000
+2015/09/24 12:28:22 - stg1itensL1.0 - linenr 8700000
+2015/09/24 12:28:22 - Calculator.0 - Linenr 8700000
+2015/09/24 12:28:22 - Switch / Case.0 - linenr 8700000
+2015/09/24 12:28:22 - Add constants 3.0 - Linha Nr : 8650000
+2015/09/24 12:28:22 - Sort rows.0 - Linenr 8650000
+2015/09/24 12:28:23 - stg1itensL1.0 - linenr 8750000
+2015/09/24 12:28:23 - Calculator.0 - Linenr 8750000
+2015/09/24 12:28:23 - Switch / Case.0 - linenr 8750000
+2015/09/24 12:28:24 - Add constants 3.0 - Linha Nr : 8700000
+2015/09/24 12:28:24 - Sort rows.0 - Linenr 8700000
+2015/09/24 12:28:24 - stg1itensL1.0 - linenr 8800000
+2015/09/24 12:28:25 - Calculator.0 - Linenr 8800000
+2015/09/24 12:28:25 - Switch / Case.0 - linenr 8800000
+2015/09/24 12:28:25 - Add constants 3.0 - Linha Nr : 8750000
+2015/09/24 12:28:25 - Sort rows.0 - Linenr 8750000
+2015/09/24 12:28:26 - stg1itensL1.0 - linenr 8850000
+2015/09/24 12:28:26 - Calculator.0 - Linenr 8850000
+2015/09/24 12:28:26 - Switch / Case.0 - linenr 8850000
+2015/09/24 12:28:26 - Add constants 3.0 - Linha Nr : 8800000
+2015/09/24 12:28:26 - Sort rows.0 - Linenr 8800000
+2015/09/24 12:28:27 - stg1itensL1.0 - linenr 8900000
+2015/09/24 12:28:27 - Calculator.0 - Linenr 8900000
+2015/09/24 12:28:27 - Switch / Case.0 - linenr 8900000
+2015/09/24 12:28:28 - Add constants 3.0 - Linha Nr : 8850000
+2015/09/24 12:28:28 - Sort rows.0 - Linenr 8850000
+2015/09/24 12:28:28 - stg1itensL1.0 - linenr 8950000
+2015/09/24 12:28:28 - Calculator.0 - Linenr 8950000
+2015/09/24 12:28:29 - Switch / Case.0 - linenr 8950000
+2015/09/24 12:28:29 - Add constants 3.0 - Linha Nr : 8900000
+2015/09/24 12:28:29 - Sort rows.0 - Linenr 8900000
+2015/09/24 12:28:30 - stg1itensL1.0 - linenr 9000000
+2015/09/24 12:28:30 - Calculator.0 - Linenr 9000000
+2015/09/24 12:28:30 - Switch / Case.0 - linenr 9000000
+2015/09/24 12:28:30 - Add constants 3.0 - Linha Nr : 8950000
+2015/09/24 12:28:30 - Sort rows.0 - Linenr 8950000
+2015/09/24 12:28:31 - stg1itensL1.0 - linenr 9050000
+2015/09/24 12:28:31 - Calculator.0 - Linenr 9050000
+2015/09/24 12:28:31 - Switch / Case.0 - linenr 9050000
+2015/09/24 12:28:32 - Add constants 3.0 - Linha Nr : 9000000
+2015/09/24 12:28:32 - Sort rows.0 - Linenr 9000000
+2015/09/24 12:28:32 - stg1itensL1.0 - linenr 9100000
+2015/09/24 12:28:32 - Calculator.0 - Linenr 9100000
+2015/09/24 12:28:32 - Switch / Case.0 - linenr 9100000
+2015/09/24 12:28:33 - Add constants 3.0 - Linha Nr : 9050000
+2015/09/24 12:28:33 - Sort rows.0 - Linenr 9050000
+2015/09/24 12:28:33 - stg1itensL1.0 - linenr 9150000
+2015/09/24 12:28:34 - Calculator.0 - Linenr 9150000
+2015/09/24 12:28:34 - Switch / Case.0 - linenr 9150000
+2015/09/24 12:28:34 - Add constants 3.0 - Linha Nr : 9100000
+2015/09/24 12:28:34 - Sort rows.0 - Linenr 9100000
+2015/09/24 12:28:35 - stg1itensL1.0 - linenr 9200000
+2015/09/24 12:28:35 - Calculator.0 - Linenr 9200000
+2015/09/24 12:28:35 - Switch / Case.0 - linenr 9200000
+2015/09/24 12:28:36 - Add constants 3.0 - Linha Nr : 9150000
+2015/09/24 12:28:36 - Sort rows.0 - Linenr 9150000
+2015/09/24 12:28:36 - stg1itensL1.0 - linenr 9250000
+2015/09/24 12:28:36 - Calculator.0 - Linenr 9250000
+2015/09/24 12:28:36 - Switch / Case.0 - linenr 9250000
+2015/09/24 12:28:37 - Add constants 3.0 - Linha Nr : 9200000
+2015/09/24 12:28:37 - Sort rows.0 - Linenr 9200000
+2015/09/24 12:28:37 - stg1itensL1.0 - linenr 9300000
+2015/09/24 12:28:38 - Calculator.0 - Linenr 9300000
+2015/09/24 12:28:38 - Switch / Case.0 - linenr 9300000
+2015/09/24 12:28:38 - Add constants 3.0 - Linha Nr : 9250000
+2015/09/24 12:28:38 - Sort rows.0 - Linenr 9250000
+2015/09/24 12:28:39 - stg1itensL1.0 - linenr 9350000
+2015/09/24 12:28:39 - Calculator.0 - Linenr 9350000
+2015/09/24 12:28:39 - Switch / Case.0 - linenr 9350000
+2015/09/24 12:28:40 - Add constants 3.0 - Linha Nr : 9300000
+2015/09/24 12:28:40 - Sort rows.0 - Linenr 9300000
+2015/09/24 12:28:40 - stg1itensL1.0 - linenr 9400000
+2015/09/24 12:28:40 - Calculator.0 - Linenr 9400000
+2015/09/24 12:28:40 - Switch / Case.0 - linenr 9400000
+2015/09/24 12:28:41 - Add constants 3.0 - Linha Nr : 9350000
+2015/09/24 12:28:41 - Sort rows.0 - Linenr 9350000
+2015/09/24 12:28:41 - stg1itensL1.0 - linenr 9450000
+2015/09/24 12:28:42 - Calculator.0 - Linenr 9450000
+2015/09/24 12:28:42 - Switch / Case.0 - linenr 9450000
+2015/09/24 12:28:42 - Add constants 3.0 - Linha Nr : 9400000
+2015/09/24 12:28:42 - Sort rows.0 - Linenr 9400000
+2015/09/24 12:28:43 - stg1itensL1.0 - linenr 9500000
+2015/09/24 12:28:43 - Calculator.0 - Linenr 9500000
+2015/09/24 12:28:43 - Switch / Case.0 - linenr 9500000
+2015/09/24 12:28:44 - Add constants 3.0 - Linha Nr : 9450000
+2015/09/24 12:28:44 - Sort rows.0 - Linenr 9450000
+2015/09/24 12:28:44 - stg1itensL1.0 - linenr 9550000
+2015/09/24 12:28:44 - Calculator.0 - Linenr 9550000
+2015/09/24 12:28:44 - Switch / Case.0 - linenr 9550000
+2015/09/24 12:28:45 - Add constants 3.0 - Linha Nr : 9500000
+2015/09/24 12:28:45 - Sort rows.0 - Linenr 9500000
+2015/09/24 12:28:45 - stg1itensL1.0 - linenr 9600000
+2015/09/24 12:28:45 - Calculator.0 - Linenr 9600000
+2015/09/24 12:28:45 - Switch / Case.0 - linenr 9600000
+2015/09/24 12:28:46 - Add constants 3.0 - Linha Nr : 9550000
+2015/09/24 12:28:46 - Sort rows.0 - Linenr 9550000
+2015/09/24 12:28:46 - stg1itensL1.0 - linenr 9650000
+2015/09/24 12:28:47 - Calculator.0 - Linenr 9650000
+2015/09/24 12:28:47 - Switch / Case.0 - linenr 9650000
+2015/09/24 12:28:47 - Add constants 3.0 - Linha Nr : 9600000
+2015/09/24 12:28:47 - Sort rows.0 - Linenr 9600000
+2015/09/24 12:28:48 - stg1itensL1.0 - linenr 9700000
+2015/09/24 12:28:48 - Calculator.0 - Linenr 9700000
+2015/09/24 12:28:48 - Switch / Case.0 - linenr 9700000
+2015/09/24 12:28:49 - Add constants 3.0 - Linha Nr : 9650000
+2015/09/24 12:28:49 - Sort rows.0 - Linenr 9650000
+2015/09/24 12:28:49 - stg1itensL1.0 - linenr 9750000
+2015/09/24 12:28:49 - Calculator.0 - Linenr 9750000
+2015/09/24 12:28:49 - Switch / Case.0 - linenr 9750000
+2015/09/24 12:28:50 - Add constants 3.0 - Linha Nr : 9700000
+2015/09/24 12:28:50 - Sort rows.0 - Linenr 9700000
+2015/09/24 12:28:50 - stg1itensL1.0 - linenr 9800000
+2015/09/24 12:28:51 - Calculator.0 - Linenr 9800000
+2015/09/24 12:28:51 - Switch / Case.0 - linenr 9800000
+2015/09/24 12:28:52 - Add constants 3.0 - Linha Nr : 9750000
+2015/09/24 12:28:52 - Sort rows.0 - Linenr 9750000
+2015/09/24 12:28:52 - stg1itensL1.0 - linenr 9850000
+2015/09/24 12:28:52 - Calculator.0 - Linenr 9850000
+2015/09/24 12:28:52 - Switch / Case.0 - linenr 9850000
+2015/09/24 12:28:53 - Add constants 3.0 - Linha Nr : 9800000
+2015/09/24 12:28:53 - Sort rows.0 - Linenr 9800000
+2015/09/24 12:28:53 - stg1itensL1.0 - linenr 9900000
+2015/09/24 12:28:53 - Calculator.0 - Linenr 9900000
+2015/09/24 12:28:53 - Switch / Case.0 - linenr 9900000
+2015/09/24 12:28:54 - Add constants 3.0 - Linha Nr : 9850000
+2015/09/24 12:28:54 - Sort rows.0 - Linenr 9850000
+2015/09/24 12:28:54 - stg1itensL1.0 - linenr 9950000
+2015/09/24 12:28:55 - Calculator.0 - Linenr 9950000
+2015/09/24 12:28:55 - Switch / Case.0 - linenr 9950000
+2015/09/24 12:28:55 - Add constants 3.0 - Linha Nr : 9900000
+2015/09/24 12:28:56 - Sort rows.0 - Linenr 9900000
+2015/09/24 12:28:56 - stg1itensL1.0 - linenr 10000000
+2015/09/24 12:28:56 - Calculator.0 - Linenr 10000000
+2015/09/24 12:28:56 - Switch / Case.0 - linenr 10000000
+2015/09/24 12:28:57 - Add constants 3.0 - Linha Nr : 9950000
+2015/09/24 12:28:57 - Sort rows.0 - Linenr 9950000
+2015/09/24 12:28:57 - stg1itensL1.0 - linenr 10050000
+2015/09/24 12:28:57 - Calculator.0 - Linenr 10050000
+2015/09/24 12:28:57 - Switch / Case.0 - linenr 10050000
+2015/09/24 12:28:58 - Add constants 3.0 - Linha Nr : 10000000
+2015/09/24 12:28:58 - Sort rows.0 - Linenr 10000000
+2015/09/24 12:28:58 - stg1itensL1.0 - linenr 10100000
+2015/09/24 12:28:59 - Calculator.0 - Linenr 10100000
+2015/09/24 12:28:59 - Switch / Case.0 - linenr 10100000
+2015/09/24 12:28:59 - Add constants 3.0 - Linha Nr : 10050000
+2015/09/24 12:28:59 - Sort rows.0 - Linenr 10050000
+2015/09/24 12:28:59 - stg1itensL1.0 - linenr 10150000
+2015/09/24 12:29:00 - Calculator.0 - Linenr 10150000
+2015/09/24 12:29:00 - Switch / Case.0 - linenr 10150000
+2015/09/24 12:29:01 - Add constants 3.0 - Linha Nr : 10100000
+2015/09/24 12:29:01 - Sort rows.0 - Linenr 10100000
+2015/09/24 12:29:01 - stg1itensL1.0 - linenr 10200000
+2015/09/24 12:29:01 - Calculator.0 - Linenr 10200000
+2015/09/24 12:29:01 - Switch / Case.0 - linenr 10200000
+2015/09/24 12:29:02 - Add constants 3.0 - Linha Nr : 10150000
+2015/09/24 12:29:02 - Sort rows.0 - Linenr 10150000
+2015/09/24 12:29:02 - stg1itensL1.0 - linenr 10250000
+2015/09/24 12:29:02 - Calculator.0 - Linenr 10250000
+2015/09/24 12:29:02 - Switch / Case.0 - linenr 10250000
+2015/09/24 12:29:03 - Add constants 3.0 - Linha Nr : 10200000
+2015/09/24 12:29:03 - Sort rows.0 - Linenr 10200000
+2015/09/24 12:29:04 - stg1itensL1.0 - linenr 10300000
+2015/09/24 12:29:04 - Calculator.0 - Linenr 10300000
+2015/09/24 12:29:04 - Switch / Case.0 - linenr 10300000
+2015/09/24 12:29:05 - Add constants 3.0 - Linha Nr : 10250000
+2015/09/24 12:29:05 - Sort rows.0 - Linenr 10250000
+2015/09/24 12:29:05 - stg1itensL1.0 - linenr 10350000
+2015/09/24 12:29:05 - Calculator.0 - Linenr 10350000
+2015/09/24 12:29:05 - Switch / Case.0 - linenr 10350000
+2015/09/24 12:29:06 - Add constants 3.0 - Linha Nr : 10300000
+2015/09/24 12:29:06 - Sort rows.0 - Linenr 10300000
+2015/09/24 12:29:06 - stg1itensL1.0 - linenr 10400000
+2015/09/24 12:29:07 - Calculator.0 - Linenr 10400000
+2015/09/24 12:29:07 - Switch / Case.0 - linenr 10400000
+2015/09/24 12:29:07 - Add constants 3.0 - Linha Nr : 10350000
+2015/09/24 12:29:07 - Sort rows.0 - Linenr 10350000
+2015/09/24 12:29:07 - stg1itensL1.0 - linenr 10450000
+2015/09/24 12:29:08 - Calculator.0 - Linenr 10450000
+2015/09/24 12:29:08 - Switch / Case.0 - linenr 10450000
+2015/09/24 12:29:09 - Add constants 3.0 - Linha Nr : 10400000
+2015/09/24 12:29:09 - Sort rows.0 - Linenr 10400000
+2015/09/24 12:29:09 - stg1itensL1.0 - linenr 10500000
+2015/09/24 12:29:09 - Calculator.0 - Linenr 10500000
+2015/09/24 12:29:09 - Switch / Case.0 - linenr 10500000
+2015/09/24 12:29:10 - Add constants 3.0 - Linha Nr : 10450000
+2015/09/24 12:29:10 - Sort rows.0 - Linenr 10450000
+2015/09/24 12:29:10 - stg1itensL1.0 - linenr 10550000
+2015/09/24 12:29:10 - Calculator.0 - Linenr 10550000
+2015/09/24 12:29:10 - Switch / Case.0 - linenr 10550000
+2015/09/24 12:29:11 - Add constants 3.0 - Linha Nr : 10500000
+2015/09/24 12:29:11 - Sort rows.0 - Linenr 10500000
+2015/09/24 12:29:11 - stg1itensL1.0 - linenr 10600000
+2015/09/24 12:29:11 - Calculator.0 - Linenr 10600000
+2015/09/24 12:29:11 - Switch / Case.0 - linenr 10600000
+2015/09/24 12:29:12 - Add constants 3.0 - Linha Nr : 10550000
+2015/09/24 12:29:12 - Sort rows.0 - Linenr 10550000
+2015/09/24 12:29:13 - stg1itensL1.0 - linenr 10650000
+2015/09/24 12:29:13 - Calculator.0 - Linenr 10650000
+2015/09/24 12:29:13 - Switch / Case.0 - linenr 10650000
+2015/09/24 12:29:14 - Add constants 3.0 - Linha Nr : 10600000
+2015/09/24 12:29:14 - Sort rows.0 - Linenr 10600000
+2015/09/24 12:29:14 - stg1itensL1.0 - linenr 10700000
+2015/09/24 12:29:14 - Calculator.0 - Linenr 10700000
+2015/09/24 12:29:14 - Switch / Case.0 - linenr 10700000
+2015/09/24 12:29:15 - Add constants 3.0 - Linha Nr : 10650000
+2015/09/24 12:29:15 - Sort rows.0 - Linenr 10650000
+2015/09/24 12:29:15 - stg1itensL1.0 - linenr 10750000
+2015/09/24 12:29:15 - Calculator.0 - Linenr 10750000
+2015/09/24 12:29:15 - Switch / Case.0 - linenr 10750000
+2015/09/24 12:29:16 - Add constants 3.0 - Linha Nr : 10700000
+2015/09/24 12:29:16 - stg1itensL1.0 - linenr 10800000
+2015/09/24 12:29:16 - Sort rows.0 - Linenr 10700000
+2015/09/24 12:29:17 - Calculator.0 - Linenr 10800000
+2015/09/24 12:29:17 - Switch / Case.0 - linenr 10800000
+2015/09/24 12:29:18 - Add constants 3.0 - Linha Nr : 10750000
+2015/09/24 12:29:18 - stg1itensL1.0 - linenr 10850000
+2015/09/24 12:29:18 - Sort rows.0 - Linenr 10750000
+2015/09/24 12:29:18 - Calculator.0 - Linenr 10850000
+2015/09/24 12:29:18 - Switch / Case.0 - linenr 10850000
+2015/09/24 12:29:19 - Add constants 3.0 - Linha Nr : 10800000
+2015/09/24 12:29:19 - stg1itensL1.0 - linenr 10900000
+2015/09/24 12:29:19 - Sort rows.0 - Linenr 10800000
+2015/09/24 12:29:19 - Calculator.0 - Linenr 10900000
+2015/09/24 12:29:19 - Switch / Case.0 - linenr 10900000
+2015/09/24 12:29:20 - stg1itensL1.0 - linenr 10950000
+2015/09/24 12:29:20 - Add constants 3.0 - Linha Nr : 10850000
+2015/09/24 12:29:20 - Sort rows.0 - Linenr 10850000
+2015/09/24 12:29:21 - Calculator.0 - Linenr 10950000
+2015/09/24 12:29:21 - Switch / Case.0 - linenr 10950000
+2015/09/24 12:29:22 - stg1itensL1.0 - linenr 11000000
+2015/09/24 12:29:22 - Add constants 3.0 - Linha Nr : 10900000
+2015/09/24 12:29:22 - Sort rows.0 - Linenr 10900000
+2015/09/24 12:29:22 - Calculator.0 - Linenr 11000000
+2015/09/24 12:29:22 - Switch / Case.0 - linenr 11000000
+2015/09/24 12:29:23 - stg1itensL1.0 - linenr 11050000
+2015/09/24 12:29:23 - Add constants 3.0 - Linha Nr : 10950000
+2015/09/24 12:29:23 - Sort rows.0 - Linenr 10950000
+2015/09/24 12:29:23 - Calculator.0 - Linenr 11050000
+2015/09/24 12:29:23 - Switch / Case.0 - linenr 11050000
+2015/09/24 12:29:24 - stg1itensL1.0 - linenr 11100000
+2015/09/24 12:29:24 - Add constants 3.0 - Linha Nr : 11000000
+2015/09/24 12:29:24 - Sort rows.0 - Linenr 11000000
+2015/09/24 12:29:24 - Calculator.0 - Linenr 11100000
+2015/09/24 12:29:24 - Switch / Case.0 - linenr 11100000
+2015/09/24 12:29:25 - stg1itensL1.0 - linenr 11150000
+2015/09/24 12:29:25 - Add constants 3.0 - Linha Nr : 11050000
+2015/09/24 12:29:26 - Sort rows.0 - Linenr 11050000
+2015/09/24 12:29:26 - Calculator.0 - Linenr 11150000
+2015/09/24 12:29:26 - Switch / Case.0 - linenr 11150000
+2015/09/24 12:29:27 - stg1itensL1.0 - linenr 11200000
+2015/09/24 12:29:27 - Add constants 3.0 - Linha Nr : 11100000
+2015/09/24 12:29:27 - Sort rows.0 - Linenr 11100000
+2015/09/24 12:29:27 - Calculator.0 - Linenr 11200000
+2015/09/24 12:29:27 - Switch / Case.0 - linenr 11200000
+2015/09/24 12:29:28 - stg1itensL1.0 - linenr 11250000
+2015/09/24 12:29:28 - Add constants 3.0 - Linha Nr : 11150000
+2015/09/24 12:29:28 - Sort rows.0 - Linenr 11150000
+2015/09/24 12:29:28 - Calculator.0 - Linenr 11250000
+2015/09/24 12:29:28 - Switch / Case.0 - linenr 11250000
+2015/09/24 12:29:29 - stg1itensL1.0 - linenr 11300000
+2015/09/24 12:29:29 - Add constants 3.0 - Linha Nr : 11200000
+2015/09/24 12:29:29 - Sort rows.0 - Linenr 11200000
+2015/09/24 12:29:29 - Calculator.0 - Linenr 11300000
+2015/09/24 12:29:29 - Switch / Case.0 - linenr 11300000
+2015/09/24 12:29:31 - stg1itensL1.0 - linenr 11350000
+2015/09/24 12:29:31 - Add constants 3.0 - Linha Nr : 11250000
+2015/09/24 12:29:31 - Sort rows.0 - Linenr 11250000
+2015/09/24 12:29:31 - Calculator.0 - Linenr 11350000
+2015/09/24 12:29:31 - Switch / Case.0 - linenr 11350000
+2015/09/24 12:29:32 - stg1itensL1.0 - linenr 11400000
+2015/09/24 12:29:32 - Add constants 3.0 - Linha Nr : 11300000
+2015/09/24 12:29:32 - Sort rows.0 - Linenr 11300000
+2015/09/24 12:29:32 - Calculator.0 - Linenr 11400000
+2015/09/24 12:29:32 - Switch / Case.0 - linenr 11400000
+2015/09/24 12:29:33 - stg1itensL1.0 - linenr 11450000
+2015/09/24 12:29:34 - Add constants 3.0 - Linha Nr : 11350000
+2015/09/24 12:29:34 - Sort rows.0 - Linenr 11350000
+2015/09/24 12:29:34 - Calculator.0 - Linenr 11450000
+2015/09/24 12:29:34 - Switch / Case.0 - linenr 11450000
+2015/09/24 12:29:35 - stg1itensL1.0 - linenr 11500000
+2015/09/24 12:29:35 - Add constants 3.0 - Linha Nr : 11400000
+2015/09/24 12:29:35 - Sort rows.0 - Linenr 11400000
+2015/09/24 12:29:35 - Calculator.0 - Linenr 11500000
+2015/09/24 12:29:35 - Switch / Case.0 - linenr 11500000
+2015/09/24 12:29:36 - stg1itensL1.0 - linenr 11550000
+2015/09/24 12:29:36 - Add constants 3.0 - Linha Nr : 11450000
+2015/09/24 12:29:36 - Calculator.0 - Linenr 11550000
+2015/09/24 12:29:36 - Switch / Case.0 - linenr 11550000
+2015/09/24 12:29:36 - Sort rows.0 - Linenr 11450000
+2015/09/24 12:29:37 - stg1itensL1.0 - linenr 11600000
+2015/09/24 12:29:37 - Add constants 3.0 - Linha Nr : 11500000
+2015/09/24 12:29:37 - Calculator.0 - Linenr 11600000
+2015/09/24 12:29:37 - Switch / Case.0 - linenr 11600000
+2015/09/24 12:29:37 - Sort rows.0 - Linenr 11500000
+2015/09/24 12:29:38 - stg1itensL1.0 - linenr 11650000
+2015/09/24 12:29:39 - Add constants 3.0 - Linha Nr : 11550000
+2015/09/24 12:29:39 - Calculator.0 - Linenr 11650000
+2015/09/24 12:29:39 - Switch / Case.0 - linenr 11650000
+2015/09/24 12:29:39 - Sort rows.0 - Linenr 11550000
+2015/09/24 12:29:39 - Add constants 2.0 - Linha Nr : 100000
+2015/09/24 12:29:39 - Sort rows 2.0 - Linenr 100000
+2015/09/24 12:29:40 - stg1itensL1.0 - linenr 11700000
+2015/09/24 12:29:40 - Calculator.0 - Linenr 11700000
+2015/09/24 12:29:40 - Switch / Case.0 - linenr 11700000
+2015/09/24 12:29:40 - Add constants 3.0 - Linha Nr : 11600000
+2015/09/24 12:29:40 - Sort rows.0 - Linenr 11600000
+2015/09/24 12:29:41 - stg1itensL1.0 - linenr 11750000
+2015/09/24 12:29:41 - Calculator.0 - Linenr 11750000
+2015/09/24 12:29:41 - Switch / Case.0 - linenr 11750000
+2015/09/24 12:29:41 - Add constants 3.0 - Linha Nr : 11650000
+2015/09/24 12:29:41 - Sort rows.0 - Linenr 11650000
+2015/09/24 12:29:42 - stg1itensL1.0 - linenr 11800000
+2015/09/24 12:29:42 - Calculator.0 - Linenr 11800000
+2015/09/24 12:29:42 - Switch / Case.0 - linenr 11800000
+2015/09/24 12:29:42 - Add constants 3.0 - Linha Nr : 11700000
+2015/09/24 12:29:42 - Sort rows.0 - Linenr 11700000
+2015/09/24 12:29:44 - stg1itensL1.0 - linenr 11850000
+2015/09/24 12:29:44 - Calculator.0 - Linenr 11850000
+2015/09/24 12:29:44 - Switch / Case.0 - linenr 11850000
+2015/09/24 12:29:44 - Add constants 3.0 - Linha Nr : 11750000
+2015/09/24 12:29:44 - Sort rows.0 - Linenr 11750000
+2015/09/24 12:29:45 - stg1itensL1.0 - linenr 11900000
+2015/09/24 12:29:45 - Calculator.0 - Linenr 11900000
+2015/09/24 12:29:45 - Switch / Case.0 - linenr 11900000
+2015/09/24 12:29:45 - Add constants 3.0 - Linha Nr : 11800000
+2015/09/24 12:29:45 - Sort rows.0 - Linenr 11800000
+2015/09/24 12:29:46 - stg1itensL1.0 - linenr 11950000
+2015/09/24 12:29:46 - Calculator.0 - Linenr 11950000
+2015/09/24 12:29:46 - Switch / Case.0 - linenr 11950000
+2015/09/24 12:29:46 - Add constants 3.0 - Linha Nr : 11850000
+2015/09/24 12:29:46 - Sort rows.0 - Linenr 11850000
+2015/09/24 12:29:47 - stg1itensL1.0 - linenr 12000000
+2015/09/24 12:29:48 - Calculator.0 - Linenr 12000000
+2015/09/24 12:29:48 - Switch / Case.0 - linenr 12000000
+2015/09/24 12:29:48 - Add constants 3.0 - Linha Nr : 11900000
+2015/09/24 12:29:48 - Sort rows.0 - Linenr 11900000
+2015/09/24 12:29:48 - stg1itensL1.0 - linenr 12050000
+2015/09/24 12:29:49 - Calculator.0 - Linenr 12050000
+2015/09/24 12:29:49 - Switch / Case.0 - linenr 12050000
+2015/09/24 12:29:49 - Add constants 3.0 - Linha Nr : 11950000
+2015/09/24 12:29:49 - Sort rows.0 - Linenr 11950000
+2015/09/24 12:29:50 - stg1itensL1.0 - linenr 12100000
+2015/09/24 12:29:50 - Calculator.0 - Linenr 12100000
+2015/09/24 12:29:50 - Switch / Case.0 - linenr 12100000
+2015/09/24 12:29:50 - Add constants 3.0 - Linha Nr : 12000000
+2015/09/24 12:29:50 - Sort rows.0 - Linenr 12000000
+2015/09/24 12:29:51 - stg1itensL1.0 - linenr 12150000
+2015/09/24 12:29:51 - Calculator.0 - Linenr 12150000
+2015/09/24 12:29:51 - Switch / Case.0 - linenr 12150000
+2015/09/24 12:29:51 - Add constants 3.0 - Linha Nr : 12050000
+2015/09/24 12:29:51 - Sort rows.0 - Linenr 12050000
+2015/09/24 12:29:52 - stg1itensL1.0 - linenr 12200000
+2015/09/24 12:29:52 - Calculator.0 - Linenr 12200000
+2015/09/24 12:29:52 - Switch / Case.0 - linenr 12200000
+2015/09/24 12:29:53 - Add constants 3.0 - Linha Nr : 12100000
+2015/09/24 12:29:53 - Sort rows.0 - Linenr 12100000
+2015/09/24 12:29:54 - stg1itensL1.0 - linenr 12250000
+2015/09/24 12:29:54 - Calculator.0 - Linenr 12250000
+2015/09/24 12:29:54 - Switch / Case.0 - linenr 12250000
+2015/09/24 12:29:54 - Add constants 3.0 - Linha Nr : 12150000
+2015/09/24 12:29:54 - Sort rows.0 - Linenr 12150000
+2015/09/24 12:29:55 - stg1itensL1.0 - linenr 12300000
+2015/09/24 12:29:55 - Calculator.0 - Linenr 12300000
+2015/09/24 12:29:55 - Switch / Case.0 - linenr 12300000
+2015/09/24 12:29:55 - Add constants 3.0 - Linha Nr : 12200000
+2015/09/24 12:29:55 - Sort rows.0 - Linenr 12200000
+2015/09/24 12:29:56 - stg1itensL1.0 - linenr 12350000
+2015/09/24 12:29:56 - Calculator.0 - Linenr 12350000
+2015/09/24 12:29:56 - Switch / Case.0 - linenr 12350000
+2015/09/24 12:29:57 - Add constants 3.0 - Linha Nr : 12250000
+2015/09/24 12:29:57 - Sort rows.0 - Linenr 12250000
+2015/09/24 12:29:58 - stg1itensL1.0 - linenr 12400000
+2015/09/24 12:29:58 - Calculator.0 - Linenr 12400000
+2015/09/24 12:29:58 - Switch / Case.0 - linenr 12400000
+2015/09/24 12:29:58 - Add constants 3.0 - Linha Nr : 12300000
+2015/09/24 12:29:58 - Sort rows.0 - Linenr 12300000
+2015/09/24 12:29:59 - stg1itensL1.0 - linenr 12450000
+2015/09/24 12:29:59 - Calculator.0 - Linenr 12450000
+2015/09/24 12:29:59 - Switch / Case.0 - linenr 12450000
+2015/09/24 12:29:59 - Add constants 3.0 - Linha Nr : 12350000
+2015/09/24 12:29:59 - Sort rows.0 - Linenr 12350000
+2015/09/24 12:30:00 - stg1itensL1.0 - linenr 12500000
+2015/09/24 12:30:00 - Calculator.0 - Linenr 12500000
+2015/09/24 12:30:00 - Switch / Case.0 - linenr 12500000
+2015/09/24 12:30:01 - Add constants 3.0 - Linha Nr : 12400000
+2015/09/24 12:30:01 - Sort rows.0 - Linenr 12400000
+2015/09/24 12:30:01 - stg1itensL1.0 - linenr 12550000
+2015/09/24 12:30:02 - Calculator.0 - Linenr 12550000
+2015/09/24 12:30:02 - Switch / Case.0 - linenr 12550000
+2015/09/24 12:30:02 - Add constants 3.0 - Linha Nr : 12450000
+2015/09/24 12:30:02 - Sort rows.0 - Linenr 12450000
+2015/09/24 12:30:03 - stg1itensL1.0 - linenr 12600000
+2015/09/24 12:30:03 - Calculator.0 - Linenr 12600000
+2015/09/24 12:30:03 - Switch / Case.0 - linenr 12600000
+2015/09/24 12:30:03 - Add constants 3.0 - Linha Nr : 12500000
+2015/09/24 12:30:03 - Sort rows.0 - Linenr 12500000
+2015/09/24 12:30:04 - stg1itensL1.0 - linenr 12650000
+2015/09/24 12:30:04 - Calculator.0 - Linenr 12650000
+2015/09/24 12:30:04 - Switch / Case.0 - linenr 12650000
+2015/09/24 12:30:05 - Add constants 3.0 - Linha Nr : 12550000
+2015/09/24 12:30:05 - Sort rows.0 - Linenr 12550000
+2015/09/24 12:30:05 - stg1itensL1.0 - Finished reading query, closing connection.
+2015/09/24 12:30:05 - stg1itensL1.0 - Finished processing (I=12688210, O=0, R=0, W=12688210, U=0, E=0)
+2015/09/24 12:30:05 - Calculator.0 - Finished processing (I=0, O=0, R=12688210, W=12688210, U=0, E=0)
+2015/09/24 12:30:05 - Switch / Case.0 - Finished processing (I=0, O=0, R=12688210, W=12688210, U=0, E=0)
+2015/09/24 12:30:05 - Add constants 2.0 - Finished processing (I=0, O=0, R=112295, W=112295, U=0, E=0)
+2015/09/24 12:30:05 - Add constants 3.0 - Finished processing (I=0, O=0, R=12575915, W=12575915, U=0, E=0)
+2015/09/24 12:30:05 - Sort rows 2.0 - Opening 23 tmp-files...
+2015/09/24 12:30:05 - Sort rows.0 - Opening 2516 tmp-files...
+2015/09/24 12:30:18 - Group by 2.0 - Linenr 50000
+2015/09/24 12:30:19 - Group by.0 - Linenr 50000
+2015/09/24 12:30:28 - stg2_itens 2.0 - linenr 50000
+2015/09/24 12:30:29 - stg2_itens 2 2.0 - linenr 50000
+2015/09/24 12:30:29 - stg2_itens.0 - linenr 50000
+2015/09/24 12:30:30 - stg2_itens 3.0 - linenr 50000
+2015/09/24 12:30:34 - Group by 2.0 - Linenr 100000
+2015/09/24 12:30:35 - Sort rows 2.0 - Finished processing (I=0, O=0, R=112295, W=112295, U=0, E=0)
+2015/09/24 12:30:35 - Group by.0 - Linenr 100000
+2015/09/24 12:30:39 - Group by 2.0 - Finished processing (I=0, O=0, R=112295, W=84268, U=0, E=0)
+2015/09/24 12:30:43 - stg2_itens 2.0 - Finished processing (I=0, O=84263, R=84268, W=84263, U=0, E=5)
+2015/09/24 12:30:44 - stg2_itens 2 2.0 - Finished processing (I=0, O=84263, R=84263, W=84263, U=0, E=0)
+2015/09/24 12:30:49 - stg2_itens.0 - linenr 100000
+2015/09/24 12:30:49 - Group by.0 - Linenr 150000
+2015/09/24 12:30:50 - stg2_itens 3.0 - linenr 100000
+2015/09/24 12:31:02 - Group by.0 - Linenr 200000
+2015/09/24 12:31:06 - stg2_itens.0 - linenr 150000
+2015/09/24 12:31:06 - stg2_itens 3.0 - linenr 150000
+2015/09/24 12:31:14 - Group by.0 - Linenr 250000
+2015/09/24 12:31:22 - stg2_itens.0 - linenr 200000
+2015/09/24 12:31:23 - stg2_itens 3.0 - linenr 200000
+2015/09/24 12:31:26 - Group by.0 - Linenr 300000
+2015/09/24 12:31:38 - Group by.0 - Linenr 350000
+2015/09/24 12:31:39 - stg2_itens.0 - linenr 250000
+2015/09/24 12:31:39 - stg2_itens 3.0 - linenr 250000
+2015/09/24 12:31:50 - Group by.0 - Linenr 400000
+2015/09/24 12:31:55 - stg2_itens.0 - linenr 300000
+2015/09/24 12:31:56 - stg2_itens 3.0 - linenr 300000
+2015/09/24 12:32:02 - Group by.0 - Linenr 450000
+2015/09/24 12:32:12 - stg2_itens.0 - linenr 350000
+2015/09/24 12:32:12 - stg2_itens 3.0 - linenr 350000
+2015/09/24 12:32:14 - Group by.0 - Linenr 500000
+2015/09/24 12:32:26 - Group by.0 - Linenr 550000
+2015/09/24 12:32:28 - stg2_itens.0 - linenr 400000
+2015/09/24 12:32:29 - stg2_itens 3.0 - linenr 400000
+2015/09/24 12:32:37 - Group by.0 - Linenr 600000
+2015/09/24 12:32:44 - stg2_itens.0 - linenr 450000
+2015/09/24 12:32:45 - stg2_itens 3.0 - linenr 450000
+2015/09/24 12:32:49 - Group by.0 - Linenr 650000
+2015/09/24 12:33:01 - stg2_itens.0 - linenr 500000
+2015/09/24 12:33:01 - Group by.0 - Linenr 700000
+2015/09/24 12:33:01 - stg2_itens 3.0 - linenr 500000
+2015/09/24 12:33:13 - Group by.0 - Linenr 750000
+2015/09/24 12:33:17 - stg2_itens.0 - linenr 550000
+2015/09/24 12:33:18 - stg2_itens 3.0 - linenr 550000
+2015/09/24 12:33:25 - Group by.0 - Linenr 800000
+2015/09/24 12:33:33 - stg2_itens.0 - linenr 600000
+2015/09/24 12:33:34 - stg2_itens 3.0 - linenr 600000
+2015/09/24 12:33:37 - Group by.0 - Linenr 850000
+2015/09/24 12:33:49 - Group by.0 - Linenr 900000
+2015/09/24 12:33:50 - stg2_itens.0 - linenr 650000
+2015/09/24 12:33:51 - stg2_itens 3.0 - linenr 650000
+2015/09/24 12:34:00 - Group by.0 - Linenr 950000
+2015/09/24 12:34:06 - stg2_itens.0 - linenr 700000
+2015/09/24 12:34:07 - stg2_itens 3.0 - linenr 700000
+2015/09/24 12:34:12 - Group by.0 - Linenr 1000000
+2015/09/24 12:34:23 - stg2_itens.0 - linenr 750000
+2015/09/24 12:34:23 - stg2_itens 3.0 - linenr 750000
+2015/09/24 12:34:23 - Group by.0 - Linenr 1050000
+2015/09/24 12:34:35 - Group by.0 - Linenr 1100000
+2015/09/24 12:34:39 - stg2_itens.0 - linenr 800000
+2015/09/24 12:34:40 - stg2_itens 3.0 - linenr 800000
+2015/09/24 12:34:47 - Group by.0 - Linenr 1150000
+2015/09/24 12:34:55 - stg2_itens.0 - linenr 850000
+2015/09/24 12:34:56 - stg2_itens 3.0 - linenr 850000
+2015/09/24 12:34:59 - Group by.0 - Linenr 1200000
+2015/09/24 12:35:10 - Group by.0 - Linenr 1250000
+2015/09/24 12:35:12 - stg2_itens.0 - linenr 900000
+2015/09/24 12:35:12 - stg2_itens 3.0 - linenr 900000
+2015/09/24 12:35:22 - Group by.0 - Linenr 1300000
+2015/09/24 12:35:28 - stg2_itens.0 - linenr 950000
+2015/09/24 12:35:29 - stg2_itens 3.0 - linenr 950000
+2015/09/24 12:35:34 - Group by.0 - Linenr 1350000
+2015/09/24 12:35:44 - stg2_itens.0 - linenr 1000000
+2015/09/24 12:35:45 - stg2_itens 3.0 - linenr 1000000
+2015/09/24 12:35:46 - Group by.0 - Linenr 1400000
+2015/09/24 12:35:57 - Group by.0 - Linenr 1450000
+2015/09/24 12:36:00 - stg2_itens.0 - linenr 1050000
+2015/09/24 12:36:01 - stg2_itens 3.0 - linenr 1050000
+2015/09/24 12:36:09 - Group by.0 - Linenr 1500000
+2015/09/24 12:36:17 - stg2_itens.0 - linenr 1100000
+2015/09/24 12:36:17 - stg2_itens 3.0 - linenr 1100000
+2015/09/24 12:36:21 - Group by.0 - Linenr 1550000
+2015/09/24 12:36:33 - Group by.0 - Linenr 1600000
+2015/09/24 12:36:33 - stg2_itens.0 - linenr 1150000
+2015/09/24 12:36:34 - stg2_itens 3.0 - linenr 1150000
+2015/09/24 12:36:44 - Group by.0 - Linenr 1650000
+2015/09/24 12:36:49 - stg2_itens.0 - linenr 1200000
+2015/09/24 12:36:50 - stg2_itens 3.0 - linenr 1200000
+2015/09/24 12:36:56 - Group by.0 - Linenr 1700000
+2015/09/24 12:37:05 - stg2_itens.0 - linenr 1250000
+2015/09/24 12:37:06 - stg2_itens 3.0 - linenr 1250000
+2015/09/24 12:37:08 - Group by.0 - Linenr 1750000
+2015/09/24 12:37:20 - Group by.0 - Linenr 1800000
+2015/09/24 12:37:22 - stg2_itens.0 - linenr 1300000
+2015/09/24 12:37:22 - stg2_itens 3.0 - linenr 1300000
+2015/09/24 12:37:32 - Group by.0 - Linenr 1850000
+2015/09/24 12:37:38 - stg2_itens.0 - linenr 1350000
+2015/09/24 12:37:39 - stg2_itens 3.0 - linenr 1350000
+2015/09/24 12:37:44 - Group by.0 - Linenr 1900000
+2015/09/24 12:37:54 - stg2_itens.0 - linenr 1400000
+2015/09/24 12:37:55 - stg2_itens 3.0 - linenr 1400000
+2015/09/24 12:37:56 - Group by.0 - Linenr 1950000
+2015/09/24 12:38:08 - Group by.0 - Linenr 2000000
+2015/09/24 12:38:11 - stg2_itens.0 - linenr 1450000
+2015/09/24 12:38:12 - stg2_itens 3.0 - linenr 1450000
+2015/09/24 12:38:20 - Group by.0 - Linenr 2050000
+2015/09/24 12:38:27 - stg2_itens.0 - linenr 1500000
+2015/09/24 12:38:28 - stg2_itens 3.0 - linenr 1500000
+2015/09/24 12:38:32 - Group by.0 - Linenr 2100000
+2015/09/24 12:38:43 - stg2_itens.0 - linenr 1550000
+2015/09/24 12:38:44 - Group by.0 - Linenr 2150000
+2015/09/24 12:38:44 - stg2_itens 3.0 - linenr 1550000
+2015/09/24 12:38:55 - Group by.0 - Linenr 2200000
+2015/09/24 12:39:00 - stg2_itens.0 - linenr 1600000
+2015/09/24 12:39:00 - stg2_itens 3.0 - linenr 1600000
+2015/09/24 12:39:08 - Group by.0 - Linenr 2250000
+2015/09/24 12:39:16 - stg2_itens.0 - linenr 1650000
+2015/09/24 12:39:17 - stg2_itens 3.0 - linenr 1650000
+2015/09/24 12:39:20 - Group by.0 - Linenr 2300000
+2015/09/24 12:39:31 - Group by.0 - Linenr 2350000
+2015/09/24 12:39:32 - stg2_itens.0 - linenr 1700000
+2015/09/24 12:39:33 - stg2_itens 3.0 - linenr 1700000
+2015/09/24 12:39:44 - Group by.0 - Linenr 2400000
+2015/09/24 12:39:48 - stg2_itens.0 - linenr 1750000
+2015/09/24 12:39:49 - stg2_itens 3.0 - linenr 1750000
+2015/09/24 12:39:55 - Group by.0 - Linenr 2450000
+2015/09/24 12:40:05 - stg2_itens.0 - linenr 1800000
+2015/09/24 12:40:05 - stg2_itens 3.0 - linenr 1800000
+2015/09/24 12:40:07 - Group by.0 - Linenr 2500000
+2015/09/24 12:40:19 - Group by.0 - Linenr 2550000
+2015/09/24 12:40:21 - stg2_itens.0 - linenr 1850000
+2015/09/24 12:40:22 - stg2_itens 3.0 - linenr 1850000
+2015/09/24 12:40:30 - Group by.0 - Linenr 2600000
+2015/09/24 12:40:37 - stg2_itens.0 - linenr 1900000
+2015/09/24 12:40:38 - stg2_itens 3.0 - linenr 1900000
+2015/09/24 12:40:42 - Group by.0 - Linenr 2650000
+2015/09/24 12:40:53 - stg2_itens.0 - linenr 1950000
+2015/09/24 12:40:54 - stg2_itens 3.0 - linenr 1950000
+2015/09/24 12:40:54 - Group by.0 - Linenr 2700000
+2015/09/24 12:41:06 - Group by.0 - Linenr 2750000
+2015/09/24 12:41:09 - stg2_itens.0 - linenr 2000000
+2015/09/24 12:41:10 - stg2_itens 3.0 - linenr 2000000
+2015/09/24 12:41:18 - Group by.0 - Linenr 2800000
+2015/09/24 12:41:26 - stg2_itens.0 - linenr 2050000
+2015/09/24 12:41:26 - stg2_itens 3.0 - linenr 2050000
+2015/09/24 12:41:30 - Group by.0 - Linenr 2850000
+2015/09/24 12:41:42 - Group by.0 - Linenr 2900000
+2015/09/24 12:41:42 - stg2_itens.0 - linenr 2100000
+2015/09/24 12:41:43 - stg2_itens 3.0 - linenr 2100000
+2015/09/24 12:41:54 - Group by.0 - Linenr 2950000
+2015/09/24 12:41:58 - stg2_itens.0 - linenr 2150000
+2015/09/24 12:41:59 - stg2_itens 3.0 - linenr 2150000
+2015/09/24 12:42:06 - Group by.0 - Linenr 3000000
+2015/09/24 12:42:15 - stg2_itens.0 - linenr 2200000
+2015/09/24 12:42:15 - stg2_itens 3.0 - linenr 2200000
+2015/09/24 12:42:18 - Group by.0 - Linenr 3050000
+2015/09/24 12:42:29 - Group by.0 - Linenr 3100000
+2015/09/24 12:42:31 - stg2_itens.0 - linenr 2250000
+2015/09/24 12:42:32 - stg2_itens 3.0 - linenr 2250000
+2015/09/24 12:42:41 - Group by.0 - Linenr 3150000
+2015/09/24 12:42:47 - stg2_itens.0 - linenr 2300000
+2015/09/24 12:42:48 - stg2_itens 3.0 - linenr 2300000
+2015/09/24 12:42:53 - Group by.0 - Linenr 3200000
+2015/09/24 12:43:03 - stg2_itens.0 - linenr 2350000
+2015/09/24 12:43:04 - stg2_itens 3.0 - linenr 2350000
+2015/09/24 12:43:05 - Group by.0 - Linenr 3250000
+2015/09/24 12:43:17 - Group by.0 - Linenr 3300000
+2015/09/24 12:43:20 - stg2_itens.0 - linenr 2400000
+2015/09/24 12:43:20 - stg2_itens 3.0 - linenr 2400000
+2015/09/24 12:43:28 - Group by.0 - Linenr 3350000
+2015/09/24 12:43:36 - stg2_itens.0 - linenr 2450000
+2015/09/24 12:43:37 - stg2_itens 3.0 - linenr 2450000
+2015/09/24 12:43:40 - Group by.0 - Linenr 3400000
+2015/09/24 12:43:52 - stg2_itens.0 - linenr 2500000
+2015/09/24 12:43:52 - Group by.0 - Linenr 3450000
+2015/09/24 12:43:53 - stg2_itens 3.0 - linenr 2500000
+2015/09/24 12:44:04 - Group by.0 - Linenr 3500000
+2015/09/24 12:44:09 - stg2_itens.0 - linenr 2550000
+2015/09/24 12:44:09 - stg2_itens 3.0 - linenr 2550000
+2015/09/24 12:44:16 - Group by.0 - Linenr 3550000
+2015/09/24 12:44:25 - stg2_itens.0 - linenr 2600000
+2015/09/24 12:44:25 - stg2_itens 3.0 - linenr 2600000
+2015/09/24 12:44:28 - Group by.0 - Linenr 3600000
+2015/09/24 12:44:40 - Group by.0 - Linenr 3650000
+2015/09/24 12:44:41 - stg2_itens.0 - linenr 2650000
+2015/09/24 12:44:42 - stg2_itens 3.0 - linenr 2650000
+2015/09/24 12:44:52 - Group by.0 - Linenr 3700000
+2015/09/24 12:44:57 - stg2_itens.0 - linenr 2700000
+2015/09/24 12:44:58 - stg2_itens 3.0 - linenr 2700000
+2015/09/24 12:45:04 - Group by.0 - Linenr 3750000
+2015/09/24 12:45:14 - stg2_itens.0 - linenr 2750000
+2015/09/24 12:45:14 - stg2_itens 3.0 - linenr 2750000
+2015/09/24 12:45:15 - Group by.0 - Linenr 3800000
+2015/09/24 12:45:27 - Group by.0 - Linenr 3850000
+2015/09/24 12:45:30 - stg2_itens.0 - linenr 2800000
+2015/09/24 12:45:31 - stg2_itens 3.0 - linenr 2800000
+2015/09/24 12:45:39 - Group by.0 - Linenr 3900000
+2015/09/24 12:45:46 - stg2_itens.0 - linenr 2850000
+2015/09/24 12:45:47 - stg2_itens 3.0 - linenr 2850000
+2015/09/24 12:45:51 - Group by.0 - Linenr 3950000
+2015/09/24 12:46:02 - stg2_itens.0 - linenr 2900000
+2015/09/24 12:46:03 - Group by.0 - Linenr 4000000
+2015/09/24 12:46:03 - stg2_itens 3.0 - linenr 2900000
+2015/09/24 12:46:14 - Group by.0 - Linenr 4050000
+2015/09/24 12:46:19 - stg2_itens.0 - linenr 2950000
+2015/09/24 12:46:20 - stg2_itens 3.0 - linenr 2950000
+2015/09/24 12:46:27 - Group by.0 - Linenr 4100000
+2015/09/24 12:46:35 - stg2_itens.0 - linenr 3000000
+2015/09/24 12:46:36 - stg2_itens 3.0 - linenr 3000000
+2015/09/24 12:46:39 - Group by.0 - Linenr 4150000
+2015/09/24 12:46:51 - Group by.0 - Linenr 4200000
+2015/09/24 12:46:52 - stg2_itens.0 - linenr 3050000
+2015/09/24 12:46:52 - stg2_itens 3.0 - linenr 3050000
+2015/09/24 12:47:02 - Group by.0 - Linenr 4250000
+2015/09/24 12:47:08 - stg2_itens.0 - linenr 3100000
+2015/09/24 12:47:09 - stg2_itens 3.0 - linenr 3100000
+2015/09/24 12:47:14 - Group by.0 - Linenr 4300000
+2015/09/24 12:47:24 - stg2_itens.0 - linenr 3150000
+2015/09/24 12:47:25 - stg2_itens 3.0 - linenr 3150000
+2015/09/24 12:47:26 - Group by.0 - Linenr 4350000
+2015/09/24 12:47:38 - Group by.0 - Linenr 4400000
+2015/09/24 12:47:41 - stg2_itens.0 - linenr 3200000
+2015/09/24 12:47:41 - stg2_itens 3.0 - linenr 3200000
+2015/09/24 12:47:50 - Group by.0 - Linenr 4450000
+2015/09/24 12:47:57 - stg2_itens.0 - linenr 3250000
+2015/09/24 12:47:58 - stg2_itens 3.0 - linenr 3250000
+2015/09/24 12:48:02 - Group by.0 - Linenr 4500000
+2015/09/24 12:48:13 - stg2_itens.0 - linenr 3300000
+2015/09/24 12:48:14 - stg2_itens 3.0 - linenr 3300000
+2015/09/24 12:48:14 - Group by.0 - Linenr 4550000
+2015/09/24 12:48:26 - Group by.0 - Linenr 4600000
+2015/09/24 12:48:30 - stg2_itens.0 - linenr 3350000
+2015/09/24 12:48:30 - stg2_itens 3.0 - linenr 3350000
+2015/09/24 12:48:38 - Group by.0 - Linenr 4650000
+2015/09/24 12:48:46 - stg2_itens.0 - linenr 3400000
+2015/09/24 12:48:46 - stg2_itens 3.0 - linenr 3400000
+2015/09/24 12:48:50 - Group by.0 - Linenr 4700000
+2015/09/24 12:49:01 - Group by.0 - Linenr 4750000
+2015/09/24 12:49:02 - stg2_itens.0 - linenr 3450000
+2015/09/24 12:49:03 - stg2_itens 3.0 - linenr 3450000
+2015/09/24 12:49:13 - Group by.0 - Linenr 4800000
+2015/09/24 12:49:18 - stg2_itens.0 - linenr 3500000
+2015/09/24 12:49:19 - stg2_itens 3.0 - linenr 3500000
+2015/09/24 12:49:24 - Group by.0 - Linenr 4850000
+2015/09/24 12:49:34 - stg2_itens.0 - linenr 3550000
+2015/09/24 12:49:35 - stg2_itens 3.0 - linenr 3550000
+2015/09/24 12:49:36 - Group by.0 - Linenr 4900000
+2015/09/24 12:49:48 - Group by.0 - Linenr 4950000
+2015/09/24 12:49:51 - stg2_itens.0 - linenr 3600000
+2015/09/24 12:49:51 - stg2_itens 3.0 - linenr 3600000
+2015/09/24 12:49:59 - Group by.0 - Linenr 5000000
+2015/09/24 12:50:07 - stg2_itens.0 - linenr 3650000
+2015/09/24 12:50:08 - stg2_itens 3.0 - linenr 3650000
+2015/09/24 12:50:11 - Group by.0 - Linenr 5050000
+2015/09/24 12:50:22 - Group by.0 - Linenr 5100000
+2015/09/24 12:50:23 - stg2_itens.0 - linenr 3700000
+2015/09/24 12:50:24 - stg2_itens 3.0 - linenr 3700000
+2015/09/24 12:50:34 - Group by.0 - Linenr 5150000
+2015/09/24 12:50:40 - stg2_itens.0 - linenr 3750000
+2015/09/24 12:50:40 - stg2_itens 3.0 - linenr 3750000
+2015/09/24 12:50:46 - Group by.0 - Linenr 5200000
+2015/09/24 12:50:56 - stg2_itens.0 - linenr 3800000
+2015/09/24 12:50:57 - stg2_itens 3.0 - linenr 3800000
+2015/09/24 12:50:58 - Group by.0 - Linenr 5250000
+2015/09/24 12:51:09 - Group by.0 - Linenr 5300000
+2015/09/24 12:51:12 - stg2_itens.0 - linenr 3850000
+2015/09/24 12:51:13 - stg2_itens 3.0 - linenr 3850000
+2015/09/24 12:51:21 - Group by.0 - Linenr 5350000
+2015/09/24 12:51:29 - stg2_itens.0 - linenr 3900000
+2015/09/24 12:51:30 - stg2_itens 3.0 - linenr 3900000
+2015/09/24 12:51:33 - Group by.0 - Linenr 5400000
+2015/09/24 12:51:45 - stg2_itens.0 - linenr 3950000
+2015/09/24 12:51:45 - Group by.0 - Linenr 5450000
+2015/09/24 12:51:46 - stg2_itens 3.0 - linenr 3950000
+2015/09/24 12:51:57 - Group by.0 - Linenr 5500000
+2015/09/24 12:52:01 - stg2_itens.0 - linenr 4000000
+2015/09/24 12:52:02 - stg2_itens 3.0 - linenr 4000000
+2015/09/24 12:52:09 - Group by.0 - Linenr 5550000
+2015/09/24 12:52:18 - stg2_itens.0 - linenr 4050000
+2015/09/24 12:52:18 - stg2_itens 3.0 - linenr 4050000
+2015/09/24 12:52:21 - Group by.0 - Linenr 5600000
+2015/09/24 12:52:32 - Group by.0 - Linenr 5650000
+2015/09/24 12:52:34 - stg2_itens.0 - linenr 4100000
+2015/09/24 12:52:34 - stg2_itens 3.0 - linenr 4100000
+2015/09/24 12:52:43 - Group by.0 - Linenr 5700000
+2015/09/24 12:52:50 - stg2_itens.0 - linenr 4150000
+2015/09/24 12:52:51 - stg2_itens 3.0 - linenr 4150000
+2015/09/24 12:52:55 - Group by.0 - Linenr 5750000
+2015/09/24 12:53:06 - stg2_itens.0 - linenr 4200000
+2015/09/24 12:53:07 - stg2_itens 3.0 - linenr 4200000
+2015/09/24 12:53:08 - Group by.0 - Linenr 5800000
+2015/09/24 12:53:19 - Group by.0 - Linenr 5850000
+2015/09/24 12:53:22 - stg2_itens.0 - linenr 4250000
+2015/09/24 12:53:23 - stg2_itens 3.0 - linenr 4250000
+2015/09/24 12:53:31 - Group by.0 - Linenr 5900000
+2015/09/24 12:53:38 - stg2_itens.0 - linenr 4300000
+2015/09/24 12:53:39 - stg2_itens 3.0 - linenr 4300000
+2015/09/24 12:53:42 - Group by.0 - Linenr 5950000
+2015/09/24 12:53:55 - stg2_itens.0 - linenr 4350000
+2015/09/24 12:53:55 - Group by.0 - Linenr 6000000
+2015/09/24 12:53:55 - stg2_itens 3.0 - linenr 4350000
+2015/09/24 12:54:05 - Group by.0 - Linenr 6050000
+2015/09/24 12:54:09 - stg2_itens.0 - linenr 4400000
+2015/09/24 12:54:10 - stg2_itens 3.0 - linenr 4400000
+2015/09/24 12:54:17 - Group by.0 - Linenr 6100000
+2015/09/24 12:54:25 - stg2_itens.0 - linenr 4450000
+2015/09/24 12:54:26 - stg2_itens 3.0 - linenr 4450000
+2015/09/24 12:54:28 - Group by.0 - Linenr 6150000
+2015/09/24 12:54:39 - Group by.0 - Linenr 6200000
+2015/09/24 12:54:42 - stg2_itens.0 - linenr 4500000
+2015/09/24 12:54:42 - stg2_itens 3.0 - linenr 4500000
+2015/09/24 12:54:51 - Group by.0 - Linenr 6250000
+2015/09/24 12:54:58 - stg2_itens.0 - linenr 4550000
+2015/09/24 12:54:58 - stg2_itens 3.0 - linenr 4550000
+2015/09/24 12:55:02 - Group by.0 - Linenr 6300000
+2015/09/24 12:55:13 - Group by.0 - Linenr 6350000
+2015/09/24 12:55:14 - stg2_itens.0 - linenr 4600000
+2015/09/24 12:55:14 - stg2_itens 3.0 - linenr 4600000
+2015/09/24 12:55:26 - Group by.0 - Linenr 6400000
+2015/09/24 12:55:30 - stg2_itens.0 - linenr 4650000
+2015/09/24 12:55:31 - stg2_itens 3.0 - linenr 4650000
+2015/09/24 12:55:38 - Group by.0 - Linenr 6450000
+2015/09/24 12:55:46 - stg2_itens.0 - linenr 4700000
+2015/09/24 12:55:47 - stg2_itens 3.0 - linenr 4700000
+2015/09/24 12:55:49 - Group by.0 - Linenr 6500000
+2015/09/24 12:56:01 - Group by.0 - Linenr 6550000
+2015/09/24 12:56:02 - stg2_itens.0 - linenr 4750000
+2015/09/24 12:56:03 - stg2_itens 3.0 - linenr 4750000
+2015/09/24 12:56:14 - Group by.0 - Linenr 6600000
+2015/09/24 12:56:19 - stg2_itens.0 - linenr 4800000
+2015/09/24 12:56:20 - stg2_itens 3.0 - linenr 4800000
+2015/09/24 12:56:25 - Group by.0 - Linenr 6650000
+2015/09/24 12:56:36 - stg2_itens.0 - linenr 4850000
+2015/09/24 12:56:36 - stg2_itens 3.0 - linenr 4850000
+2015/09/24 12:56:37 - Group by.0 - Linenr 6700000
+2015/09/24 12:56:48 - Group by.0 - Linenr 6750000
+2015/09/24 12:56:52 - stg2_itens.0 - linenr 4900000
+2015/09/24 12:56:52 - stg2_itens 3.0 - linenr 4900000
+2015/09/24 12:57:00 - Group by.0 - Linenr 6800000
+2015/09/24 12:57:08 - stg2_itens.0 - linenr 4950000
+2015/09/24 12:57:09 - stg2_itens 3.0 - linenr 4950000
+2015/09/24 12:57:12 - Group by.0 - Linenr 6850000
+2015/09/24 12:57:24 - Group by.0 - Linenr 6900000
+2015/09/24 12:57:25 - stg2_itens.0 - linenr 5000000
+2015/09/24 12:57:26 - stg2_itens 3.0 - linenr 5000000
+2015/09/24 12:57:35 - Group by.0 - Linenr 6950000
+2015/09/24 12:57:41 - stg2_itens.0 - linenr 5050000
+2015/09/24 12:57:42 - stg2_itens 3.0 - linenr 5050000
+2015/09/24 12:57:47 - Group by.0 - Linenr 7000000
+2015/09/24 12:57:58 - stg2_itens.0 - linenr 5100000
+2015/09/24 12:57:58 - Group by.0 - Linenr 7050000
+2015/09/24 12:57:58 - stg2_itens 3.0 - linenr 5100000
+2015/09/24 12:58:10 - Group by.0 - Linenr 7100000
+2015/09/24 12:58:14 - stg2_itens.0 - linenr 5150000
+2015/09/24 12:58:15 - stg2_itens 3.0 - linenr 5150000
+2015/09/24 12:58:22 - Group by.0 - Linenr 7150000
+2015/09/24 12:58:30 - stg2_itens.0 - linenr 5200000
+2015/09/24 12:58:31 - stg2_itens 3.0 - linenr 5200000
+2015/09/24 12:58:33 - Group by.0 - Linenr 7200000
+2015/09/24 12:58:45 - Group by.0 - Linenr 7250000
+2015/09/24 12:58:46 - stg2_itens.0 - linenr 5250000
+2015/09/24 12:58:47 - stg2_itens 3.0 - linenr 5250000
+2015/09/24 12:58:56 - Group by.0 - Linenr 7300000
+2015/09/24 12:59:03 - stg2_itens.0 - linenr 5300000
+2015/09/24 12:59:03 - stg2_itens 3.0 - linenr 5300000
+2015/09/24 12:59:07 - Group by.0 - Linenr 7350000
+2015/09/24 12:59:19 - stg2_itens.0 - linenr 5350000
+2015/09/24 12:59:19 - Group by.0 - Linenr 7400000
+2015/09/24 12:59:19 - stg2_itens 3.0 - linenr 5350000
+2015/09/24 12:59:31 - Group by.0 - Linenr 7450000
+2015/09/24 12:59:35 - stg2_itens.0 - linenr 5400000
+2015/09/24 12:59:35 - stg2_itens 3.0 - linenr 5400000
+2015/09/24 12:59:42 - Group by.0 - Linenr 7500000
+2015/09/24 12:59:51 - stg2_itens.0 - linenr 5450000
+2015/09/24 12:59:52 - stg2_itens 3.0 - linenr 5450000
+2015/09/24 12:59:54 - Group by.0 - Linenr 7550000
+2015/09/24 13:00:06 - Group by.0 - Linenr 7600000
+2015/09/24 13:00:07 - stg2_itens.0 - linenr 5500000
+2015/09/24 13:00:08 - stg2_itens 3.0 - linenr 5500000
+2015/09/24 13:00:17 - Group by.0 - Linenr 7650000
+2015/09/24 13:00:24 - stg2_itens.0 - linenr 5550000
+2015/09/24 13:00:24 - stg2_itens 3.0 - linenr 5550000
+2015/09/24 13:00:29 - Group by.0 - Linenr 7700000
+2015/09/24 13:00:40 - stg2_itens.0 - linenr 5600000
+2015/09/24 13:00:40 - stg2_itens 3.0 - linenr 5600000
+2015/09/24 13:00:41 - Group by.0 - Linenr 7750000
+2015/09/24 13:00:52 - Group by.0 - Linenr 7800000
+2015/09/24 13:00:56 - stg2_itens.0 - linenr 5650000
+2015/09/24 13:00:57 - stg2_itens 3.0 - linenr 5650000
+2015/09/24 13:01:04 - Group by.0 - Linenr 7850000
+2015/09/24 13:01:12 - stg2_itens.0 - linenr 5700000
+2015/09/24 13:01:13 - stg2_itens 3.0 - linenr 5700000
+2015/09/24 13:01:15 - Group by.0 - Linenr 7900000
+2015/09/24 13:01:27 - Group by.0 - Linenr 7950000
+2015/09/24 13:01:28 - stg2_itens.0 - linenr 5750000
+2015/09/24 13:01:29 - stg2_itens 3.0 - linenr 5750000
+2015/09/24 13:01:39 - Group by.0 - Linenr 8000000
+2015/09/24 13:01:44 - stg2_itens.0 - linenr 5800000
+2015/09/24 13:01:45 - stg2_itens 3.0 - linenr 5800000
+2015/09/24 13:01:51 - Group by.0 - Linenr 8050000
+2015/09/24 13:02:01 - stg2_itens.0 - linenr 5850000
+2015/09/24 13:02:01 - stg2_itens 3.0 - linenr 5850000
+2015/09/24 13:02:02 - Group by.0 - Linenr 8100000
+2015/09/24 13:02:14 - Group by.0 - Linenr 8150000
+2015/09/24 13:02:17 - stg2_itens.0 - linenr 5900000
+2015/09/24 13:02:18 - stg2_itens 3.0 - linenr 5900000
+2015/09/24 13:02:26 - Group by.0 - Linenr 8200000
+2015/09/24 13:02:33 - stg2_itens.0 - linenr 5950000
+2015/09/24 13:02:34 - stg2_itens 3.0 - linenr 5950000
+2015/09/24 13:02:38 - Group by.0 - Linenr 8250000
+2015/09/24 13:02:49 - stg2_itens.0 - linenr 6000000
+2015/09/24 13:02:50 - Group by.0 - Linenr 8300000
+2015/09/24 13:02:50 - stg2_itens 3.0 - linenr 6000000
+2015/09/24 13:03:01 - Group by.0 - Linenr 8350000
+2015/09/24 13:03:05 - stg2_itens.0 - linenr 6050000
+2015/09/24 13:03:06 - stg2_itens 3.0 - linenr 6050000
+2015/09/24 13:03:13 - Group by.0 - Linenr 8400000
+2015/09/24 13:03:22 - stg2_itens.0 - linenr 6100000
+2015/09/24 13:03:22 - stg2_itens 3.0 - linenr 6100000
+2015/09/24 13:03:25 - Group by.0 - Linenr 8450000
+2015/09/24 13:03:36 - Group by.0 - Linenr 8500000
+2015/09/24 13:03:38 - stg2_itens.0 - linenr 6150000
+2015/09/24 13:03:38 - stg2_itens 3.0 - linenr 6150000
+2015/09/24 13:03:48 - Group by.0 - Linenr 8550000
+2015/09/24 13:03:54 - stg2_itens.0 - linenr 6200000
+2015/09/24 13:03:55 - stg2_itens 3.0 - linenr 6200000
+2015/09/24 13:03:59 - Group by.0 - Linenr 8600000
+2015/09/24 13:04:10 - stg2_itens.0 - linenr 6250000
+2015/09/24 13:04:11 - stg2_itens 3.0 - linenr 6250000
+2015/09/24 13:04:11 - Group by.0 - Linenr 8650000
+2015/09/24 13:04:23 - Group by.0 - Linenr 8700000
+2015/09/24 13:04:26 - stg2_itens.0 - linenr 6300000
+2015/09/24 13:04:27 - stg2_itens 3.0 - linenr 6300000
+2015/09/24 13:04:34 - Group by.0 - Linenr 8750000
+2015/09/24 13:04:43 - stg2_itens.0 - linenr 6350000
+2015/09/24 13:04:43 - stg2_itens 3.0 - linenr 6350000
+2015/09/24 13:04:46 - Group by.0 - Linenr 8800000
+2015/09/24 13:04:58 - Group by.0 - Linenr 8850000
+2015/09/24 13:04:59 - stg2_itens.0 - linenr 6400000
+2015/09/24 13:04:59 - stg2_itens 3.0 - linenr 6400000
+2015/09/24 13:05:10 - Group by.0 - Linenr 8900000
+2015/09/24 13:05:15 - stg2_itens.0 - linenr 6450000
+2015/09/24 13:05:16 - stg2_itens 3.0 - linenr 6450000
+2015/09/24 13:05:21 - Group by.0 - Linenr 8950000
+2015/09/24 13:05:31 - stg2_itens.0 - linenr 6500000
+2015/09/24 13:05:32 - stg2_itens 3.0 - linenr 6500000
+2015/09/24 13:05:33 - Group by.0 - Linenr 9000000
+2015/09/24 13:05:45 - Group by.0 - Linenr 9050000
+2015/09/24 13:05:47 - stg2_itens.0 - linenr 6550000
+2015/09/24 13:05:48 - stg2_itens 3.0 - linenr 6550000
+2015/09/24 13:05:56 - Group by.0 - Linenr 9100000
+2015/09/24 13:06:03 - stg2_itens.0 - linenr 6600000
+2015/09/24 13:06:04 - stg2_itens 3.0 - linenr 6600000
+2015/09/24 13:06:08 - Group by.0 - Linenr 9150000
+2015/09/24 13:06:20 - stg2_itens.0 - linenr 6650000
+2015/09/24 13:06:20 - Group by.0 - Linenr 9200000
+2015/09/24 13:06:20 - stg2_itens 3.0 - linenr 6650000
+2015/09/24 13:06:32 - Group by.0 - Linenr 9250000
+2015/09/24 13:06:36 - stg2_itens.0 - linenr 6700000
+2015/09/24 13:06:36 - stg2_itens 3.0 - linenr 6700000
+2015/09/24 13:06:43 - Group by.0 - Linenr 9300000
+2015/09/24 13:06:52 - stg2_itens.0 - linenr 6750000
+2015/09/24 13:06:53 - stg2_itens 3.0 - linenr 6750000
+2015/09/24 13:06:55 - Group by.0 - Linenr 9350000
+2015/09/24 13:07:07 - Group by.0 - Linenr 9400000
+2015/09/24 13:07:08 - stg2_itens.0 - linenr 6800000
+2015/09/24 13:07:09 - stg2_itens 3.0 - linenr 6800000
+2015/09/24 13:07:18 - Group by.0 - Linenr 9450000
+2015/09/24 13:07:25 - stg2_itens.0 - linenr 6850000
+2015/09/24 13:07:25 - stg2_itens 3.0 - linenr 6850000
+2015/09/24 13:07:31 - Group by.0 - Linenr 9500000
+2015/09/24 13:07:41 - stg2_itens.0 - linenr 6900000
+2015/09/24 13:07:42 - stg2_itens 3.0 - linenr 6900000
+2015/09/24 13:07:43 - Group by.0 - Linenr 9550000
+2015/09/24 13:07:55 - Group by.0 - Linenr 9600000
+2015/09/24 13:07:58 - stg2_itens.0 - linenr 6950000
+2015/09/24 13:07:58 - stg2_itens 3.0 - linenr 6950000
+2015/09/24 13:08:07 - Group by.0 - Linenr 9650000
+2015/09/24 13:08:14 - stg2_itens.0 - linenr 7000000
+2015/09/24 13:08:15 - stg2_itens 3.0 - linenr 7000000
+2015/09/24 13:08:19 - Group by.0 - Linenr 9700000
+2015/09/24 13:08:30 - stg2_itens.0 - linenr 7050000
+2015/09/24 13:08:31 - Group by.0 - Linenr 9750000
+2015/09/24 13:08:31 - stg2_itens 3.0 - linenr 7050000
+2015/09/24 13:08:43 - Group by.0 - Linenr 9800000
+2015/09/24 13:08:47 - stg2_itens.0 - linenr 7100000
+2015/09/24 13:08:47 - stg2_itens 3.0 - linenr 7100000
+2015/09/24 13:08:55 - Group by.0 - Linenr 9850000
+2015/09/24 13:09:03 - stg2_itens.0 - linenr 7150000
+2015/09/24 13:09:03 - stg2_itens 3.0 - linenr 7150000
+2015/09/24 13:09:06 - Group by.0 - Linenr 9900000
+2015/09/24 13:09:19 - Group by.0 - Linenr 9950000
+2015/09/24 13:09:19 - stg2_itens.0 - linenr 7200000
+2015/09/24 13:09:20 - stg2_itens 3.0 - linenr 7200000
+2015/09/24 13:09:30 - Group by.0 - Linenr 10000000
+2015/09/24 13:09:35 - stg2_itens.0 - linenr 7250000
+2015/09/24 13:09:36 - stg2_itens 3.0 - linenr 7250000
+2015/09/24 13:09:42 - Group by.0 - Linenr 10050000
+2015/09/24 13:09:52 - stg2_itens.0 - linenr 7300000
+2015/09/24 13:09:52 - stg2_itens 3.0 - linenr 7300000
+2015/09/24 13:09:54 - Group by.0 - Linenr 10100000
+2015/09/24 13:10:06 - Group by.0 - Linenr 10150000
+2015/09/24 13:10:08 - stg2_itens.0 - linenr 7350000
+2015/09/24 13:10:08 - stg2_itens 3.0 - linenr 7350000
+2015/09/24 13:10:17 - Group by.0 - Linenr 10200000
+2015/09/24 13:10:24 - stg2_itens.0 - linenr 7400000
+2015/09/24 13:10:25 - stg2_itens 3.0 - linenr 7400000
+2015/09/24 13:10:29 - Group by.0 - Linenr 10250000
+2015/09/24 13:10:40 - stg2_itens.0 - linenr 7450000
+2015/09/24 13:10:41 - stg2_itens 3.0 - linenr 7450000
+2015/09/24 13:10:41 - Group by.0 - Linenr 10300000
+2015/09/24 13:10:53 - Group by.0 - Linenr 10350000
+2015/09/24 13:10:56 - stg2_itens.0 - linenr 7500000
+2015/09/24 13:10:57 - stg2_itens 3.0 - linenr 7500000
+2015/09/24 13:11:04 - Group by.0 - Linenr 10400000
+2015/09/24 13:11:13 - stg2_itens.0 - linenr 7550000
+2015/09/24 13:11:13 - stg2_itens 3.0 - linenr 7550000
+2015/09/24 13:11:16 - Group by.0 - Linenr 10450000
+2015/09/24 13:11:28 - Group by.0 - Linenr 10500000
+2015/09/24 13:11:29 - stg2_itens.0 - linenr 7600000
+2015/09/24 13:11:30 - stg2_itens 3.0 - linenr 7600000
+2015/09/24 13:11:40 - Group by.0 - Linenr 10550000
+2015/09/24 13:11:45 - stg2_itens.0 - linenr 7650000
+2015/09/24 13:11:46 - stg2_itens 3.0 - linenr 7650000
+2015/09/24 13:11:52 - Group by.0 - Linenr 10600000
+2015/09/24 13:12:01 - stg2_itens.0 - linenr 7700000
+2015/09/24 13:12:02 - stg2_itens 3.0 - linenr 7700000
+2015/09/24 13:12:04 - Group by.0 - Linenr 10650000
+2015/09/24 13:12:16 - Group by.0 - Linenr 10700000
+2015/09/24 13:12:17 - stg2_itens.0 - linenr 7750000
+2015/09/24 13:12:18 - stg2_itens 3.0 - linenr 7750000
+2015/09/24 13:12:27 - Group by.0 - Linenr 10750000
+2015/09/24 13:12:34 - stg2_itens.0 - linenr 7800000
+2015/09/24 13:12:34 - stg2_itens 3.0 - linenr 7800000
+2015/09/24 13:12:40 - Group by.0 - Linenr 10800000
+2015/09/24 13:12:50 - stg2_itens.0 - linenr 7850000
+2015/09/24 13:12:50 - stg2_itens 3.0 - linenr 7850000
+2015/09/24 13:12:52 - Group by.0 - Linenr 10850000
+2015/09/24 13:13:04 - Group by.0 - Linenr 10900000
+2015/09/24 13:13:06 - stg2_itens.0 - linenr 7900000
+2015/09/24 13:13:07 - stg2_itens 3.0 - linenr 7900000
+2015/09/24 13:13:16 - Group by.0 - Linenr 10950000
+2015/09/24 13:13:22 - stg2_itens.0 - linenr 7950000
+2015/09/24 13:13:23 - stg2_itens 3.0 - linenr 7950000
+2015/09/24 13:13:28 - Group by.0 - Linenr 11000000
+2015/09/24 13:13:38 - stg2_itens.0 - linenr 8000000
+2015/09/24 13:13:39 - stg2_itens 3.0 - linenr 8000000
+2015/09/24 13:13:40 - Group by.0 - Linenr 11050000
+2015/09/24 13:13:52 - Group by.0 - Linenr 11100000
+2015/09/24 13:13:55 - stg2_itens.0 - linenr 8050000
+2015/09/24 13:13:55 - stg2_itens 3.0 - linenr 8050000
+2015/09/24 13:14:04 - Group by.0 - Linenr 11150000
+2015/09/24 13:14:11 - stg2_itens.0 - linenr 8100000
+2015/09/24 13:14:12 - stg2_itens 3.0 - linenr 8100000
+2015/09/24 13:14:16 - Group by.0 - Linenr 11200000
+2015/09/24 13:14:27 - stg2_itens.0 - linenr 8150000
+2015/09/24 13:14:28 - stg2_itens 3.0 - linenr 8150000
+2015/09/24 13:14:28 - Group by.0 - Linenr 11250000
+2015/09/24 13:14:40 - Group by.0 - Linenr 11300000
+2015/09/24 13:14:44 - stg2_itens.0 - linenr 8200000
+2015/09/24 13:14:44 - stg2_itens 3.0 - linenr 8200000
+2015/09/24 13:14:53 - Group by.0 - Linenr 11350000
+2015/09/24 13:15:00 - stg2_itens.0 - linenr 8250000
+2015/09/24 13:15:00 - stg2_itens 3.0 - linenr 8250000
+2015/09/24 13:15:05 - Group by.0 - Linenr 11400000
+2015/09/24 13:15:16 - stg2_itens.0 - linenr 8300000
+2015/09/24 13:15:17 - stg2_itens 3.0 - linenr 8300000
+2015/09/24 13:15:17 - Group by.0 - Linenr 11450000
+2015/09/24 13:15:29 - Group by.0 - Linenr 11500000
+2015/09/24 13:15:32 - stg2_itens.0 - linenr 8350000
+2015/09/24 13:15:33 - stg2_itens 3.0 - linenr 8350000
+2015/09/24 13:15:41 - Group by.0 - Linenr 11550000
+2015/09/24 13:15:48 - stg2_itens.0 - linenr 8400000
+2015/09/24 13:15:49 - stg2_itens 3.0 - linenr 8400000
+2015/09/24 13:15:54 - Group by.0 - Linenr 11600000
+2015/09/24 13:16:05 - stg2_itens.0 - linenr 8450000
+2015/09/24 13:16:05 - stg2_itens 3.0 - linenr 8450000
+2015/09/24 13:16:07 - Group by.0 - Linenr 11650000
+2015/09/24 13:16:20 - Group by.0 - Linenr 11700000
+2015/09/24 13:16:21 - stg2_itens.0 - linenr 8500000
+2015/09/24 13:16:22 - stg2_itens 3.0 - linenr 8500000
+2015/09/24 13:16:33 - Group by.0 - Linenr 11750000
+2015/09/24 13:16:37 - stg2_itens.0 - linenr 8550000
+2015/09/24 13:16:38 - stg2_itens 3.0 - linenr 8550000
+2015/09/24 13:16:46 - Group by.0 - Linenr 11800000
+2015/09/24 13:16:53 - stg2_itens.0 - linenr 8600000
+2015/09/24 13:16:54 - stg2_itens 3.0 - linenr 8600000
+2015/09/24 13:16:58 - Group by.0 - Linenr 11850000
+2015/09/24 13:17:09 - stg2_itens.0 - linenr 8650000
+2015/09/24 13:17:10 - stg2_itens 3.0 - linenr 8650000
+2015/09/24 13:17:11 - Group by.0 - Linenr 11900000
+2015/09/24 13:17:24 - Group by.0 - Linenr 11950000
+2015/09/24 13:17:26 - stg2_itens.0 - linenr 8700000
+2015/09/24 13:17:26 - stg2_itens 3.0 - linenr 8700000
+2015/09/24 13:17:37 - Group by.0 - Linenr 12000000
+2015/09/24 13:17:42 - stg2_itens.0 - linenr 8750000
+2015/09/24 13:17:42 - stg2_itens 3.0 - linenr 8750000
+2015/09/24 13:17:50 - Group by.0 - Linenr 12050000
+2015/09/24 13:17:58 - stg2_itens.0 - linenr 8800000
+2015/09/24 13:17:59 - stg2_itens 3.0 - linenr 8800000
+2015/09/24 13:18:03 - Group by.0 - Linenr 12100000
+2015/09/24 13:18:14 - stg2_itens.0 - linenr 8850000
+2015/09/24 13:18:15 - stg2_itens 3.0 - linenr 8850000
+2015/09/24 13:18:16 - Group by.0 - Linenr 12150000
+2015/09/24 13:18:29 - Group by.0 - Linenr 12200000
+2015/09/24 13:18:30 - stg2_itens.0 - linenr 8900000
+2015/09/24 13:18:31 - stg2_itens 3.0 - linenr 8900000
+2015/09/24 13:18:42 - Group by.0 - Linenr 12250000
+2015/09/24 13:18:46 - stg2_itens.0 - linenr 8950000
+2015/09/24 13:18:47 - stg2_itens 3.0 - linenr 8950000
+2015/09/24 13:18:55 - Group by.0 - Linenr 12300000
+2015/09/24 13:19:03 - stg2_itens.0 - linenr 9000000
+2015/09/24 13:19:03 - stg2_itens 3.0 - linenr 9000000
+2015/09/24 13:19:08 - Group by.0 - Linenr 12350000
+2015/09/24 13:19:19 - stg2_itens.0 - linenr 9050000
+2015/09/24 13:19:19 - stg2_itens 3.0 - linenr 9050000
+2015/09/24 13:19:21 - Group by.0 - Linenr 12400000
+2015/09/24 13:19:34 - Group by.0 - Linenr 12450000
+2015/09/24 13:19:35 - stg2_itens.0 - linenr 9100000
+2015/09/24 13:19:36 - stg2_itens 3.0 - linenr 9100000
+2015/09/24 13:19:48 - Group by.0 - Linenr 12500000
+2015/09/24 13:19:51 - stg2_itens.0 - linenr 9150000
+2015/09/24 13:19:52 - stg2_itens 3.0 - linenr 9150000
+2015/09/24 13:20:01 - Group by.0 - Linenr 12550000
+2015/09/24 13:20:05 - Sort rows.0 - Finished processing (I=0, O=0, R=12575915, W=12575915, U=0, E=0)
+2015/09/24 13:20:07 - stg2_itens.0 - linenr 9200000
+2015/09/24 13:20:08 - Group by.0 - Finished processing (I=0, O=0, R=12575915, W=9211607, U=0, E=0)
+2015/09/24 13:20:08 - stg2_itens 3.0 - linenr 9200000
+2015/09/24 13:20:11 - stg2_itens.0 - Finished processing (I=0, O=9211607, R=9211607, W=9211607, U=0, E=0)
+2015/09/24 13:20:11 - stg2_itens erro.0 - Finished processing (I=0, O=5, R=5, W=5, U=0, E=0)
+2015/09/24 13:20:11 - Text file output.0 - Finished processing (I=0, O=6, R=5, W=5, U=0, E=0)
+2015/09/24 13:20:12 - stg2_itens 3.0 - Finished processing (I=0, O=9211607, R=9211607, W=9211607, U=0, E=0)
+2015/09/24 13:20:12 - stg2itens - Starting entry [Success]
+2015/09/24 13:20:12 - stg2itens - Finished job entry [Success] (result=[true])
+2015/09/24 13:20:12 - stg2itens - Finished job entry [stg2L1] (result=[true])
+2015/09/24 13:20:12 - staging2 - Starting entry [Success]
+2015/09/24 13:20:12 - staging2 - Finished job entry [Success] (result=[true])
+2015/09/24 13:20:12 - staging2 - Finished job entry [stg2itens] (result=[true])
+2015/09/24 13:20:12 - staging2 - Finished job entry [stg2_dimensoes] (result=[true])
