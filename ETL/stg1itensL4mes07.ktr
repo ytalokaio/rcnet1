@@ -69,7 +69,7 @@
   <created_date>2016&#x2f;01&#x2f;28 15&#x3a;02&#x3a;59.856</created_date>
   <modified_user>-</modified_user>
   <modified_date>2016&#x2f;01&#x2f;28 15&#x3a;02&#x3a;59.856</modified_date>
-    <key_for_session_key/>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -80,7 +80,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>central</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>root</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -92,7 +92,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -107,7 +107,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>datawarehouse</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -119,7 +119,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -161,7 +161,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes01</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -173,7 +173,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -188,7 +188,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes10</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -200,7 +200,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -215,7 +215,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes11</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -227,7 +227,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -242,7 +242,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes12</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -254,7 +254,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -269,7 +269,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes02</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -281,7 +281,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -296,7 +296,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes03</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -308,7 +308,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -323,7 +323,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes04</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -335,7 +335,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -350,7 +350,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes05</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -362,7 +362,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -377,7 +377,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes06</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -389,7 +389,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -404,7 +404,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes07</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -416,7 +416,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -431,7 +431,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes08</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -443,7 +443,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -458,7 +458,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1mes09</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -470,7 +470,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -485,7 +485,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln1</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -497,7 +497,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -512,7 +512,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -524,7 +524,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -539,7 +539,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes01</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -551,7 +551,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -566,7 +566,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes10</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -578,7 +578,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -593,7 +593,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes11</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -605,7 +605,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -620,7 +620,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes12</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -632,7 +632,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -647,7 +647,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes02</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -659,7 +659,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -674,7 +674,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes03</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -686,7 +686,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -701,7 +701,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes04</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -713,7 +713,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -728,7 +728,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes05</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -740,7 +740,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -755,7 +755,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes06</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -767,7 +767,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -782,7 +782,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes07</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -794,7 +794,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -809,7 +809,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes08</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -821,7 +821,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -836,7 +836,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln2mes09</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -848,7 +848,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -863,7 +863,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes01</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -875,7 +875,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -890,7 +890,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes10</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -902,7 +902,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -917,7 +917,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes11</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -929,7 +929,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -944,7 +944,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes12</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -956,7 +956,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -971,7 +971,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes02</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -983,7 +983,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -998,7 +998,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes03</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1010,7 +1010,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1025,7 +1025,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes04</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1037,7 +1037,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1052,7 +1052,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes05</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1064,7 +1064,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1079,7 +1079,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes06</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1091,7 +1091,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1106,7 +1106,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes07</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1118,7 +1118,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1133,7 +1133,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes08</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1145,7 +1145,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1160,7 +1160,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>ln3mes09</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1172,7 +1172,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1565,7 +1565,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>staging</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1577,7 +1577,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1592,7 +1592,7 @@
     <type>MYSQL</type>
     <access>Native</access>
     <database>vendas</database>
-    <port>3306</port>
+    <port>3305</port>
     <username>BI</username>
     <password>Encrypted 2be98afc86aa79f85a516a671dd99aac8</password>
     <servername/>
@@ -1604,7 +1604,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3305</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
@@ -1781,7 +1781,7 @@
            <schema_name/>
            </partitioning>
     <connection>ln4mes7</connection>
-    <sql>SELECT&#xa;nReg&#xa;, nECF&#xa;, CCF&#xa;, COO&#xa;, nItem&#xa;, Codigo&#xa;, Descricao&#xa;, Qtd&#xa;, Unidade&#xa;, ValorUnitario&#xa;, ValorTotal&#xa;, Alq&#xa;, IndCancel&#xa;, Data&#xa;, Hora&#xa;, CodSetor&#xa;, CodSubSetor&#xa;, CodMarca&#xa;, QtdNovo&#xa;, ValorTotalNovo&#xa;, database&#x28;&#x29; as database_name&#xa;FROM zcupomitens where  nReg &#x3e; &#x28;select ifnull&#x28;&#x28;SELECT nReg_log FROM staging.log_extracao where &#x28;tabela_extracao &#x3d; &#x27;ln4mes07&#x27;&#x29; order by nReg_log DESC limit 1&#x29;,0&#x29;&#x29;&#xa;limit 500</sql>
+    <sql>SELECT&#xa;nReg&#xa;, nECF&#xa;, CCF&#xa;, COO&#xa;, nItem&#xa;, Codigo&#xa;, Descricao&#xa;, Qtd&#xa;, Unidade&#xa;, ValorUnitario&#xa;, ValorTotal&#xa;, Alq&#xa;, IndCancel&#xa;, Data&#xa;, Hora&#xa;, CodSetor&#xa;, CodSubSetor&#xa;, CodMarca&#xa;, QtdNovo&#xa;, ValorTotalNovo&#xa;, database&#x28;&#x29; as database_name&#xa;FROM zcupomitens where  nReg &#x3e; &#x28;select ifnull&#x28;&#x28;SELECT nReg_log FROM staging.log_extracao where &#x28;tabela_extracao &#x3d; &#x27;ln4mes07&#x27;&#x29; order by nReg_log DESC limit 1&#x29;,0&#x29;&#x29;</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
