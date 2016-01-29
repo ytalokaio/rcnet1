@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `datawarehouse` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `datawarehouse`;
 -- MySQL dump 10.13  Distrib 5.6.24, for osx10.8 (x86_64)
 --
 -- Host: 127.0.0.1    Database: datawarehouse
@@ -16,21 +18,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Temporary view structure for view `abc`
---
-
-DROP TABLE IF EXISTS `abc`;
-/*!50001 DROP VIEW IF EXISTS `abc`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `abc` AS SELECT 
- 1 AS `id_produto`,
- 1 AS `produto_desc`,
- 1 AS `total_venda`,
- 1 AS `percentual`*/;
-SET character_set_client = @saved_cs_client;
-
---
 -- Table structure for table `d_data`
 --
 
@@ -38,22 +25,39 @@ DROP TABLE IF EXISTS `d_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `d_data` (
-  `id_data` int(10) unsigned NOT NULL,
-  `data` datetime DEFAULT NULL,
-  `version` int(11) DEFAULT NULL,
-  `date_start` datetime DEFAULT NULL,
-  `date_range` datetime DEFAULT NULL,
-  `mes` smallint(2) DEFAULT NULL,
-  `ano` smallint(4) DEFAULT NULL,
-  `diasemana` smallint(1) DEFAULT NULL,
-  `hora` smallint(2) DEFAULT NULL,
-  `trimestre` smallint(1) DEFAULT NULL,
-  `minuto` smallint(2) DEFAULT NULL,
-  `dia` smallint(2) DEFAULT NULL,
+  `id_data` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `data` date NOT NULL DEFAULT '1900-01-01',
+  `dia` smallint(2) NOT NULL DEFAULT '-2',
+  `mes` smallint(2) NOT NULL DEFAULT '-2',
+  `ano` smallint(4) NOT NULL DEFAULT '-2',
+  `diasemana` smallint(1) NOT NULL DEFAULT '-2',
+  `trimestre` smallint(1) NOT NULL DEFAULT '-2',
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `version` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_data`),
   KEY `idx_d_data_lookup` (`data`),
-  KEY `idx_d_data_lookup2` (`data`,`dia`,`mes`,`ano`,`diasemana`,`hora`,`trimestre`,`minuto`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `idx_d_data_lookup2` (`data`,`dia`,`mes`,`ano`,`diasemana`,`trimestre`)
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `d_hora`
+--
+
+DROP TABLE IF EXISTS `d_hora`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `d_hora` (
+  `id_hora` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `horario` time NOT NULL DEFAULT '00:00:00',
+  `hora` smallint(2) NOT NULL DEFAULT '-2',
+  `minuto` smallint(2) NOT NULL DEFAULT '-2',
+  `version` int(11) NOT NULL DEFAULT '0',
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`id_hora`)
+) ENGINE=InnoDB AUTO_INCREMENT=704 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -65,14 +69,15 @@ DROP TABLE IF EXISTS `d_icms`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `d_icms` (
   `id_icms` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `alq_icms` varchar(15) DEFAULT NULL,
-  `icms_desc` varchar(45) DEFAULT NULL,
-  `alq_percentual` decimal(4,2) DEFAULT NULL,
-  `version` int(11) DEFAULT NULL,
-  `date_start` datetime DEFAULT NULL,
-  `date_range` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_icms`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+  `alq_icms` varchar(15) NOT NULL DEFAULT '0',
+  `icms_desc` varchar(45) NOT NULL DEFAULT 'teste',
+  `alq_percentual` decimal(4,2) NOT NULL DEFAULT '-2.00',
+  `version` int(11) NOT NULL DEFAULT '-2',
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`id_icms`),
+  KEY `idx_d_icms_lookup` (`alq_icms`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,6 +95,42 @@ CREATE TABLE `d_loja` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `d_operador`
+--
+
+DROP TABLE IF EXISTS `d_operador`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `d_operador` (
+  `id_operador` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `operador_nome` varchar(45) NOT NULL DEFAULT 'teste',
+  `version` int(11) NOT NULL DEFAULT '-2',
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`id_operador`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `d_piscofins`
+--
+
+DROP TABLE IF EXISTS `d_piscofins`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `d_piscofins` (
+  `id_piscofins` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `alq_pis` decimal(6,5) unsigned NOT NULL DEFAULT '0.00000',
+  `alq_cofins` decimal(6,5) unsigned NOT NULL DEFAULT '0.00000',
+  `cod_piscofins` smallint(2) unsigned zerofill NOT NULL DEFAULT '00',
+  `version` int(11) NOT NULL DEFAULT '-2',
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`id_piscofins`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `d_produto`
 --
 
@@ -97,20 +138,21 @@ DROP TABLE IF EXISTS `d_produto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `d_produto` (
-  `id_produto` int(10) unsigned NOT NULL DEFAULT '0',
+  `id_produto` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `produto_desc` varchar(50) NOT NULL DEFAULT 'nao obtido',
   `produto_descvenda` varchar(45) NOT NULL DEFAULT 'nao obtido',
   `SKU` varchar(14) NOT NULL DEFAULT '0',
   `id_tipo_produto` int(10) unsigned NOT NULL DEFAULT '0',
-  `produto_desativado` tinyint(1) DEFAULT NULL,
+  `produto_desativado` tinyint(1) NOT NULL DEFAULT '0',
   `version` int(10) NOT NULL DEFAULT '0',
-  `date_start` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `date_range` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `NCM` int(10) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_produto`),
-  KEY `fk_d_tipo_produto` (`id_tipo_produto`) USING BTREE,
+  KEY `fk_d_tipo_produto` (`id_tipo_produto`),
   KEY `index4` (`SKU`,`id_produto`),
   CONSTRAINT `fk_d_tipo_produto` FOREIGN KEY (`id_tipo_produto`) REFERENCES `d_tipo_produto` (`id_tipo_produto`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34510 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,8 +171,8 @@ CREATE TABLE `d_tipo_produto` (
   `sub_categoria_id` smallint(3) NOT NULL DEFAULT '-2',
   `sub_categoria_desc` varchar(45) NOT NULL DEFAULT 'teste',
   `version` int(10) NOT NULL DEFAULT '0',
-  `date_start` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `date_range` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
   PRIMARY KEY (`id_tipo_produto`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -143,12 +185,18 @@ DROP TABLE IF EXISTS `d_tipo_transacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `d_tipo_transacao` (
-  `id_tipo_pagamento` int(11) NOT NULL,
-  `cod1` smallint(2) NOT NULL,
-  `cod2` smallint(2) NOT NULL,
-  `tipo_pagamento_desc` varchar(45) NOT NULL,
-  PRIMARY KEY (`id_tipo_pagamento`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `id_tipo_transacao` int(11) NOT NULL AUTO_INCREMENT,
+  `tipo_transacao` varchar(45) NOT NULL DEFAULT '-2',
+  `cod1` smallint(2) NOT NULL DEFAULT '-2',
+  `cod2` smallint(2) NOT NULL DEFAULT '-2',
+  `tipo_cartao_desc` varchar(45) NOT NULL DEFAULT '-2',
+  `version` int(11) NOT NULL DEFAULT '0',
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`id_tipo_transacao`),
+  KEY `idx_d_tipo_transacao_lookup` (`cod1`,`cod2`,`tipo_cartao_desc`),
+  KEY `idx_carta` (`tipo_cartao_desc`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -159,20 +207,25 @@ DROP TABLE IF EXISTS `f_transacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `f_transacao` (
+  `ECF` smallint(2) unsigned NOT NULL,
   `CCF` int(11) NOT NULL,
   `COO` int(11) NOT NULL,
   `id_data` int(10) unsigned NOT NULL,
+  `id_hora` int(10) unsigned NOT NULL,
   `id_tipo_transacao` int(11) NOT NULL,
   `id_loja` int(10) unsigned NOT NULL,
-  `transacao_valor` decimal(5,2) NOT NULL,
-  `transacao_contador` smallint(1) NOT NULL,
-  PRIMARY KEY (`CCF`,`COO`,`id_data`,`id_tipo_transacao`),
+  `id_operador` int(10) unsigned NOT NULL,
+  `transacao_valor` decimal(9,2) NOT NULL,
+  `NSU` int(10) NOT NULL,
+  PRIMARY KEY (`ECF`,`CCF`,`COO`,`id_data`,`id_hora`,`id_tipo_transacao`,`id_loja`),
   KEY `fk_f_pagamentos_d_tipo_pagamento1_idx` (`id_tipo_transacao`),
   KEY `fk_f_pagamentos_d_data1` (`id_data`),
   KEY `fk_f_pagamentos_d_loja` (`id_loja`),
-  CONSTRAINT `fk_f_pagamentos_d_data1` FOREIGN KEY (`id_data`) REFERENCES `d_data` (`id_data`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  KEY `fk_f_transacoes_d_operador_idx` (`id_operador`),
+  CONSTRAINT `fk_f_id_operador` FOREIGN KEY (`id_operador`) REFERENCES `d_operador` (`id_operador`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_f_pagamentos_d_data` FOREIGN KEY (`id_data`) REFERENCES `d_data` (`id_data`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_f_pagamentos_d_loja` FOREIGN KEY (`id_loja`) REFERENCES `d_loja` (`id_loja`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_f_pagamentos_d_tipo_pagamento1` FOREIGN KEY (`id_tipo_transacao`) REFERENCES `d_tipo_transacao` (`id_tipo_pagamento`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_f_pagamentos_d_tipo_transacao` FOREIGN KEY (`id_tipo_transacao`) REFERENCES `d_tipo_transacao` (`id_tipo_transacao`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -184,54 +237,62 @@ DROP TABLE IF EXISTS `f_vendas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `f_vendas` (
+  `ECF` smallint(2) unsigned NOT NULL,
   `COO` int(10) unsigned NOT NULL,
   `CCF` int(10) unsigned NOT NULL,
   `id_loja` int(10) unsigned NOT NULL,
   `id_produto` int(10) unsigned NOT NULL,
   `id_data` int(10) unsigned NOT NULL,
+  `id_hora` int(10) unsigned NOT NULL,
   `id_icms` int(10) unsigned NOT NULL,
+  `id_piscofins` int(10) unsigned NOT NULL,
   `qtd_produto` decimal(7,3) unsigned NOT NULL,
   `custo_produto` decimal(5,2) unsigned NOT NULL,
   `valor_produto` decimal(5,2) unsigned NOT NULL,
   `total_venda` decimal(7,2) unsigned NOT NULL,
-  `total_custo` decimal(11,6) DEFAULT NULL,
-  PRIMARY KEY (`COO`,`CCF`,`id_loja`,`id_produto`,`id_data`),
+  `total_custo` decimal(11,6) unsigned NOT NULL,
+  PRIMARY KEY (`ECF`,`COO`,`CCF`,`id_loja`,`id_produto`,`id_data`,`id_hora`),
   KEY `fk_f_vendas_d_loja_idx` (`id_loja`),
   KEY `fk_f_vendas_d_produto1_idx` (`id_produto`),
   KEY `fk_f_vendas_d_data1_idx` (`id_data`),
   KEY `fk_f_vendas_d_icms` (`id_icms`),
-  CONSTRAINT `fk_f_vendas_d_data1` FOREIGN KEY (`id_data`) REFERENCES `d_data` (`id_data`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  KEY `fk_id_piscofins` (`id_piscofins`),
+  CONSTRAINT `fk_f_vendas_d_data` FOREIGN KEY (`id_data`) REFERENCES `d_data` (`id_data`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_f_vendas_d_icms` FOREIGN KEY (`id_icms`) REFERENCES `d_icms` (`id_icms`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_f_vendas_d_loja` FOREIGN KEY (`id_loja`) REFERENCES `d_loja` (`id_loja`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_f_vendas_d_produto1` FOREIGN KEY (`id_produto`) REFERENCES `d_produto` (`id_produto`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_f_vendas_d_produto` FOREIGN KEY (`id_produto`) REFERENCES `d_produto` (`id_produto`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_id_piscofins` FOREIGN KEY (`id_piscofins`) REFERENCES `d_piscofins` (`id_piscofins`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Temporary view structure for view `hora`
+-- Table structure for table `f_vendas_canceladas`
 --
 
-DROP TABLE IF EXISTS `hora`;
-/*!50001 DROP VIEW IF EXISTS `hora`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `hora` AS SELECT 
- 1 AS `datahora')`,
- 1 AS `data`,
- 1 AS `hora`*/;
-SET character_set_client = @saved_cs_client;
-
---
--- Temporary view structure for view `minuto`
---
-
-DROP TABLE IF EXISTS `minuto`;
-/*!50001 DROP VIEW IF EXISTS `minuto`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `minuto` AS SELECT 
- 1 AS `minute(utc_time())`*/;
-SET character_set_client = @saved_cs_client;
+DROP TABLE IF EXISTS `f_vendas_canceladas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `f_vendas_canceladas` (
+  `ECF` smallint(2) unsigned NOT NULL,
+  `COO` int(10) unsigned NOT NULL,
+  `CCF` int(10) unsigned NOT NULL,
+  `id_loja` int(10) unsigned NOT NULL,
+  `id_produto` int(10) unsigned NOT NULL,
+  `id_data` int(10) unsigned NOT NULL,
+  `id_hora` int(10) unsigned NOT NULL,
+  `qtd_produto` decimal(7,3) unsigned NOT NULL,
+  `total_venda` decimal(7,2) unsigned NOT NULL,
+  PRIMARY KEY (`ECF`,`COO`,`CCF`,`id_loja`,`id_produto`,`id_data`,`id_hora`),
+  KEY `fk_iddata_idx` (`id_data`),
+  KEY `fk_idhora_idx` (`id_hora`),
+  KEY `fk_idproduto_idx` (`id_produto`),
+  KEY `fk_idloja_idx` (`id_loja`),
+  CONSTRAINT `fk_iddata` FOREIGN KEY (`id_data`) REFERENCES `d_data` (`id_data`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_idhora` FOREIGN KEY (`id_hora`) REFERENCES `d_hora` (`id_hora`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_idloja` FOREIGN KEY (`id_loja`) REFERENCES `d_loja` (`id_loja`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_idproduto` FOREIGN KEY (`id_produto`) REFERENCES `d_produto` (`id_produto`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `venda_produto_ano`
@@ -241,16 +302,16 @@ DROP TABLE IF EXISTS `venda_produto_ano`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venda_produto_ano` (
-  `venda_produto_ano_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_loja` int(11) NOT NULL DEFAULT '-2',
-  `id_produto` int(11) NOT NULL DEFAULT '-2',
-  `ano` smallint(4) NOT NULL DEFAULT '-1',
+  `id_loja` int(11) unsigned NOT NULL,
+  `id_produto` int(11) unsigned NOT NULL,
+  `ano` smallint(4) unsigned NOT NULL,
   `valor_produto_minimo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_medio` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_maximo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `custo_produto_minimo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_medio` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_maximo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `SKU` varchar(14) NOT NULL,
   `produto_desc` varchar(50) NOT NULL DEFAULT 'teste',
   `produto_descvenda` varchar(45) NOT NULL DEFAULT 'teste',
   `id_tipo_produto` int(11) NOT NULL DEFAULT '-2',
@@ -260,10 +321,11 @@ CREATE TABLE `venda_produto_ano` (
   `total_venda` decimal(10,2) NOT NULL DEFAULT '0.00',
   `total_custo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `lucro_total` decimal(13,6) NOT NULL DEFAULT '0.000000',
-  `icms_venda` decimal(13,6) unsigned NOT NULL,
-  PRIMARY KEY (`venda_produto_ano_id`),
+  `icms_venda` decimal(13,6) NOT NULL,
+  `ultima_atualizacao` datetime NOT NULL,
+  PRIMARY KEY (`id_loja`,`id_produto`,`ano`,`id_icms`),
   KEY `idx_venda_produto_ano_lookup` (`id_loja`,`id_produto`,`ano`)
-) ENGINE=InnoDB AUTO_INCREMENT=9974 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,21 +336,21 @@ DROP TABLE IF EXISTS `venda_produto_dia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venda_produto_dia` (
-  `venda_produto_dia_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_loja` int(11) NOT NULL DEFAULT '-2',
-  `id_produto` int(11) NOT NULL DEFAULT '-2',
-  `ano` smallint(4) NOT NULL DEFAULT '-1',
-  `trimestre` tinyint(2) NOT NULL DEFAULT '-1',
-  `mes` tinyint(2) NOT NULL DEFAULT '-1',
+  `id_loja` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `ano` smallint(4) NOT NULL,
+  `trimestre` tinyint(2) NOT NULL,
+  `mes` tinyint(2) NOT NULL,
   `data` date NOT NULL DEFAULT '1900-01-01',
   `diasemana` tinyint(2) NOT NULL,
-  `dia` tinyint(2) NOT NULL DEFAULT '-1',
+  `dia` tinyint(2) NOT NULL,
   `valor_produto_minimo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_medio` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_maximo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `custo_produto_minimo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_medio` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_maximo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `SKU` varchar(14) NOT NULL,
   `produto_desc` varchar(50) NOT NULL DEFAULT 'teste',
   `produto_descvenda` varchar(45) NOT NULL DEFAULT 'teste',
   `id_tipo_produto` int(11) NOT NULL DEFAULT '-2',
@@ -299,10 +361,11 @@ CREATE TABLE `venda_produto_dia` (
   `total_custo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `lucro_total` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `icms_venda` decimal(13,6) NOT NULL DEFAULT '-2.000000',
-  PRIMARY KEY (`venda_produto_dia_id`),
+  `ultima_atualizacao` datetime NOT NULL,
+  PRIMARY KEY (`id_loja`,`id_produto`,`ano`,`trimestre`,`mes`,`dia`,`id_icms`),
   KEY `idx_venda_produto_dia_lookup` (`id_loja`,`id_produto`,`ano`,`trimestre`,`mes`,`diasemana`,`dia`),
   KEY `idx_data` (`data`)
-) ENGINE=InnoDB AUTO_INCREMENT=182762 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -313,12 +376,11 @@ DROP TABLE IF EXISTS `venda_produto_diasemana`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venda_produto_diasemana` (
-  `venda_produto_diasemana_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_loja` int(11) NOT NULL DEFAULT '-2',
-  `id_produto` int(11) NOT NULL DEFAULT '-2',
-  `ano` smallint(4) NOT NULL DEFAULT '-1',
-  `trimestre` tinyint(2) NOT NULL DEFAULT '-1',
-  `mes` tinyint(2) NOT NULL DEFAULT '-1',
+  `id_loja` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `ano` smallint(4) NOT NULL,
+  `trimestre` tinyint(2) NOT NULL,
+  `mes` tinyint(2) NOT NULL,
   `diasemana` tinyint(2) NOT NULL,
   `valor_produto_minimo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_medio` decimal(9,2) NOT NULL DEFAULT '0.00',
@@ -326,19 +388,21 @@ CREATE TABLE `venda_produto_diasemana` (
   `custo_produto_minimo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_medio` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_maximo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `SKU` varchar(14) NOT NULL,
   `produto_desc` varchar(50) NOT NULL DEFAULT 'teste',
   `produto_descvenda` varchar(45) NOT NULL DEFAULT 'teste',
   `id_tipo_produto` int(11) NOT NULL DEFAULT '-2',
-  `id_icms` int(10) NOT NULL DEFAULT '-2',
+  `id_icms` int(10) NOT NULL,
   `produto_desativado` tinyint(1) NOT NULL DEFAULT '0',
   `qtd_produto` decimal(10,3) NOT NULL DEFAULT '0.000',
   `total_venda` decimal(10,2) NOT NULL DEFAULT '0.00',
   `total_custo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `lucro_total` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `icms_venda` decimal(13,6) NOT NULL DEFAULT '-2.000000',
-  PRIMARY KEY (`venda_produto_diasemana_id`),
+  `ultima_atualizacao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_loja`,`id_produto`,`ano`,`mes`,`diasemana`,`id_icms`),
   KEY `idx_venda_produto_dia_lookup` (`id_loja`,`id_produto`,`ano`,`trimestre`,`mes`,`diasemana`)
-) ENGINE=InnoDB AUTO_INCREMENT=162708 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -349,36 +413,40 @@ DROP TABLE IF EXISTS `venda_produto_hora`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venda_produto_hora` (
-  `venda_produto_hora_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_loja` int(11) NOT NULL DEFAULT '-2',
-  `id_produto` int(11) NOT NULL DEFAULT '-2',
-  `ano` smallint(4) NOT NULL DEFAULT '-1',
-  `trimestre` tinyint(2) NOT NULL DEFAULT '-1',
-  `mes` tinyint(2) NOT NULL DEFAULT '-1',
-  `data` date DEFAULT NULL,
-  `dia` tinyint(2) NOT NULL DEFAULT '-1',
-  `hora` tinyint(2) NOT NULL DEFAULT '-1',
+  `id_loja` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `ano` smallint(4) NOT NULL,
+  `trimestre` tinyint(2) NOT NULL,
+  `mes` tinyint(2) NOT NULL,
+  `data` date NOT NULL,
+  `dia` tinyint(2) NOT NULL,
+  `hora` tinyint(2) NOT NULL,
   `valor_produto_minimo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_medio` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_maximo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `custo_produto_minimo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_medio` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_maximo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `SKU` varchar(14) NOT NULL,
   `produto_desc` varchar(50) NOT NULL DEFAULT 'teste',
   `produto_descvenda` varchar(45) NOT NULL DEFAULT 'teste',
   `id_tipo_produto` int(11) NOT NULL DEFAULT '-2',
-  `id_icms` int(11) DEFAULT NULL,
+  `id_icms` int(11) NOT NULL,
+  `id_piscofins` int(10) unsigned NOT NULL,
   `produto_desativado` tinyint(1) NOT NULL DEFAULT '0',
   `qtd_produto` decimal(10,3) NOT NULL DEFAULT '0.000',
   `total_venda` decimal(10,2) NOT NULL DEFAULT '0.00',
   `total_custo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `lucro_total` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `diasemana` tinyint(2) NOT NULL,
-  `icms_venda` decimal(13,6) DEFAULT '-2.000000',
-  PRIMARY KEY (`venda_produto_hora_id`),
+  `icms_venda` decimal(13,6) NOT NULL,
+  `cofins_venda` decimal(13,6) NOT NULL,
+  `pis_venda` decimal(13,6) NOT NULL,
+  `data_atualizacao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_loja`,`id_produto`,`ano`,`mes`,`dia`,`hora`,`id_icms`,`id_piscofins`),
   KEY `idx_venda_produto_hora_lookup` (`id_loja`,`id_produto`,`ano`,`trimestre`,`mes`,`dia`,`hora`,`diasemana`),
   KEY `idx_data` (`data`)
-) ENGINE=InnoDB AUTO_INCREMENT=536244 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -389,18 +457,18 @@ DROP TABLE IF EXISTS `venda_produto_mes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venda_produto_mes` (
-  `venda_produto_mes_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_loja` int(11) NOT NULL DEFAULT '-2',
-  `id_produto` int(11) NOT NULL DEFAULT '-2',
-  `ano` smallint(4) NOT NULL DEFAULT '-1',
+  `id_loja` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `ano` smallint(4) NOT NULL,
   `trimestre` tinyint(2) NOT NULL DEFAULT '-1',
-  `mes` tinyint(2) NOT NULL DEFAULT '-1',
+  `mes` tinyint(2) NOT NULL,
   `valor_produto_minimo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_medio` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_maximo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `custo_produto_minimo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_medio` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_maximo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `SKU` varchar(14) NOT NULL,
   `produto_desc` varchar(50) NOT NULL DEFAULT 'teste',
   `produto_descvenda` varchar(45) NOT NULL DEFAULT 'teste',
   `id_tipo_produto` int(11) NOT NULL DEFAULT '-2',
@@ -410,10 +478,11 @@ CREATE TABLE `venda_produto_mes` (
   `total_venda` decimal(10,2) NOT NULL DEFAULT '0.00',
   `total_custo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `lucro_total` decimal(13,6) NOT NULL DEFAULT '0.000000',
-  `icms_venda` decimal(13,6) unsigned NOT NULL,
-  PRIMARY KEY (`venda_produto_mes_id`),
+  `icms_venda` decimal(13,6) NOT NULL,
+  `ultima_atualizacao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_loja`,`id_produto`,`ano`,`mes`,`id_icms`),
   KEY `idx_venda_produto_dia_lookup` (`id_loja`,`id_produto`,`ano`,`trimestre`,`mes`)
-) ENGINE=InnoDB AUTO_INCREMENT=38733 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -424,17 +493,17 @@ DROP TABLE IF EXISTS `venda_produto_trimestre`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `venda_produto_trimestre` (
-  `venda_produto_trimestre_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `id_loja` int(11) NOT NULL DEFAULT '-2',
-  `id_produto` int(11) NOT NULL DEFAULT '-2',
-  `ano` smallint(4) NOT NULL DEFAULT '-1',
-  `trimestre` tinyint(2) NOT NULL DEFAULT '-1',
+  `id_loja` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `ano` smallint(4) NOT NULL,
+  `trimestre` tinyint(2) NOT NULL,
   `valor_produto_minimo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_medio` decimal(9,2) NOT NULL DEFAULT '0.00',
   `valor_produto_maximo` decimal(9,2) NOT NULL DEFAULT '0.00',
   `custo_produto_minimo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_medio` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `custo_produto_maximo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `SKU` varchar(14) NOT NULL,
   `produto_desc` varchar(50) NOT NULL DEFAULT 'teste',
   `produto_descvenda` varchar(45) NOT NULL DEFAULT 'teste',
   `id_tipo_produto` int(11) NOT NULL DEFAULT '-2',
@@ -444,195 +513,12 @@ CREATE TABLE `venda_produto_trimestre` (
   `total_venda` decimal(10,2) NOT NULL DEFAULT '0.00',
   `total_custo` decimal(13,6) NOT NULL DEFAULT '0.000000',
   `lucro_total` decimal(13,6) NOT NULL DEFAULT '0.000000',
-  `icms_venda` decimal(13,6) unsigned NOT NULL,
-  PRIMARY KEY (`venda_produto_trimestre_id`),
+  `icms_venda` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `ultima_atualizacao` datetime NOT NULL,
+  PRIMARY KEY (`id_loja`,`id_produto`,`ano`,`trimestre`,`id_icms`),
   KEY `idx_venda_produto_trimestre_lookup` (`id_loja`,`id_produto`,`ano`,`trimestre`)
-) ENGINE=InnoDB AUTO_INCREMENT=19491 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Temporary view structure for view `vendas_categoria`
---
-
-DROP TABLE IF EXISTS `vendas_categoria`;
-/*!50001 DROP VIEW IF EXISTS `vendas_categoria`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `vendas_categoria` AS SELECT 
- 1 AS `secao_desc`,
- 1 AS `categoria_desc`,
- 1 AS `qtd_produto`,
- 1 AS `total_custo`,
- 1 AS `total_venda`,
- 1 AS `lucro`*/;
-SET character_set_client = @saved_cs_client;
-
---
--- Temporary view structure for view `vendas_secao`
---
-
-DROP TABLE IF EXISTS `vendas_secao`;
-/*!50001 DROP VIEW IF EXISTS `vendas_secao`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `vendas_secao` AS SELECT 
- 1 AS `secao_desc`,
- 1 AS `qtd_produto`,
- 1 AS `total_custo`,
- 1 AS `total_venda`,
- 1 AS `lucro`*/;
-SET character_set_client = @saved_cs_client;
-
---
--- Temporary view structure for view `vendas_subcategoria`
---
-
-DROP TABLE IF EXISTS `vendas_subcategoria`;
-/*!50001 DROP VIEW IF EXISTS `vendas_subcategoria`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `vendas_subcategoria` AS SELECT 
- 1 AS `secao_desc`,
- 1 AS `categoria_desc`,
- 1 AS `sub_categoria_desc`,
- 1 AS `qtd_produto`,
- 1 AS `total_custo`,
- 1 AS `total_venda`,
- 1 AS `lucro`*/;
-SET character_set_client = @saved_cs_client;
-
---
--- Dumping routines for database 'datawarehouse'
---
-/*!50003 DROP FUNCTION IF EXISTS `SKUtoid_produto` */;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8 */ ;
-/*!50003 SET character_set_results = utf8 */ ;
-/*!50003 SET collation_connection  = utf8_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` FUNCTION `SKUtoid_produto`(s VARCHAR(14)) RETURNS int(10)
-BEGIN
-DECLARE id INT UNSIGNED;
-SET id = (SELECT id_produto FROM datawarehouse.d_produto WHERE SKU= s);
-RETURN id;
-END ;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
-
---
--- Final view structure for view `abc`
---
-
-/*!50001 DROP VIEW IF EXISTS `abc`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `abc` AS select `venda_produto_dia`.`id_produto` AS `id_produto`,`venda_produto_dia`.`produto_desc` AS `produto_desc`,sum(`venda_produto_dia`.`total_venda`) AS `total_venda`,(sum(`venda_produto_dia`.`total_venda`) / (select sum(`venda_produto_dia`.`total_venda`) from `venda_produto_dia` where ((`venda_produto_dia`.`ano` = 2015) and (`venda_produto_dia`.`mes` = 1)) group by `venda_produto_dia`.`ano`)) AS `percentual` from `venda_produto_dia` where ((`venda_produto_dia`.`ano` = 2015) and (`venda_produto_dia`.`mes` = 1)) group by `venda_produto_dia`.`ano`,`venda_produto_dia`.`mes`,`venda_produto_dia`.`id_produto` order by `percentual` desc */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `hora`
---
-
-/*!50001 DROP VIEW IF EXISTS `hora`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `hora` AS select date_format(utc_timestamp(),'%d/%m/%Y %H:%i:%s') AS `datahora')`,utc_date() AS `data`,utc_time() AS `hora` */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `minuto`
---
-
-/*!50001 DROP VIEW IF EXISTS `minuto`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `minuto` AS select minute(utc_time()) AS `minute(utc_time())` */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `vendas_categoria`
---
-
-/*!50001 DROP VIEW IF EXISTS `vendas_categoria`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vendas_categoria` AS select `d_tipo_produto`.`secao_desc` AS `secao_desc`,`d_tipo_produto`.`categoria_desc` AS `categoria_desc`,sum(`f_vendas`.`qtd_produto`) AS `qtd_produto`,sum(`f_vendas`.`total_custo`) AS `total_custo`,sum(`f_vendas`.`total_venda`) AS `total_venda`,(sum(`f_vendas`.`total_venda`) - sum(`f_vendas`.`total_custo`)) AS `lucro` from ((`f_vendas` join `d_produto` on((`f_vendas`.`id_produto` = `d_produto`.`id_produto`))) join `d_tipo_produto` on((`d_produto`.`id_tipo_produto` = `d_tipo_produto`.`id_tipo_produto`))) group by `d_tipo_produto`.`secao_id`,`d_tipo_produto`.`categoria_id` order by `lucro` desc */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `vendas_secao`
---
-
-/*!50001 DROP VIEW IF EXISTS `vendas_secao`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vendas_secao` AS select `d_tipo_produto`.`secao_desc` AS `secao_desc`,sum(`f_vendas`.`qtd_produto`) AS `qtd_produto`,sum(`f_vendas`.`total_custo`) AS `total_custo`,sum(`f_vendas`.`total_venda`) AS `total_venda`,(sum(`f_vendas`.`total_venda`) - sum(`f_vendas`.`total_custo`)) AS `lucro` from ((`f_vendas` join `d_produto` on((`f_vendas`.`id_produto` = `d_produto`.`id_produto`))) join `d_tipo_produto` on((`d_produto`.`id_tipo_produto` = `d_tipo_produto`.`id_tipo_produto`))) group by `d_tipo_produto`.`secao_id` order by `lucro` desc */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-
---
--- Final view structure for view `vendas_subcategoria`
---
-
-/*!50001 DROP VIEW IF EXISTS `vendas_subcategoria`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `vendas_subcategoria` AS select `d_tipo_produto`.`secao_desc` AS `secao_desc`,`d_tipo_produto`.`categoria_desc` AS `categoria_desc`,`d_tipo_produto`.`sub_categoria_desc` AS `sub_categoria_desc`,sum(`f_vendas`.`qtd_produto`) AS `qtd_produto`,sum(`f_vendas`.`total_custo`) AS `total_custo`,sum(`f_vendas`.`total_venda`) AS `total_venda`,(sum(`f_vendas`.`total_venda`) - sum(`f_vendas`.`total_custo`)) AS `lucro` from ((`f_vendas` join `d_produto` on((`f_vendas`.`id_produto` = `d_produto`.`id_produto`))) join `d_tipo_produto` on((`d_produto`.`id_tipo_produto` = `d_tipo_produto`.`id_tipo_produto`))) group by `d_tipo_produto`.`secao_id`,`d_tipo_produto`.`categoria_id`,`d_tipo_produto`.`sub_categoria_id` order by `lucro` desc */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -643,7 +529,9 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-24 10:29:49
+-- Dump completed on 2016-01-29 14:36:04
+CREATE DATABASE  IF NOT EXISTS `staging` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `staging`;
 -- MySQL dump 10.13  Distrib 5.6.24, for osx10.8 (x86_64)
 --
 -- Host: 127.0.0.1    Database: staging
@@ -685,6 +573,76 @@ CREATE TABLE `agrup_itens_inicial` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `f_transacao_erro`
+--
+
+DROP TABLE IF EXISTS `f_transacao_erro`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `f_transacao_erro` (
+  `id_erro_f_transacao` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `CCF` int(11) DEFAULT NULL,
+  `COO` int(11) DEFAULT NULL,
+  `id_data` int(10) DEFAULT NULL,
+  `id_tipo_transacao` int(11) DEFAULT NULL,
+  `id_loja` int(10) DEFAULT NULL,
+  `transacao_valor` varchar(45) DEFAULT NULL,
+  `id_operador` int(11) DEFAULT NULL,
+  `operador` varchar(45) DEFAULT NULL,
+  `tipo1` int(11) DEFAULT NULL,
+  `tipo2` int(11) DEFAULT NULL,
+  `cartao` varchar(50) DEFAULT NULL,
+  `NSU` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_erro_f_transacao`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `f_vendas_canceladas_erro`
+--
+
+DROP TABLE IF EXISTS `f_vendas_canceladas_erro`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `f_vendas_canceladas_erro` (
+  `n_erro` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `ECF` smallint(2) unsigned NOT NULL,
+  `COO` int(10) unsigned NOT NULL,
+  `CCF` int(10) unsigned NOT NULL,
+  `id_loja` int(10) unsigned NOT NULL,
+  `id_produto` int(10) unsigned NOT NULL,
+  `id_data` int(10) unsigned NOT NULL,
+  `id_hora` int(10) unsigned NOT NULL,
+  `qtd_produto` decimal(7,3) unsigned NOT NULL,
+  `total_venda` decimal(7,2) unsigned NOT NULL,
+  PRIMARY KEY (`n_erro`)
+) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `f_vendas_deletadas`
+--
+
+DROP TABLE IF EXISTS `f_vendas_deletadas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `f_vendas_deletadas` (
+  `COO` int(10) unsigned NOT NULL,
+  `CCF` int(10) unsigned NOT NULL,
+  `id_loja` int(10) unsigned NOT NULL,
+  `id_produto` int(10) unsigned NOT NULL,
+  `id_data` int(10) unsigned NOT NULL,
+  `id_icms` int(10) unsigned NOT NULL,
+  `qtd_produto` decimal(7,3) unsigned NOT NULL,
+  `custo_produto` decimal(5,2) unsigned NOT NULL,
+  `valor_produto` decimal(5,2) unsigned NOT NULL,
+  `total_venda` decimal(7,2) unsigned NOT NULL,
+  `total_custo` decimal(11,6) unsigned NOT NULL,
+  PRIMARY KEY (`COO`,`CCF`,`id_loja`,`id_produto`,`id_data`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `f_vendas_erro`
 --
 
@@ -692,20 +650,52 @@ DROP TABLE IF EXISTS `f_vendas_erro`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `f_vendas_erro` (
-  `COO` int(10) unsigned NOT NULL,
-  `CCF` int(10) unsigned NOT NULL,
-  `id_loja` int(10) unsigned NOT NULL,
-  `id_itens` int(10) unsigned NOT NULL,
-  `id_data` int(10) unsigned NOT NULL,
-  `qtd_item` decimal(7,3) unsigned NOT NULL,
-  `custo_item` decimal(5,2) unsigned NOT NULL,
-  `valor_item` decimal(5,2) unsigned NOT NULL,
-  `total_item` decimal(7,2) unsigned NOT NULL,
-  `id_icms` varchar(15) DEFAULT NULL,
-  PRIMARY KEY (`COO`,`CCF`,`id_loja`,`id_itens`,`id_data`),
+  `id_f_vendas_erro` int(11) NOT NULL AUTO_INCREMENT,
+  `ECF` smallint(2) DEFAULT '0',
+  `COO` int(10) DEFAULT '0',
+  `CCF` int(10) DEFAULT '0',
+  `id_loja` int(10) DEFAULT '0',
+  `id_itens` int(10) DEFAULT '0',
+  `id_data` int(10) DEFAULT '0',
+  `qtd_item` decimal(7,3) DEFAULT NULL,
+  `custo_item` decimal(5,2) DEFAULT NULL,
+  `valor_item` decimal(5,2) DEFAULT NULL,
+  `total_item` decimal(7,2) DEFAULT NULL,
+  `id_icms` int(10) DEFAULT NULL,
+  `SKU` varchar(15) DEFAULT NULL,
+  `data` datetime DEFAULT NULL,
+  `id_piscofins` int(11) DEFAULT NULL,
+  `cod_piscofins` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_f_vendas_erro`),
   KEY `fk_f_vendas_d_loja_idx` (`id_loja`),
   KEY `fk_f_vendas_d_itens1_idx` (`id_itens`),
   KEY `fk_f_vendas_d_data1_idx` (`id_data`)
+) ENGINE=InnoDB AUTO_INCREMENT=2300 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `f_vendas_erro_tratamento`
+--
+
+DROP TABLE IF EXISTS `f_vendas_erro_tratamento`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `f_vendas_erro_tratamento` (
+  `id_f_vendas_erro` int(11) NOT NULL AUTO_INCREMENT,
+  `ECF` smallint(2) DEFAULT '0',
+  `COO` int(10) DEFAULT '0',
+  `CCF` int(10) DEFAULT '0',
+  `id_loja` int(10) DEFAULT '0',
+  `id_itens` int(10) DEFAULT '0',
+  `id_data` int(10) DEFAULT '0',
+  `qtd_item` decimal(7,3) DEFAULT NULL,
+  `custo_item` decimal(5,2) DEFAULT NULL,
+  `valor_item` decimal(5,2) DEFAULT NULL,
+  `total_item` decimal(7,2) DEFAULT NULL,
+  `id_icms` int(10) DEFAULT NULL,
+  `SKU` varchar(15) DEFAULT NULL,
+  `data` datetime DEFAULT NULL,
+  PRIMARY KEY (`id_f_vendas_erro`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -722,7 +712,7 @@ CREATE TABLE `log_extracao` (
   `nReg_log` double DEFAULT NULL,
   `data` datetime NOT NULL,
   PRIMARY KEY (`id_log_extracao`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -776,7 +766,7 @@ CREATE TABLE `relatorio_transacoes` (
   `cheque_total` decimal(9,2) DEFAULT NULL,
   `hiper_debito` decimal(9,2) DEFAULT NULL,
   PRIMARY KEY (`venda_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=899268 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -864,7 +854,7 @@ DROP TABLE IF EXISTS `stg1_itens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `stg1_itens` (
-  `nInterno` int(10) unsigned NOT NULL,
+  `nInterno` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `CodigoBarra` varchar(45) NOT NULL DEFAULT '0',
   `item_descricao` varchar(50) NOT NULL DEFAULT '0',
   `Abreviacao` varchar(25) NOT NULL DEFAULT '0',
@@ -1003,8 +993,9 @@ CREATE TABLE `stg1_itens` (
   `Revisado` int(10) unsigned DEFAULT '0',
   `ABC` varchar(1) DEFAULT '0',
   `DataABC` varchar(15) DEFAULT '0',
-  PRIMARY KEY (`nInterno`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='InnoDB free: 495616 kB; InnoDB free: 14336 kB; InnoDB free: ';
+  PRIMARY KEY (`nInterno`),
+  KEY `sku` (`CodigoBarra`)
+) ENGINE=InnoDB AUTO_INCREMENT=15609 DEFAULT CHARSET=latin1 COMMENT='InnoDB free: 495616 kB; InnoDB free: 14336 kB; InnoDB free: ';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1040,7 +1031,7 @@ CREATE TABLE `stg2_categorias` (
   `sub_categoria_id` smallint(3) unsigned NOT NULL,
   `sub_categoria_desc` varchar(45) NOT NULL,
   PRIMARY KEY (`id_stgcategoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=370 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1063,8 +1054,9 @@ CREATE TABLE `stg2_d_itens` (
   `grupomarca_id` smallint(3) NOT NULL,
   `grupomarca_desc` varchar(45) NOT NULL,
   `custo_item` decimal(10,2) NOT NULL,
+  `codigoNCM` int(9) DEFAULT NULL,
   PRIMARY KEY (`id_itens`)
-) ENGINE=InnoDB AUTO_INCREMENT=15465 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24814 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1079,14 +1071,18 @@ CREATE TABLE `stg2_itens` (
   `CCF` int(10) unsigned NOT NULL,
   `COO` int(10) unsigned NOT NULL,
   `SKU` varchar(14) NOT NULL,
-  `Qtd` decimal(9,3) NOT NULL,
-  `ValorUnitario` decimal(7,2) NOT NULL,
-  `ValorTotal` decimal(7,2) NOT NULL,
+  `Qtd` decimal(9,3) unsigned NOT NULL,
+  `ValorUnitario` decimal(7,2) unsigned NOT NULL,
+  `ValorTotal` decimal(7,2) unsigned NOT NULL,
   `Data` datetime NOT NULL,
-  `id_loja` smallint(2) DEFAULT NULL,
-  `alq` varchar(15) DEFAULT NULL,
+  `id_loja` smallint(2) unsigned NOT NULL,
+  `alq` varchar(15) NOT NULL,
+  `nECF` int(2) unsigned NOT NULL DEFAULT '0',
+  `custo_unitario` decimal(12,6) unsigned NOT NULL,
+  `custo_total` decimal(12,6) unsigned NOT NULL,
+  `cod_piscofins` smallint(2) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1715285 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7909200 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1101,14 +1097,18 @@ CREATE TABLE `stg2_itens_aux` (
   `CCF` int(10) unsigned NOT NULL,
   `COO` int(10) unsigned NOT NULL,
   `SKU` varchar(14) NOT NULL,
-  `Qtd` decimal(9,3) NOT NULL,
-  `ValorUnitario` decimal(7,2) NOT NULL,
-  `ValorTotal` decimal(7,2) NOT NULL,
+  `Qtd` decimal(9,3) unsigned NOT NULL,
+  `ValorUnitario` decimal(7,2) unsigned NOT NULL,
+  `ValorTotal` decimal(7,2) unsigned NOT NULL,
   `Data` datetime NOT NULL,
-  `id_loja` smallint(2) DEFAULT NULL,
-  `alq` varchar(15) DEFAULT NULL,
+  `id_loja` smallint(2) NOT NULL,
+  `alq` varchar(15) NOT NULL,
+  `custo_unitario` decimal(12,6) NOT NULL,
+  `custo_total` decimal(12,6) NOT NULL,
+  `nECF` int(2) unsigned NOT NULL DEFAULT '0',
+  `cod_piscofins` smallint(2) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=856746 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7909200 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1128,8 +1128,9 @@ CREATE TABLE `stg2_itens_cancelamento` (
   `ValorTotal` decimal(7,2) NOT NULL,
   `Data` datetime NOT NULL,
   `id_loja` smallint(2) DEFAULT NULL,
+  `nECF` int(2) unsigned NOT NULL,
   PRIMARY KEY (`id_cancelamento`)
-) ENGINE=InnoDB AUTO_INCREMENT=18275 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=94789 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1149,8 +1150,34 @@ CREATE TABLE `stg2_itens_cancelamento_aux` (
   `ValorTotal` decimal(7,2) NOT NULL,
   `Data` datetime NOT NULL,
   `id_loja` smallint(2) DEFAULT NULL,
+  `nECF` int(2) unsigned NOT NULL,
   PRIMARY KEY (`id_cancelamento`)
-) ENGINE=InnoDB AUTO_INCREMENT=6638 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=94789 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg2_itens_duplicados`
+--
+
+DROP TABLE IF EXISTS `stg2_itens_duplicados`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg2_itens_duplicados` (
+  `id_duplicata` int(11) NOT NULL AUTO_INCREMENT,
+  `CCF` varchar(40) DEFAULT NULL,
+  `COO` varchar(40) DEFAULT NULL,
+  `SKU` varchar(40) DEFAULT NULL,
+  `Qtd` varchar(40) DEFAULT NULL,
+  `ValorUnitario` varchar(40) DEFAULT NULL,
+  `ValorTotal` varchar(40) DEFAULT NULL,
+  `Data` varchar(40) DEFAULT NULL,
+  `id_loja` varchar(40) DEFAULT NULL,
+  `alq` varchar(45) DEFAULT NULL,
+  `nECF` int(11) DEFAULT NULL,
+  `nItem` int(11) DEFAULT NULL,
+  `IndCancel` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id_duplicata`)
+) ENGINE=InnoDB AUTO_INCREMENT=1268 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1172,7 +1199,51 @@ CREATE TABLE `stg2_itens_erro` (
   `id_loja` varchar(40) DEFAULT NULL,
   `alq` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_erro`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg2_movimentos_internos`
+--
+
+DROP TABLE IF EXISTS `stg2_movimentos_internos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg2_movimentos_internos` (
+  `movimento_id` int(10) NOT NULL AUTO_INCREMENT,
+  `COO` int(11) unsigned NOT NULL,
+  `CCF` int(11) unsigned NOT NULL,
+  `venda_data` datetime NOT NULL,
+  `valor` decimal(9,2) NOT NULL,
+  `Tipo1` smallint(2) NOT NULL DEFAULT '0',
+  `Tipo2` smallint(2) NOT NULL DEFAULT '0',
+  `Cartao` varchar(50) NOT NULL DEFAULT '0',
+  `id_loja` smallint(2) unsigned NOT NULL,
+  `nECF` smallint(2) unsigned NOT NULL,
+  PRIMARY KEY (`movimento_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg2_movimentos_internos_aux`
+--
+
+DROP TABLE IF EXISTS `stg2_movimentos_internos_aux`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg2_movimentos_internos_aux` (
+  `movimento_id` int(10) NOT NULL AUTO_INCREMENT,
+  `COO` int(11) unsigned NOT NULL,
+  `CCF` int(11) unsigned NOT NULL,
+  `venda_data` datetime NOT NULL,
+  `valor` decimal(9,2) NOT NULL,
+  `Tipo1` smallint(2) NOT NULL DEFAULT '0',
+  `Tipo2` smallint(2) NOT NULL DEFAULT '0',
+  `Cartao` varchar(50) NOT NULL DEFAULT '0',
+  `id_loja` smallint(2) unsigned NOT NULL,
+  `nECF` smallint(2) unsigned NOT NULL,
+  PRIMARY KEY (`movimento_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1184,16 +1255,87 @@ DROP TABLE IF EXISTS `stg2_transacoes`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `stg2_transacoes` (
   `venda_id` int(10) NOT NULL AUTO_INCREMENT,
+  `COO` int(11) unsigned NOT NULL,
+  `CCF` int(11) unsigned NOT NULL,
   `venda_data` datetime NOT NULL,
   `valor` decimal(9,2) NOT NULL,
-  `IndCancel` tinyint(1) NOT NULL DEFAULT '0',
   `Tipo1` smallint(2) NOT NULL DEFAULT '0',
   `Tipo2` smallint(2) NOT NULL DEFAULT '0',
   `Cartao` varchar(50) NOT NULL DEFAULT '0',
-  `Recarga` tinyint(1) NOT NULL DEFAULT '0',
   `id_loja` smallint(2) unsigned NOT NULL,
+  `nECF` smallint(2) unsigned NOT NULL,
+  `NSU` int(10) DEFAULT NULL,
+  `operador` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`venda_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2642317 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg2_transacoes_aux`
+--
+
+DROP TABLE IF EXISTS `stg2_transacoes_aux`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg2_transacoes_aux` (
+  `venda_id` int(10) NOT NULL AUTO_INCREMENT,
+  `COO` int(11) unsigned NOT NULL,
+  `CCF` int(11) unsigned NOT NULL,
+  `venda_data` datetime NOT NULL,
+  `valor` decimal(9,2) NOT NULL,
+  `Tipo1` smallint(2) NOT NULL DEFAULT '0',
+  `Tipo2` smallint(2) NOT NULL DEFAULT '0',
+  `Cartao` varchar(50) NOT NULL DEFAULT '0',
+  `id_loja` smallint(2) unsigned NOT NULL,
+  `nECF` smallint(2) unsigned NOT NULL,
+  `NSU` int(10) DEFAULT NULL,
+  `operador` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`venda_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg2_transacoes_canceladas`
+--
+
+DROP TABLE IF EXISTS `stg2_transacoes_canceladas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg2_transacoes_canceladas` (
+  `venda_id` int(10) NOT NULL AUTO_INCREMENT,
+  `COO` int(11) unsigned NOT NULL,
+  `CCF` int(11) unsigned NOT NULL,
+  `venda_data` datetime NOT NULL,
+  `valor` decimal(9,2) NOT NULL,
+  `Tipo1` smallint(2) NOT NULL DEFAULT '0',
+  `Tipo2` smallint(2) NOT NULL DEFAULT '0',
+  `Cartao` varchar(50) NOT NULL DEFAULT '0',
+  `id_loja` smallint(2) unsigned NOT NULL,
+  `nECF` smallint(2) unsigned NOT NULL,
+  PRIMARY KEY (`venda_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg2_transacoes_canceladas_aux`
+--
+
+DROP TABLE IF EXISTS `stg2_transacoes_canceladas_aux`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg2_transacoes_canceladas_aux` (
+  `venda_id` int(10) NOT NULL AUTO_INCREMENT,
+  `COO` int(11) unsigned NOT NULL,
+  `CCF` int(11) unsigned NOT NULL,
+  `venda_data` datetime NOT NULL,
+  `valor` decimal(9,2) NOT NULL,
+  `Tipo1` smallint(2) NOT NULL DEFAULT '0',
+  `Tipo2` smallint(2) NOT NULL DEFAULT '0',
+  `Cartao` varchar(50) NOT NULL DEFAULT '0',
+  `id_loja` smallint(2) unsigned NOT NULL,
+  `nECF` smallint(2) unsigned NOT NULL,
+  PRIMARY KEY (`venda_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1229,7 +1371,44 @@ CREATE TABLE `stg_relatoriofec` (
   `nEnvelope` varchar(45) NOT NULL DEFAULT '0',
   `ccf` varchar(45) NOT NULL DEFAULT '0',
   PRIMARY KEY (`nReg`)
-) ENGINE=InnoDB AUTO_INCREMENT=208 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg_relatoriofecloja1`
+--
+
+DROP TABLE IF EXISTS `stg_relatoriofecloja1`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg_relatoriofecloja1` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nReg` double NOT NULL,
+  `Data` date NOT NULL,
+  `Hora` varchar(45) NOT NULL,
+  `Valor` varchar(45) NOT NULL,
+  `COO` varchar(45) NOT NULL,
+  `IndCancel` varchar(45) NOT NULL DEFAULT '0',
+  `Tipo1` varchar(45) NOT NULL DEFAULT '0',
+  `Tipo2` varchar(45) NOT NULL DEFAULT '0',
+  `NSU` varchar(45) NOT NULL DEFAULT '0',
+  `Cartao` varchar(500) NOT NULL DEFAULT '0',
+  `Recarga` int(10) unsigned NOT NULL DEFAULT '0',
+  `nMov` double NOT NULL DEFAULT '0',
+  `StatusSangria` int(10) unsigned NOT NULL DEFAULT '0',
+  `SeqSangria` double NOT NULL DEFAULT '0',
+  `TicketDesconto` varchar(45) NOT NULL DEFAULT '0',
+  `TicketBruto` varchar(45) NOT NULL DEFAULT '0',
+  `TicketQtd` varchar(45) NOT NULL DEFAULT '0',
+  `nECF` int(10) unsigned NOT NULL DEFAULT '0',
+  `nRegPDV` double NOT NULL DEFAULT '0',
+  `StatusEnviado` int(10) unsigned NOT NULL DEFAULT '0',
+  `Operador` varchar(45) NOT NULL DEFAULT '0',
+  `Troco` varchar(45) NOT NULL DEFAULT '0',
+  `nEnvelope` varchar(45) NOT NULL DEFAULT '0',
+  `ccf` varchar(45) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=413 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1256,40 +1435,188 @@ CREATE TABLE `stg_zcupomitensloja1` (
   `IndCancel` varchar(1) NOT NULL,
   `Data` date NOT NULL,
   `Hora` varchar(15) NOT NULL,
-  `CodSetor` int(10) unsigned NOT NULL,
-  `CodSubSetor` int(10) unsigned NOT NULL,
-  `CodMarca` int(10) unsigned NOT NULL,
+  `CodSetor` int(10) unsigned DEFAULT NULL,
+  `CodSubSetor` int(10) unsigned DEFAULT NULL,
+  `CodMarca` int(10) unsigned DEFAULT NULL,
   `QtdNovo` decimal(12,3) DEFAULT NULL,
   `ValorTotalNovo` decimal(12,3) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `2nd` (`CCF`)
-) ENGINE=InnoDB AUTO_INCREMENT=1200001 DEFAULT CHARSET=latin1;
+  KEY `2nd` (`CCF`),
+  KEY `codigo_sku` (`Codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=501 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping routines for database 'staging'
+-- Table structure for table `stg_zcupomitensloja2`
 --
-/*!50003 DROP FUNCTION IF EXISTS `reglog_tabela` */;
-/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
-/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
-/*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8 */ ;
-/*!50003 SET character_set_results = utf8 */ ;
-/*!50003 SET collation_connection  = utf8_general_ci */ ;
-/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
-DELIMITER ;;
-CREATE DEFINER=`root`@`localhost` FUNCTION `reglog_tabela`(tabela VARCHAR(14)) RETURNS int(10)
-BEGIN
-DECLARE reg_log INT UNSIGNED;
-SET reg_log = (select ifnull((SELECT nReg_log FROM staging.log_extracao where (tabela_extracao = tabela) order by nReg_log DESC limit 1),0));
-RETURN reg_log;
-END ;;
-DELIMITER ;
-/*!50003 SET sql_mode              = @saved_sql_mode */ ;
-/*!50003 SET character_set_client  = @saved_cs_client */ ;
-/*!50003 SET character_set_results = @saved_cs_results */ ;
-/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+DROP TABLE IF EXISTS `stg_zcupomitensloja2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg_zcupomitensloja2` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `nReg` double NOT NULL,
+  `nECF` int(10) unsigned NOT NULL,
+  `CCF` int(10) unsigned NOT NULL,
+  `COO` int(10) unsigned NOT NULL,
+  `nItem` int(10) unsigned NOT NULL,
+  `Codigo` varchar(14) NOT NULL,
+  `Descricao` varchar(45) NOT NULL,
+  `Qtd` varchar(12) NOT NULL,
+  `Unidade` varchar(5) NOT NULL,
+  `ValorUnitario` varchar(12) NOT NULL,
+  `ValorTotal` varchar(12) NOT NULL,
+  `Alq` varchar(15) DEFAULT NULL,
+  `IndCancel` varchar(1) NOT NULL,
+  `Data` date NOT NULL,
+  `Hora` varchar(15) NOT NULL,
+  `CodSetor` int(10) unsigned DEFAULT NULL,
+  `CodSubSetor` int(10) unsigned DEFAULT NULL,
+  `CodMarca` int(10) unsigned DEFAULT NULL,
+  `QtdNovo` decimal(12,3) DEFAULT NULL,
+  `ValorTotalNovo` decimal(12,3) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `2nd` (`CCF`),
+  KEY `codigo_sku` (`Codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=10195873 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg_zcupomitensloja3`
+--
+
+DROP TABLE IF EXISTS `stg_zcupomitensloja3`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg_zcupomitensloja3` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `nReg` double NOT NULL,
+  `nECF` int(10) unsigned NOT NULL,
+  `CCF` int(10) unsigned NOT NULL,
+  `COO` int(10) unsigned NOT NULL,
+  `nItem` int(10) unsigned NOT NULL,
+  `Codigo` varchar(14) NOT NULL,
+  `Descricao` varchar(45) NOT NULL,
+  `Qtd` varchar(12) NOT NULL,
+  `Unidade` varchar(5) NOT NULL,
+  `ValorUnitario` varchar(12) NOT NULL,
+  `ValorTotal` varchar(12) NOT NULL,
+  `Alq` varchar(15) DEFAULT NULL,
+  `IndCancel` varchar(1) NOT NULL,
+  `Data` date NOT NULL,
+  `Hora` varchar(15) NOT NULL,
+  `CodSetor` int(10) unsigned DEFAULT NULL,
+  `CodSubSetor` int(10) unsigned DEFAULT NULL,
+  `CodMarca` int(10) unsigned DEFAULT NULL,
+  `QtdNovo` decimal(12,3) DEFAULT NULL,
+  `ValorTotalNovo` decimal(12,3) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `2nd` (`CCF`),
+  KEY `codigo_sku` (`Codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=1621132 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `stg_zcupomitensloja4`
+--
+
+DROP TABLE IF EXISTS `stg_zcupomitensloja4`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `stg_zcupomitensloja4` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `nReg` double NOT NULL,
+  `nECF` int(10) unsigned NOT NULL,
+  `CCF` int(10) unsigned NOT NULL,
+  `COO` int(10) unsigned NOT NULL,
+  `nItem` int(10) unsigned NOT NULL,
+  `Codigo` varchar(14) NOT NULL,
+  `Descricao` varchar(45) NOT NULL,
+  `Qtd` varchar(12) NOT NULL,
+  `Unidade` varchar(5) NOT NULL,
+  `ValorUnitario` varchar(12) NOT NULL,
+  `ValorTotal` varchar(12) NOT NULL,
+  `Alq` varchar(15) DEFAULT NULL,
+  `IndCancel` varchar(1) NOT NULL,
+  `Data` date NOT NULL,
+  `Hora` varchar(15) NOT NULL,
+  `CodSetor` int(10) unsigned DEFAULT NULL,
+  `CodSubSetor` int(10) unsigned DEFAULT NULL,
+  `CodMarca` int(10) unsigned DEFAULT NULL,
+  `QtdNovo` decimal(12,3) DEFAULT NULL,
+  `ValorTotalNovo` decimal(12,3) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `2nd` (`CCF`),
+  KEY `codigo_sku` (`Codigo`)
+) ENGINE=InnoDB AUTO_INCREMENT=2697240 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `temp_f_vendas`
+--
+
+DROP TABLE IF EXISTS `temp_f_vendas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `temp_f_vendas` (
+  `ECF` smallint(2) unsigned NOT NULL,
+  `COO` int(10) unsigned NOT NULL,
+  `CCF` int(10) unsigned NOT NULL,
+  `id_loja` int(10) unsigned NOT NULL,
+  `id_produto` int(10) unsigned NOT NULL,
+  `id_data` int(10) unsigned NOT NULL,
+  `id_hora` int(10) unsigned NOT NULL,
+  `id_icms` int(10) unsigned NOT NULL,
+  `qtd_produto` decimal(7,3) unsigned NOT NULL,
+  `custo_produto` decimal(5,2) unsigned NOT NULL,
+  `valor_produto` decimal(5,2) unsigned NOT NULL,
+  `total_venda` decimal(7,2) unsigned NOT NULL,
+  `total_custo` decimal(11,6) unsigned NOT NULL,
+  `id_piscofins` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`ECF`,`COO`,`CCF`,`id_loja`,`id_produto`,`id_data`,`id_hora`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `temp_venda_produto_hora`
+--
+
+DROP TABLE IF EXISTS `temp_venda_produto_hora`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `temp_venda_produto_hora` (
+  `id_loja` int(11) NOT NULL,
+  `id_produto` int(11) NOT NULL,
+  `ano` smallint(4) NOT NULL,
+  `trimestre` tinyint(2) NOT NULL,
+  `mes` tinyint(2) NOT NULL,
+  `data` date NOT NULL,
+  `dia` tinyint(2) NOT NULL,
+  `hora` tinyint(2) NOT NULL,
+  `valor_produto_minimo` decimal(9,2) NOT NULL DEFAULT '0.00',
+  `valor_produto_medio` decimal(9,2) NOT NULL DEFAULT '0.00',
+  `valor_produto_maximo` decimal(9,2) NOT NULL DEFAULT '0.00',
+  `custo_produto_minimo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `custo_produto_medio` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `custo_produto_maximo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `produto_desc` varchar(50) NOT NULL DEFAULT 'teste',
+  `produto_descvenda` varchar(45) NOT NULL DEFAULT 'teste',
+  `id_tipo_produto` int(11) NOT NULL DEFAULT '-2',
+  `id_icms` int(11) NOT NULL,
+  `produto_desativado` tinyint(1) NOT NULL DEFAULT '0',
+  `qtd_produto` decimal(10,3) NOT NULL DEFAULT '0.000',
+  `total_venda` decimal(10,2) NOT NULL DEFAULT '0.00',
+  `total_custo` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `lucro_total` decimal(13,6) NOT NULL DEFAULT '0.000000',
+  `diasemana` tinyint(2) NOT NULL,
+  `icms_venda` decimal(13,6) NOT NULL,
+  `id_piscofins` int(10) unsigned NOT NULL,
+  `pis_venda` decimal(13,6) NOT NULL,
+  `cofins_venda` decimal(13,6) NOT NULL,
+  `SKU` varchar(14) DEFAULT NULL,
+  PRIMARY KEY (`id_loja`,`id_produto`,`ano`,`mes`,`dia`,`hora`,`id_icms`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -1300,4 +1627,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-24 10:29:49
+-- Dump completed on 2016-01-29 14:36:04
