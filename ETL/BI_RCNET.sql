@@ -131,6 +131,28 @@ CREATE TABLE `d_piscofins` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+
+
+
+
+DROP TABLE IF EXISTS `d_tipo_produto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `d_tipo_produto` (
+  `id_tipo_produto` int(10) unsigned NOT NULL DEFAULT '0',
+  `secao_id` tinyint(2) NOT NULL DEFAULT '-2',
+  `secao_desc` varchar(45) NOT NULL DEFAULT 'teste',
+  `categoria_id` smallint(3) NOT NULL DEFAULT '-2',
+  `categoria_desc` varchar(45) NOT NULL DEFAULT 'teste',
+  `sub_categoria_id` smallint(3) NOT NULL DEFAULT '-2',
+  `sub_categoria_desc` varchar(45) NOT NULL DEFAULT 'teste',
+  `version` int(10) NOT NULL DEFAULT '0',
+  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
+  PRIMARY KEY (`id_tipo_produto`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
 -- Table structure for table `d_produto`
 --
 
@@ -158,25 +180,6 @@ CREATE TABLE `d_produto` (
 --
 -- Table structure for table `d_tipo_produto`
 --
-
-DROP TABLE IF EXISTS `d_tipo_produto`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `d_tipo_produto` (
-  `id_tipo_produto` int(10) unsigned NOT NULL DEFAULT '0',
-  `secao_id` tinyint(2) NOT NULL DEFAULT '-2',
-  `secao_desc` varchar(45) NOT NULL DEFAULT 'teste',
-  `categoria_id` smallint(3) NOT NULL DEFAULT '-2',
-  `categoria_desc` varchar(45) NOT NULL DEFAULT 'teste',
-  `sub_categoria_id` smallint(3) NOT NULL DEFAULT '-2',
-  `sub_categoria_desc` varchar(45) NOT NULL DEFAULT 'teste',
-  `version` int(10) NOT NULL DEFAULT '0',
-  `date_start` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
-  `date_range` datetime NOT NULL DEFAULT '1900-01-01 00:00:00',
-  PRIMARY KEY (`id_tipo_produto`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
 --
 -- Table structure for table `d_tipo_transacao`
 --
