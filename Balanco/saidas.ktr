@@ -1736,7 +1736,7 @@
            <schema_name/>
            </partitioning>
     <connection>supermercado</connection>
-    <sql>SELECT&#xa;  CodigoBarra&#xa;, MOVIMENTACAO&#xa;, replace&#x28;qtdentradaestoque,&#x27;,&#x27;,&#x27;.&#x27;&#x29; qtd&#xa;, concat&#x28;&#x22;compraprodutos&#x22;&#x29; table_name&#xa;FROM compraprodutos inner join tipo_movimentacao using &#x28;movimentacao&#x29; where entrada_saida &#x3d; true and DataEntrada &#x3e; &#x28;select data from config_balanco&#x29;&#xa;</sql>
+    <sql>SELECT&#xa;  CodigoBarra&#xa;, tipo_movimentacao.MOVIMENTACAO&#xa;, replace&#x28;qtdentradaestoque,&#x27;,&#x27;,&#x27;.&#x27;&#x29; qtd&#xa;, concat&#x28;&#x22;compraprodutos&#x22;&#x29; table_name&#xa;FROM compraprodutos inner join tipo_movimentacao on &#x28;compraprodutos.movimentacao &#x3d; tipo_movimentacao.movimentacao&#x29; inner join compras using &#x28;ncompra&#x29; where entrada_saida &#x3d; true and DataEntrada &#x3e; &#x28;select data from config_balanco&#x29; &#xa; and compras.tipo &#x3d; &#x27;PNF&#x27;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
