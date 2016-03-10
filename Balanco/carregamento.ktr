@@ -1722,90 +1722,11 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Add constants</from><to>Table output</to><enabled>Y</enabled> </hop>
-  <hop> <from>Table input</from><to>Calculator</to><enabled>Y</enabled> </hop>
   <hop> <from>Calculator</from><to>Add constants</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input</from><to>If field value is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants</from><to>Table output</to><enabled>Y</enabled> </hop>
   </order>
-  <step>
-    <name>Table input</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>supermercado</connection>
-    <sql>select codigobarra, qtd_saida,sum&#x28;qtd_entrada&#x29; qtd_entrada from temp_balanco_entrada inner join &#x28;SELECT&#xa;  codigobarra,&#xa;  sum&#x28;qtd_saida&#x29; qtd_saida&#xa;FROM temp_balanco_saida group by codigobarra&#x29; as t2 using &#x28;codigobarra&#x29; group by codigobarra</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>77</xloc>
-      <yloc>132</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Table output</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>supermercado</connection>
-    <schema/>
-    <table>estoque</table>
-    <commit>1000</commit>
-    <truncate>Y</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>Y</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>CodigoBarra</column_name>
-          <stream_name>codigobarra</stream_name>
-        </field>
-        <field>
-          <column_name>Qtd</column_name>
-          <stream_name>qtd</stream_name>
-        </field>
-        <field>
-          <column_name>statusenviado</column_name>
-          <stream_name>statusenviado</stream_name>
-        </field>
-        <field>
-          <column_name>customedio</column_name>
-          <stream_name>customedio</stream_name>
-        </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>443</xloc>
-      <yloc>124</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step>
     <name>Add constants</name>
     <type>Constant</type>
@@ -1862,10 +1783,24 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-       <calculation><field_name>qtd</field_name>
+       <calculation><field_name>qtd_entrada</field_name>
+<calc_type>ADD</calc_type>
+<field_a>balanco</field_a>
+<field_b>compras</field_b>
+<field_c/>
+<value_type>Number</value_type>
+<value_length>-1</value_length>
+<value_precision>3</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>estoque</field_name>
 <calc_type>SUBTRACT</calc_type>
 <field_a>qtd_entrada</field_a>
-<field_b>qtd_saida</field_b>
+<field_b>vendas</field_b>
 <field_c/>
 <value_type>Number</value_type>
 <value_length>-1</value_length>
@@ -1880,6 +1815,138 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>199</xloc>
       <yloc>127</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>supermercado</connection>
+    <sql>SELECT&#xa;  codigobarra&#xa;, balanco&#xa;, compras&#xa;, vendas&#xa;FROM auditoria_balanco&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>41</xloc>
+      <yloc>28</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>supermercado</connection>
+    <schema/>
+    <table>estoque</table>
+    <commit>1000</commit>
+    <truncate>Y</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+        <field>
+          <column_name>CodigoBarra</column_name>
+          <stream_name>codigobarra</stream_name>
+        </field>
+        <field>
+          <column_name>Qtd</column_name>
+          <stream_name>estoque</stream_name>
+        </field>
+        <field>
+          <column_name>statusenviado</column_name>
+          <stream_name>statusenviado</stream_name>
+        </field>
+        <field>
+          <column_name>customedio</column_name>
+          <stream_name>customedio</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>651</xloc>
+      <yloc>121</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      <valuetype>
+        <name>Number</name>
+        <value/>
+        <mask/>
+        <set_type_empty_string>N</set_type_empty_string>
+        </valuetype>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>balanco</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>compras</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>vendas</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>115</xloc>
+      <yloc>78</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

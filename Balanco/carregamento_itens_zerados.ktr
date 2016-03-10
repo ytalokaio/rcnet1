@@ -1794,7 +1794,7 @@
            <schema_name/>
            </partitioning>
     <connection>supermercado</connection>
-    <sql>SELECT&#xa;CodigoBarra&#xa;FROM itens where codigobarra not in &#x28;select distinct codigobarra from temp_balanco_entrada&#x29;</sql>
+    <sql>SELECT&#xa;CodigoBarra&#xa;FROM itens where codigobarra not in &#x28;select distinct codigobarra from auditoria_balanco&#x29;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
