@@ -1780,7 +1780,7 @@
       <name>criacao tabelas</name>
       <description/>
       <type>SQL</type>
-      <sql>DROP TABLE IF EXISTS &#x60;temp_balanco_entrada&#x60;&#x3b;&#xa;create table temp_balanco_entrada &#x28;id_temp_balanco_entrada int&#x28;11&#x29; unsigned not null auto_increment primary key,&#xa;tabela_origem_entrada varchar&#x28;30&#x29;, codigobarra varchar&#x28;15&#x29;, qtd_entrada decimal &#x28;14,3&#x29;&#x29;&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;temp_balanco_saida&#x60;&#x3b;&#xa;create table temp_balanco_saida &#x28; id_temp_balanco_saida int&#x28;11&#x29; unsigned not null auto_increment primary key,&#xa;tabela_origem_saida varchar&#x28;30&#x29;, codigobarra varchar&#x28;15&#x29;, qtd_saida decimal &#x28;14,3&#x29;&#x29;&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;config_balanco&#x60;&#x3b;&#xa;create table config_balanco &#x28;id_config_balanco int&#x28;11&#x29; unsigned not null auto_increment primary key, nBalanco int&#x28;1&#x29; not null , Data date not null&#x29;&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;auditoria_balanco&#x60;&#x3b;&#xa;create table auditoria_balanco &#x28; id_auditoria_balanco int&#x28;11&#x29; unsigned not null auto_increment primary key, codigobarra varchar&#x28;15&#x29;, qtd_saida decimal &#x28;14,3&#x29;&#x29;&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;tipo_movimentacao&#x60;&#x3b;&#xa;CREATE TABLE  &#x60;tipo_movimentacao&#x60; &#x28;&#xa;  &#x60;id_tipo_movimentacao&#x60; int&#x28;10&#x29; unsigned NOT NULL auto_increment,&#xa;  &#x60;movimentacao&#x60; varchar&#x28;45&#x29; NOT NULL,&#xa;  &#x60;tipo_operacao&#x60; int&#x28;2&#x29; unsigned default NULL,&#xa;  &#x60;entrada_saida&#x60; tinyint&#x28;1&#x29; default NULL,&#xa;  &#x60;is_98&#x60; tinyint&#x28;1&#x29; default &#x27;0&#x27;,&#xa;  &#x60;is_49&#x60; tinyint&#x28;1&#x29; default NULL,&#xa;  PRIMARY KEY  &#x28;&#x60;id_tipo_movimentacao&#x60;&#x29;&#xa;&#x29; ENGINE&#x3d;InnoDB DEFAULT CHARSET&#x3d;latin1&#x3b;&#xa;INSERT INTO &#x60;tipo_movimentacao&#x60; &#x28;&#x60;id_tipo_movimentacao&#x60;,&#x60;movimentacao&#x60;,&#x60;tipo_operacao&#x60;,&#x60;entrada_saida&#x60;,&#x60;is_98&#x60;,&#x60;is_49&#x60;&#x29; VALUES &#xa; &#x28;1,&#x27;COMPRA&#x27;,1,0,0,0&#x29;,&#xa; &#x28;2,&#x27;BONIFICACAO&#x27;,98,0,1,0&#x29;,&#xa; &#x28;3,&#x27;DEVOLUCAO&#x27;,49,1,0,1&#x29;,&#xa; &#x28;4,&#x27;ARMAZENAGEM-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;5,&#x27;TRANSFERENCIA-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;6,&#x27;CONSUMO&#x27;,98,0,1,0&#x29;,&#xa; &#x28;7,&#x27;DEVOLUCAO-S&#x27;,49,1,0,0&#x29;,&#xa; &#x28;8,&#x27;TRANSFERENCIA&#x27;,NULL,NULL,NULL,NULL&#x29;,&#xa; &#x28;9,&#x27;AVARIA-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;10,&#x27;CONSUMO INTERNO-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;11,&#x27;TRANSFERENCIA-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;12,&#x27;&#x27;,NULL,NULL,NULL,NULL&#x29;,&#xa; &#x28;13,&#x27;TRANSFERENCIA -E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;14,&#x27;SUBSTCUPOM&#x27;,49,1,0,1&#x29;,&#xa; &#x28;15,&#x27;VENDA&#x27;,2,1,0,0&#x29;,&#xa; &#x28;16,&#x27;CONSUMOINTERNO&#x27;,49,1,0,1&#x29;,&#xa; &#x28;17,&#x27;AVARIA&#x27;,49,1,0,1&#x29;,&#xa; &#x28;18,&#x27;CONSUMO INTERNO&#x27;,49,1,0,1&#x29;,&#xa; &#x28;19,&#x27;DEVOLUCAO-CONS&#x27;,49,1,0,1&#x29;,&#xa; &#x28;20,&#x27;SUBST CUPOM POR NFE-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;21,&#x27;OUTRAS ENTRADAS-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;22,&#x27;CONSIGNACAO&#x27;,49,1,0,1&#x29;,&#xa; &#x28;23,&#x27;OUTRAS-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;32,&#x27;COMODATO&#x27;,98,0,1,0&#x29;,&#xa; &#x28;33,&#x27;BONIFICACAO, DOACAO OU BRINDE - S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;34,&#x27;COMPRA P&#x2f;IND&#x27;,NULL,0,0,0&#x29;,&#xa; &#x28;35,&#x27;ARMAZENAGEM-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;36,&#x27;TROCA-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;37,&#x27;OUTRAS-S&#x27;,49,1,0,1&#x29;&#x3b;&#xa;INSERT INTO &#x60;tipo_movimentacao&#x60; &#x28;&#x60;id_tipo_movimentacao&#x60;,&#x60;movimentacao&#x60;,&#x60;tipo_operacao&#x60;,&#x60;entrada_saida&#x60;,&#x60;is_98&#x60;,&#x60;is_49&#x60;&#x29; VALUES &#xa; &#x28;38,&#x27;OUTRAS SAIDAS-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;39,&#x27;RETORNO MERC REMET. P&#x2f; ARMAZEM GERAL-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;40,&#x27;REMESSA PARA DEPOSITO-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;41,&#x27;RETORNO MERC ARMAZ EM DEPOSITO-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;42,&#x27;IMOBILIZADO&#x27;,98,0,1,0&#x29;,&#xa; &#x28;43,&#x27;REMESSA CONCERTO-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;44,&#x27;RETORNO CONCERTO-E&#x27;,98,0,1,0&#x29;&#x3b;</sql>
+      <sql>DROP TABLE IF EXISTS &#x60;temp_balanco_entrada&#x60;&#x3b;&#xa;create table temp_balanco_entrada &#x28;id_temp_balanco_entrada int&#x28;11&#x29; unsigned not null auto_increment primary key,&#xa;tabela_origem_entrada varchar&#x28;30&#x29;, codigobarra varchar&#x28;15&#x29;, qtd_entrada decimal &#x28;14,3&#x29;&#x29;&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;temp_balanco_saida&#x60;&#x3b;&#xa;create table temp_balanco_saida &#x28; id_temp_balanco_saida int&#x28;11&#x29; unsigned not null auto_increment primary key,&#xa;tabela_origem_saida varchar&#x28;30&#x29;, codigobarra varchar&#x28;15&#x29;, qtd_saida decimal &#x28;14,3&#x29;&#x29;&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;config_balanco&#x60;&#x3b;&#xa;create table config_balanco &#x28;id_config_balanco int&#x28;11&#x29; unsigned not null auto_increment primary key, nBalanco int&#x28;1&#x29; not null , Data date not null&#x29;&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;auditoria_balanco&#x60;&#x3b;&#xa;create table auditoria_balanco &#x28; id_auditoria_balanco int&#x28;11&#x29; unsigned not null auto_increment primary key, codigobarra varchar&#x28;15&#x29;, qtd_saida decimal &#x28;14,3&#x29;&#x29;&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;tipo_movimentacao&#x60;&#x3b;&#xa;CREATE TABLE  &#x60;tipo_movimentacao&#x60; &#x28;&#xa;  &#x60;id_tipo_movimentacao&#x60; int&#x28;10&#x29; unsigned NOT NULL auto_increment,&#xa;  &#x60;movimentacao&#x60; varchar&#x28;45&#x29; NOT NULL,&#xa;  &#x60;tipo_operacao&#x60; int&#x28;2&#x29; unsigned default NULL,&#xa;  &#x60;entrada_saida&#x60; tinyint&#x28;1&#x29; default NULL,&#xa;  &#x60;is_98&#x60; tinyint&#x28;1&#x29; default &#x27;0&#x27;,&#xa;  &#x60;is_49&#x60; tinyint&#x28;1&#x29; default NULL,&#xa;  PRIMARY KEY  &#x28;&#x60;id_tipo_movimentacao&#x60;&#x29;&#xa;&#x29; ENGINE&#x3d;InnoDB DEFAULT CHARSET&#x3d;latin1&#x3b;&#xa;INSERT INTO &#x60;tipo_movimentacao&#x60; &#x28;&#x60;id_tipo_movimentacao&#x60;,&#x60;movimentacao&#x60;,&#x60;tipo_operacao&#x60;,&#x60;entrada_saida&#x60;,&#x60;is_98&#x60;,&#x60;is_49&#x60;&#x29; VALUES &#xa; &#x28;1,&#x27;COMPRA&#x27;,1,0,0,0&#x29;,&#xa; &#x28;2,&#x27;BONIFICACAO&#x27;,98,0,1,0&#x29;,&#xa; &#x28;3,&#x27;DEVOLUCAO&#x27;,49,1,0,1&#x29;,&#xa; &#x28;4,&#x27;ARMAZENAGEM-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;5,&#x27;TRANSFERENCIA-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;6,&#x27;CONSUMO&#x27;,98,0,1,0&#x29;,&#xa; &#x28;7,&#x27;DEVOLUCAO-S&#x27;,49,1,0,0&#x29;,&#xa; &#x28;8,&#x27;TRANSFERENCIA&#x27;,NULL,NULL,NULL,NULL&#x29;,&#xa; &#x28;9,&#x27;AVARIA-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;10,&#x27;CONSUMO INTERNO-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;11,&#x27;TRANSFERENCIA-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;12,&#x27;&#x27;,NULL,NULL,NULL,NULL&#x29;,&#xa; &#x28;13,&#x27;TRANSFERENCIA -E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;14,&#x27;SUBSTCUPOM&#x27;,49,1,0,1&#x29;,&#xa; &#x28;15,&#x27;VENDA&#x27;,2,1,0,0&#x29;,&#xa; &#x28;16,&#x27;CONSUMOINTERNO&#x27;,49,1,0,1&#x29;,&#xa; &#x28;17,&#x27;AVARIA&#x27;,49,1,0,1&#x29;,&#xa; &#x28;18,&#x27;CONSUMO INTERNO&#x27;,49,1,0,1&#x29;,&#xa; &#x28;19,&#x27;DEVOLUCAO-CONS&#x27;,49,1,0,1&#x29;,&#xa; &#x28;20,&#x27;SUBST CUPOM POR NFE-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;21,&#x27;OUTRAS ENTRADAS-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;22,&#x27;CONSIGNACAO&#x27;,49,1,0,1&#x29;,&#xa; &#x28;23,&#x27;OUTRAS-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;32,&#x27;COMODATO&#x27;,98,0,1,0&#x29;,&#xa; &#x28;33,&#x27;BONIFICACAO, DOACAO OU BRINDE - S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;34,&#x27;COMPRA P&#x2f;IND&#x27;,NULL,0,0,0&#x29;,&#xa; &#x28;35,&#x27;ARMAZENAGEM-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;36,&#x27;TROCA-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;37,&#x27;OUTRAS-S&#x27;,49,1,0,1&#x29;&#x3b;&#xa;INSERT INTO &#x60;tipo_movimentacao&#x60; &#x28;&#x60;id_tipo_movimentacao&#x60;,&#x60;movimentacao&#x60;,&#x60;tipo_operacao&#x60;,&#x60;entrada_saida&#x60;,&#x60;is_98&#x60;,&#x60;is_49&#x60;&#x29; VALUES &#xa; &#x28;38,&#x27;OUTRAS SAIDAS-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;39,&#x27;RETORNO MERC REMET. P&#x2f; ARMAZEM GERAL-E&#x27;,98,0,1,0&#x29;,&#xa; &#x28;40,&#x27;REMESSA PARA DEPOSITO-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;41,&#x27;RETORNO MERC ARMAZ EM DEPOSITO-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;42,&#x27;IMOBILIZADO&#x27;,98,0,1,0&#x29;,&#xa; &#x28;43,&#x27;REMESSA CONCERTO-S&#x27;,49,1,0,1&#x29;,&#xa; &#x28;44,&#x27;RETORNO CONCERTO-E&#x27;,98,0,1,0&#x29;&#x3b;&#xa;&#xa;&#xa;SET sql_mode &#x3d; &#x27;&#x27;&#x3b;</sql>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
@@ -1838,8 +1838,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>656</xloc>
-      <yloc>231</yloc>
+      <xloc>619</xloc>
+      <yloc>245</yloc>
       </entry>
     <entry>
       <name>configuracoes</name>
@@ -1847,7 +1847,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>file&#x3a;&#x2f;&#x2f;&#x2f;Users&#x2f;ykmfb&#x2f;GitHub&#x2f;rcnet1&#x2f;Balanco&#x2f;configuracoes.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;configuracoes.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -2052,8 +2052,41 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>537</xloc>
-      <yloc>269</yloc>
+      <xloc>489</xloc>
+      <yloc>294</yloc>
+      </entry>
+    <entry>
+      <name>tabela_sumarizada</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;tabela_sumariza.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>707</xloc>
+      <yloc>210</yloc>
       </entry>
   </entries>
   <hops>
@@ -2157,15 +2190,6 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>truncate_estoque</from>
-      <to>carregamento</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>carregamento_itens_zerados</from>
       <to>Success</to>
       <from_nr>0</from_nr>
@@ -2186,6 +2210,24 @@
     <hop>
       <from>carregamento entrada_sem_saida</from>
       <to>carregamento_itens_zerados</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>truncate_estoque</from>
+      <to>tabela_sumarizada</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>tabela_sumarizada</from>
+      <to>carregamento</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
