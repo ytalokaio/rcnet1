@@ -1,0 +1,178 @@
+2016/03/21 16:35:42 - staging2 - Starting entry [stg2_dimensoes]
+2016/03/21 16:35:42 - stg2_dimensoes - Starting entry [stg2_dimensoes_itens]
+2016/03/21 16:35:42 - stg2_dimensoes_itens - Starting entry [stg2_categorias]
+2016/03/21 16:35:42 - stg2_categorias - Loading transformation from XML file [file:///Users/ykmfb/GitHub/rcnet1/ETL/stg2_categorias.ktr]
+2016/03/21 16:35:42 - stg2_categorias - Expedindo in?cio para transforma??o [stg2_categorias]
+2016/03/21 16:35:42 - Table output.0 - Connected to database [staging] (commit=1000)
+2016/03/21 16:35:42 - leitura grupos.0 - Finished reading query, closing connection.
+2016/03/21 16:35:42 - leitura grupos.0 - Finished processing (I=2, O=0, R=0, W=2, U=0, E=0)
+2016/03/21 16:35:42 - Table output.0 - Finished processing (I=0, O=2, R=2, W=2, U=0, E=0)
+2016/03/21 16:35:42 - stg2_dimensoes_itens - Starting entry [stg2_dimensoes_itens_categorizar]
+2016/03/21 16:35:42 - stg2_dimensoes_itens_categorizar - Loading transformation from XML file [file:///Users/ykmfb/GitHub/rcnet1/ETL/stg2_dimensoes_itens_categorizar.ktr]
+2016/03/21 16:35:42 - stg2_dimensoes_itens_categorizar - Expedindo in?cio para transforma??o [stg2_dimensoes_itens_categorizar]
+2016/03/21 16:35:42 - carregamento stg2_d_itens.0 - Connected to database [staging] (commit=1000)
+2016/03/21 16:35:42 - convert SKU bigint.0 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : !Calculator.ErrorInStepRunning : 
+2016/03/21 16:35:42 - convert SKU bigint.0 - resultType: 2; targetMeta: 1
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - Unexpected conversion error while converting value [result String] to a Number
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number : non-numeric character found at position 2 for value [1,43]
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - !
+2016/03/21 16:35:42 - convert SKU bigint.0 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : Erro inesperado
+2016/03/21 16:35:42 - convert SKU bigint.0 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : org.pentaho.di.core.exception.KettleStepException: 
+2016/03/21 16:35:42 - convert SKU bigint.0 - Error while running the step 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - resultType: 2; targetMeta: 1
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - Unexpected conversion error while converting value [result String] to a Number
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number : non-numeric character found at position 2 for value [1,43]
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.trans.steps.calculator.Calculator.processRow(Calculator.java:178)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at java.lang.Thread.run(Thread.java:695)
+2016/03/21 16:35:42 - convert SKU bigint.0 - Caused by: org.pentaho.di.core.exception.KettleValueException: 
+2016/03/21 16:35:42 - convert SKU bigint.0 - resultType: 2; targetMeta: 1
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - Unexpected conversion error while converting value [result String] to a Number
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number : non-numeric character found at position 2 for value [1,43]
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.trans.steps.calculator.Calculator.calcFields(Calculator.java:609)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.trans.steps.calculator.Calculator.processRow(Calculator.java:162)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	... 2 more
+2016/03/21 16:35:42 - convert SKU bigint.0 - Caused by: org.pentaho.di.core.exception.KettleValueException: 
+2016/03/21 16:35:42 - convert SKU bigint.0 - Unexpected conversion error while converting value [result String] to a Number
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number : non-numeric character found at position 2 for value [1,43]
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.core.row.value.ValueMetaBase.getNumber(ValueMetaBase.java:1695)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.core.row.value.ValueMetaBase.convertData(ValueMetaBase.java:3544)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.trans.steps.calculator.Calculator.calcFields(Calculator.java:607)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	... 3 more
+2016/03/21 16:35:42 - convert SKU bigint.0 - Caused by: org.pentaho.di.core.exception.KettleValueException: 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number : non-numeric character found at position 2 for value [1,43]
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.core.row.value.ValueMetaBase.convertStringToNumber(ValueMetaBase.java:807)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.core.row.value.ValueMetaBase.getNumber(ValueMetaBase.java:1635)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	... 5 more
+2016/03/21 16:35:42 - convert SKU bigint.0 - Caused by: org.pentaho.di.core.exception.KettleValueException: 
+2016/03/21 16:35:42 - convert SKU bigint.0 - result String : couldn't convert String to number : non-numeric character found at position 2 for value [1,43]
+2016/03/21 16:35:42 - convert SKU bigint.0 - 
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	at org.pentaho.di.core.row.value.ValueMetaBase.convertStringToNumber(ValueMetaBase.java:798)
+2016/03/21 16:35:42 - convert SKU bigint.0 - 	... 6 more
+2016/03/21 16:35:42 - convert SKU bigint.0 - Finished processing (I=0, O=0, R=3255, W=3254, U=0, E=1)
+2016/03/21 16:35:42 - stg2_dimensoes_itens_categorizar - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : Erros detectados!
+2016/03/21 16:35:42 - stg2_dimensoes_itens_categorizar - Transforma??o detectada 
+2016/03/21 16:35:42 - stg2_dimensoes_itens_categorizar - Transforma??o est? matando os outros steps!
+2016/03/21 16:35:42 - correcao sem grupo.0 - Finished processing (I=0, O=0, R=9959, W=9959, U=0, E=0)
+2016/03/21 16:35:42 - leitura stg1_itens_categorizados.0 - Finished reading query, closing connection.
+2016/03/21 16:35:42 - leitura stg1_itens_categorizados.0 - Finished processing (I=10129, O=0, R=0, W=10127, U=0, E=0)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : Because of an error, this step can't continue: 
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Error batch inserting rows into table [stg2_d_itens].
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Errors encountered (first 10):
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Error updating batch
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Unknown column 'codigoNCM' in 'field list'
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:342)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.processRow(TableOutput.java:118)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at java.lang.Thread.run(Thread.java:695)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Caused by: org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Error updating batch
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Unknown column 'codigoNCM' in 'field list'
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1386)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:289)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	... 3 more
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Caused by: java.sql.BatchUpdateException: Unknown column 'codigoNCM' in 'field list'
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1809)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.PreparedStatement.executeBatch(PreparedStatement.java:1271)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:285)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	... 3 more
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'codigoNCM' in 'field list'
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at sun.reflect.GeneratedConstructorAccessor68.newInstance(Unknown Source)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.Util.handleNewInstance(Util.java:400)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.Util.getInstance(Util.java:383)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:980)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3847)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3783)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2447)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2594)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2545)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1901)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2113)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	at com.mysql.jdbc.PreparedStatement.executeBatchSerially(PreparedStatement.java:1767)
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - 	... 5 more
+2016/03/21 16:35:43 - carregamento stg2_d_itens.0 - Finished processing (I=0, O=999, R=1000, W=0, U=0, E=1)
+2016/03/21 16:35:43 - stg2_dimensoes_itens_categorizar - Transforma??o detectada 
+2016/03/21 16:35:43 - stg2_dimensoes_itens_categorizar - ERROR (version 5.4.0.1-130, build 1 from 2015-06-14_12-34-55 by buildguy) : Erros detectados!
+2016/03/21 16:35:43 - stg2_dimensoes_itens_categorizar - Transforma??o est? matando os outros steps!
+2016/03/21 16:35:43 - stg2_dimensoes_itens - Finished job entry [stg2_dimensoes_itens_categorizar] (result=[false])
+2016/03/21 16:35:43 - stg2_dimensoes_itens - Finished job entry [stg2_categorias] (result=[false])
+2016/03/21 16:35:43 - stg2_dimensoes - Finished job entry [stg2_dimensoes_itens] (result=[false])
+2016/03/21 16:35:43 - staging2 - Starting entry [stg2itens]
+2016/03/21 16:35:43 - stg2itens - Starting entry [SQL]
+2016/03/21 16:35:43 - stg2itens - Starting entry [stg2L1]
+2016/03/21 16:35:43 - stg2itens - Launched job entry [stg2L1] in parallel.
+2016/03/21 16:35:43 - stg2L1 - Loading transformation from XML file [file:///Users/ykmfb/GitHub/rcnet1/ETL/stg2L1.ktr]
+2016/03/21 16:35:43 - stg2L1 - Expedindo in?cio para transforma??o [stg2L1]
+2016/03/21 16:35:43 - stg2_itens.0 - Connected to database [staging] (commit=1000)
+2016/03/21 16:35:43 - stg2_itens erro.0 - Connected to database [staging] (commit=1000)
+2016/03/21 16:35:43 - stg2_itens 2.0 - Connected to database [staging] (commit=1000)
+2016/03/21 16:35:43 - stg2_itens 3.0 - Connected to database [staging] (commit=1000)
+2016/03/21 16:35:43 - stg2_itens 2 2.0 - Connected to database [staging] (commit=1000)
+2016/03/21 16:35:43 - stg2_itens erro 2 2.0 - Connected to database [staging] (commit=100)
+2016/03/21 16:35:43 - stg1itensL1.0 - Finished reading query, closing connection.
+2016/03/21 16:35:43 - stg1itensL1.0 - Finished processing (I=500, O=0, R=0, W=500, U=0, E=0)
+2016/03/21 16:35:43 - Replace in string 2.0 - Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2016/03/21 16:35:43 - Calculator.2 - Finished processing (I=0, O=0, R=125, W=125, U=0, E=0)
+2016/03/21 16:35:43 - Calculator.0 - Finished processing (I=0, O=0, R=125, W=125, U=0, E=0)
+2016/03/21 16:35:43 - Calculator.1 - Finished processing (I=0, O=0, R=125, W=125, U=0, E=0)
+2016/03/21 16:35:43 - Calculator.3 - Finished processing (I=0, O=0, R=125, W=125, U=0, E=0)
+2016/03/21 16:35:43 - Switch / Case.0 - Finished processing (I=0, O=0, R=252, W=252, U=0, E=0)
+2016/03/21 16:35:43 - Switch / Case.1 - Finished processing (I=0, O=0, R=248, W=248, U=0, E=0)
+2016/03/21 16:35:43 - Add constants 3.0 - Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2016/03/21 16:35:43 - Sort rows.0 - Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2016/03/21 16:35:43 - Unique rows 2.0 - Finished processing (I=0, O=0, R=500, W=500, U=0, E=0)
+2016/03/21 16:35:43 - Group by.0 - Finished processing (I=0, O=0, R=500, W=408, U=0, E=0)
+2016/03/21 16:35:43 - Database lookup.0 - Finished processing (I=17776, O=0, R=408, W=408, U=0, E=0)
+2016/03/21 16:35:43 - Calculator 2.0 - Finished processing (I=0, O=0, R=408, W=408, U=0, E=0)
+2016/03/21 16:35:43 - stg2_itens.0 - Finished processing (I=0, O=408, R=408, W=408, U=0, E=0)
+2016/03/21 16:35:44 - stg2_itens 3.0 - Finished processing (I=0, O=408, R=408, W=408, U=0, E=0)
+2016/03/21 16:35:44 - stg2itens - Starting entry [Success]
+2016/03/21 16:35:44 - stg2itens - Finished job entry [Success] (result=[true])
+2016/03/21 16:35:44 - stg2itens - Finished job entry [SQL] (result=[true])
+2016/03/21 16:35:44 - staging2 - Starting entry [Success]
+2016/03/21 16:35:44 - staging2 - Finished job entry [Success] (result=[true])
+2016/03/21 16:35:44 - staging2 - Finished job entry [stg2itens] (result=[true])
+2016/03/21 16:35:44 - staging2 - Finished job entry [stg2_dimensoes] (result=[true])
